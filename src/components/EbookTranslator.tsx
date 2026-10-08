@@ -122,11 +122,22 @@ interface NodeError {
   message: string;
 }
 
-const LANG_OPTIONS = LOCALES.map(code => ({
-  value: LOCALE_ENGLISH_NAMES[code],
-  label: LOCALE_NAMES[code],
-  code,
-}));
+/**
+ * Languages offered as translation source/target but not as UI locales.
+ * The LLM handles them fine; they just have no interface translation.
+ */
+const EXTRA_TRANSLATION_LANGS: { value: string; label: string; code: string }[] = [
+  { value: 'Maltese', label: 'Malti', code: 'mt' },
+];
+
+const LANG_OPTIONS = [
+  ...LOCALES.map(code => ({
+    value: LOCALE_ENGLISH_NAMES[code],
+    label: LOCALE_NAMES[code],
+    code: code as string,
+  })),
+  ...EXTRA_TRANSLATION_LANGS,
+];
 const VALID_LANG_VALUES = new Set(LANG_OPTIONS.map(o => o.value));
 /** Map English language name back to BCP-47 code for epub metadata. */
 const LANG_NAME_TO_CODE = Object.fromEntries(LANG_OPTIONS.map(o => [o.value, o.code]));

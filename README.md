@@ -10,7 +10,7 @@ Live instance: **[philoli.com/projects/ebook-translator](https://philoli.com/pro
 
 - **EPUB and PDF input.** Text PDFs are reconstructed into paragraphs; scanned PDFs are OCR'd page by page with a vision-capable model (formulas included).
 - **Bilingual output.** Original and translation side by side, exported as a new EPUB.
-- **40+ languages**, any direction. The UI itself is translated into 41 locales.
+- **42 languages** (including Maltese), any direction. The UI itself is translated into 41 locales.
 - **Three translation tones**: natural/general, fiction, and professional/technical.
 - **Math support.** LaTeX inside the book is rendered with KaTeX and preserved through translation.
 - **Custom glossaries.** Upload a CSV term base so domain vocabulary is translated consistently.
