@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Tasuta e-raamatute tõlkija — EPUB / PDF / AI / 40 keelt",
+    "description": "Tasuta AI e-raamatute tõlkija, mis töötab täielikult teie brauseris. Tõlkige EPUB- ja PDF-faile 40+ keelde kakskeelse kõrvuti väljundiga. Kasutage oma API võtit."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Projekt",
+    "title": "Tasuta e-raamatute tõlkija",
+    "subtitle": "Laadi üles EPUB, kasuta oma LLM API key-d ja saa vastu kakskeelne väljaanne, kus algne ja tõlgitud tekst on lõikude kaupa vaheldumisi. Faili töödeldakse täielikult sinu brauseris — sinu raamat ei jõua kunagi ühtegi serverisse.",
+    "steps": {
+      "settings": "seaded",
+      "upload": "üleslaadimine",
+      "preview": "eelvaade",
+      "browse": "sirvi"
+    },
+    "actions": {
+      "cancelRunning": "Tühista pooleliolev",
+      "translateAllRemaining": "Tõlgi kõik ülejäänud",
+      "downloadEpub": "⬇ Laadi alla EPUB",
+      "building": "Koostamine…",
+      "back": "← Tagasi",
+      "settingsModel": "← Seaded / mudel",
+      "show": "Näita",
+      "hide": "Peida",
+      "cancel": "Tühista",
+      "retranslate": "Tõlgi uuesti",
+      "resume": "Jätka",
+      "translateChapter": "Tõlgi see peatükk",
+      "continue": "Jätka →"
+    },
+    "settings": {
+      "provider": "Pakkuja",
+      "model": "Mudel",
+      "apiKey": "API Key",
+      "apiKeyPlaceholder": "Kleebi oma {provider} võti",
+      "apiKeyHint": "Hangi see aadressilt {link}. Sinu võti saadetakse ainult teenusele {provider}, mitte kunagi lehele {host}.",
+      "rememberKey": "Jäta võti meelde ainult selles brauseris (localStorage). Eemalda märge ühiskasutatavates seadmetes.",
+      "showApiKey": "Näita API key",
+      "hideApiKey": "Peida API key",
+      "translateFrom": "Tõlgi keelest",
+      "translateTo": "Tõlgi keelde",
+      "tone": "Toon",
+      "customProvider": "Kohandatud (OpenAI-ühilduv)",
+      "customModel": "Mudeli ID",
+      "customModelPlaceholder": "nt gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API lõpp-punkt",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "Täielik URL OpenAI-ühilduva /chat/completions lõpp-punkti juurde.",
+      "openrouterModelPlaceholder": "nt google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "nt kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Jätkamiseks sisesta API key."
+    },
+    "upload": {
+      "parsing": "EPUB-i parsimine…",
+      "parsingPdf": "PDF-i sõelumine — teksti eraldamine ja lõikude taastamine…",
+      "dropTitle": "Lohista EPUB siia",
+      "dropSubtitle": "või klõpsa faili valimiseks",
+      "noChapters": "Selles EPUB-failis ei leitud loetavaid peatükke.",
+      "ocrRunning": "Lehekülgede OCR-töötlus mudeliga {model}…",
+      "ocrPageOf": "Lehekülg {current} / {total}",
+      "ocrFailedCount": "{count} ebaõnnestus",
+      "scannedPdfDetected": "{file} on skannitud PDF ({pages} lehekülge), millel puudub tekstikiht.",
+      "modelLacksVision": "Sinu valitud {provider} mudel \"{model}\" ei toeta piltide sisestamist, seega ei saa see skannitud lehekülgi OCR-töödelda.",
+      "switchToVision": "Vali:",
+      "runOcr": "Käivita OCR",
+      "providerHasNoVision": "{provider} ei paku selles valikus nägemisvõimelist mudelit. Ava seaded, et vahetada teenusepakkujat (Gemini, OpenAI või Claude toetavad kõik OCR-i).",
+      "recentBooks": "Hiljutised raamatud",
+      "progressParagraphs": "{done} / {total} lõiku",
+      "progressPages": "{done} / {total} lehekülge",
+      "deleteBook": "Eemalda ajaloost",
+      "deleteConfirm": "Kas eemaldada \"{name}\" ajaloost? Fail ja selle tõlked kustutatakse.",
+      "untitled": "Pealkirjata",
+      "relativeJustNow": "just nüüd",
+      "relativeMinutesAgo": "{n} min tagasi",
+      "relativeHoursAgo": "{n} t tagasi",
+      "relativeDaysAgo": "{n} p tagasi"
+    },
+    "preview": {
+      "pages": "{count} lehekülge",
+      "scannedTag": "skannitud (vajab OCR-i)",
+      "textLayerTag": "tekstikiht tuvastatud",
+      "prev": "Eelmine",
+      "next": "Järgmine",
+      "pageOf": "Lehekülg {current} / {total}",
+      "pageList": "Leheküljed ({count})",
+      "pageLabel": "Lehekülg {n}",
+      "willOcrWith": "OCR-töötleb kõik leheküljed mudeliga {model}.",
+      "willTranslate": "Tekst eraldatud. Jätka peatükkide valimisega tõlkimiseks.",
+      "startOcr": "Alusta OCR-i ({count} lehekülge)",
+      "continue": "Jätka →",
+      "singlePage": {
+        "button": "Tõlgi see lehekülg",
+        "tooltip": "OCR-töötle ja tõlgi ainult see lehekülg, et saaksid kvaliteeti eelvaadata enne terve raamatu töötlemist.",
+        "running": "Selle lehekülje OCR-töötlus ja tõlkimine…",
+        "translating": "Selle lehekülje tõlkimine…",
+        "empty": "Sellelt leheküljelt ei leitud tõlgitavat teksti.",
+        "resultHeader": "Lehekülg {page} — kakskeelne eelvaade",
+        "needsVision": "Praegune mudel ei saa pilte OCR-töödelda. Vali esmalt nägemisvõimeline mudel."
+      }
+    },
+    "browse": {
+      "chapters": "Peatükid",
+      "toneTitle": "Tõlke toon — mõjutab kirjutamisstiili",
+      "paragraphCount": "{nodes} lõiku · {translated} tõlgitud",
+      "errorOne": "{count} lõik ebaõnnestus. Proovimiseks saad uuesti tõlkida — juba tehtud lõigud jäetakse vahele.",
+      "errorMany": "{count} lõiku ebaõnnestus. Proovimiseks saad uuesti tõlkida — juba tehtud lõigud jäetakse vahele.",
+      "noTranslatableText": "Selles peatükis puudub tõlgitav tekst (kaas, eessõna jne).",
+      "translatingAria": "Tõlkimine",
+      "translatingLabel": "tõlkimine…",
+      "buildFailed": "EPUB-i loomine ebaõnnestus:"
+    },
+    "glossary": {
+      "label": "Sõnastik",
+      "title": "Määra raamatus kasutatavatele terminitele kindlad tõlked — kasulik tehniliste, professionaalsete või valdkonnaspetsiifiliste tööde puhul.",
+      "none": "Puudub",
+      "empty": "Ühtegi sõnastikku pole veel üles laaditud.",
+      "entryCount": "{n} terminit",
+      "upload": "Laadi üles CSV…",
+      "uploading": "Laadin üles…",
+      "hint": "CSV kahe veeruga: lähtetermin, tõlge. Valikuline kolmas veerg: märkus. Esimene rida võib olla päis. UTF-8.",
+      "delete": "Eemalda sõnastik",
+      "deleteConfirm": "Kas eemaldada sõnastik \"{name}\"? Kõik seda kasutavad raamatud lähevad tagasi sõnastiku puudumise režiimi."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Idiomaatiline",
+        "hint": "loomulik ja sujuv — enamik raamatuid"
+      },
+      "literary": {
+        "label": "Kirjanduslik",
+        "hint": "romaanid ja ilukirjandus"
+      },
+      "technical": {
+        "label": "Tehniline",
+        "hint": "eriala- ja teatmeteosed"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "odavaim, kiire",
+      "higherQuality": "kõrgem kvaliteet",
+      "bestQuality": "parim kvaliteet",
+      "newestFast": "uusim, kiire",
+      "cheapest": "odavaim",
+      "bestQualityStable": "parim kvaliteet, stabiilne",
+      "balanced": "tasakaalustatud",
+      "freeTierFast": "tasuta pakett, kiire",
+      "flagshipCoding": "lipulaev koodi/agentide jaoks",
+      "longContext": "pikk kontekst, stabiilne",
+      "cheaper": "odavam",
+      "latestLongContext": "uusim, 256K kontekst"
+    }
+  }
+}

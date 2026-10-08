@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Δωρεάν μεταφραστής ebook — EPUB / PDF / AI / 40 γλώσσες",
+    "description": "Δωρεάν μεταφραστής ebook με AI που λειτουργεί εξ ολοκλήρου στον φυλλομετρητή σας. Μεταφράστε αρχεία EPUB και PDF σε 40+ γλώσσες με δίγλωσση παράλληλη έξοδο. Χρησιμοποιήστε το δικό σας κλειδί API."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Έργο",
+    "title": "Δωρεάν μεταφραστής ebook",
+    "subtitle": "Ανεβάστε ένα EPUB, χρησιμοποιήστε το δικό σας LLM API key και λάβετε μια δίγλωσση έκδοση με το πρωτότυπο και το μεταφρασμένο κείμενο εναλλασσόμενα ανά παράγραφο. Το αρχείο αναλύεται εξ ολοκλήρου στο πρόγραμμα περιήγησής σας — το βιβλίο σας δεν έρχεται ποτέ σε επαφή με κανέναν διακομιστή.",
+    "steps": {
+      "settings": "ρυθμίσεις",
+      "upload": "μεταφόρτωση",
+      "preview": "προεπισκόπηση",
+      "browse": "περιήγηση"
+    },
+    "actions": {
+      "cancelRunning": "Ακύρωση εκτέλεσης",
+      "translateAllRemaining": "Μετάφραση όλων των υπολοίπων",
+      "downloadEpub": "⬇ Λήψη EPUB",
+      "building": "Δημιουργία…",
+      "back": "← Πίσω",
+      "settingsModel": "← Ρυθμίσεις / μοντέλο",
+      "show": "Εμφάνιση",
+      "hide": "Απόκρυψη",
+      "cancel": "Ακύρωση",
+      "retranslate": "Επαναμετάφραση",
+      "resume": "Συνέχεια",
+      "translateChapter": "Μετάφραση αυτού του κεφαλαίου",
+      "continue": "Συνέχεια →"
+    },
+    "settings": {
+      "provider": "Πάροχος",
+      "model": "Μοντέλο",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "Επικολλήστε το κλειδί {provider}",
+      "apiKeyHint": "Αποκτήστε ένα στο {link}. Το κλειδί σας στέλνεται μόνο στην {provider}, ποτέ στο {host}.",
+      "rememberKey": "Απομνημόνευση κλειδιού μόνο σε αυτόν τον περιηγητή (localStorage). Αποεπιλέξτε για κοινόχρηστες συσκευές.",
+      "showApiKey": "Εμφάνιση API key",
+      "hideApiKey": "Απόκρυψη API key",
+      "translateFrom": "Μετάφραση από",
+      "translateTo": "Μετάφραση σε",
+      "tone": "Ύφος",
+      "customProvider": "Προσαρμοσμένο (συμβατό με OpenAI)",
+      "customModel": "ID μοντέλου",
+      "customModelPlaceholder": "π.χ. gpt-4o, deepseek-chat, …",
+      "customEndpoint": "Τερματικό σημείο API",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "Πλήρες URL για ένα συμβατό με OpenAI τερματικό σημείο /chat/completions.",
+      "openrouterModelPlaceholder": "π.χ. google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "π.χ. kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Εισαγάγετε ένα API key για να συνεχίσετε."
+    },
+    "upload": {
+      "parsing": "Ανάλυση EPUB…",
+      "parsingPdf": "Ανάλυση PDF — εξαγωγή κειμένου και αναδόμηση παραγράφων…",
+      "dropTitle": "Σύρετε ένα EPUB εδώ",
+      "dropSubtitle": "ή κάντε κλικ για να επιλέξετε αρχείο",
+      "noChapters": "Δεν βρέθηκαν αναγνώσιμα κεφάλαια σε αυτό το EPUB.",
+      "ocrRunning": "OCR σελίδων με {model}…",
+      "ocrPageOf": "Σελίδα {current} / {total}",
+      "ocrFailedCount": "{count} αποτυχίες",
+      "scannedPdfDetected": "Το {file} είναι ένα σαρωμένο PDF ({pages} σελίδες) χωρίς επίπεδο κειμένου.",
+      "modelLacksVision": "Το επιλεγμένο μοντέλο {provider} \"{model}\" δεν δέχεται είσοδο εικόνας, επομένως δεν μπορεί να κάνει OCR σε σαρωμένες σελίδες.",
+      "switchToVision": "Εναλλαγή σε:",
+      "runOcr": "Εκτέλεση OCR",
+      "providerHasNoVision": "Το {provider} δεν προσφέρει μοντέλο με δυνατότητα όρασης σε αυτή την επιλογή. Ανοίξτε τις Ρυθμίσεις για να αλλάξετε πάροχο (Gemini, OpenAI ή Claude υποστηρίζουν όλα OCR).",
+      "recentBooks": "Πρόσφατα βιβλία",
+      "progressParagraphs": "{done} / {total} παράγραφοι",
+      "progressPages": "{done} / {total} σελίδες",
+      "deleteBook": "Αφαίρεση από το ιστορικό",
+      "deleteConfirm": "Αφαίρεση του \"{name}\" από το ιστορικό; Το αρχείο και οι μεταφράσεις του θα διαγραφούν.",
+      "untitled": "Χωρίς τίτλο",
+      "relativeJustNow": "μόλις τώρα",
+      "relativeMinutesAgo": "πριν από {n} λεπτό",
+      "relativeHoursAgo": "πριν από {n} ώρα",
+      "relativeDaysAgo": "πριν από {n} ημέρα"
+    },
+    "preview": {
+      "pages": "{count} σελίδες",
+      "scannedTag": "σαρωμένο (απαιτεί OCR)",
+      "textLayerTag": "ανιχνεύτηκε επίπεδο κειμένου",
+      "prev": "Προηγ.",
+      "next": "Επόμ.",
+      "pageOf": "Σελίδα {current} / {total}",
+      "pageList": "Σελίδες ({count})",
+      "pageLabel": "Σελίδα {n}",
+      "willOcrWith": "Θα γίνει OCR σε όλες τις σελίδες με {model}.",
+      "willTranslate": "Το κείμενο εξήχθη. Συνεχίστε για να επιλέξετε κεφάλαια προς μετάφραση.",
+      "startOcr": "Έναρξη OCR ({count} σελίδες)",
+      "continue": "Συνέχεια →",
+      "singlePage": {
+        "button": "Μετάφραση αυτής της σελίδας",
+        "tooltip": "OCR και μετάφραση μόνο αυτής της σελίδας για να δείτε την ποιότητα πριν δεσμευτείτε για ολόκληρο το βιβλίο.",
+        "running": "OCR & μετάφραση αυτής της σελίδας…",
+        "translating": "Μετάφραση αυτής της σελίδας…",
+        "empty": "Δεν βρέθηκε μεταφράσιμο κείμενο σε αυτή τη σελίδα.",
+        "resultHeader": "Σελίδα {page} — δίγλωσση προεπισκόπηση",
+        "needsVision": "Το τρέχον μοντέλο δεν μπορεί να κάνει OCR σε εικόνες. Αλλάξτε πρώτα σε ένα μοντέλο με δυνατότητα όρασης."
+      }
+    },
+    "browse": {
+      "chapters": "Κεφάλαια",
+      "toneTitle": "Ύφος μετάφρασης — επηρεάζει το στυλ γραφής",
+      "paragraphCount": "{nodes} παράγραφοι · {translated} μεταφράστηκαν",
+      "errorOne": "{count} παράγραφος απέτυχε. Μπορείτε να μεταφράσετε ξανά για να δοκιμάσετε — οι ήδη ολοκληρωμένες παράγραφοι παραλείπονται.",
+      "errorMany": "{count} παράγραφοι απέτυχαν. Μπορείτε να μεταφράσετε ξανά για να δοκιμάσετε — οι ήδη ολοκληρωμένες παράγραφοι παραλείπονται.",
+      "noTranslatableText": "Αυτό το κεφάλαιο δεν έχει κείμενο προς μετάφραση (εξώφυλλο, προκαταρκτικά στοιχεία, κ.λπ.).",
+      "translatingAria": "Μετάφραση",
+      "translatingLabel": "μεταφράζεται…",
+      "buildFailed": "Αποτυχία δημιουργίας EPUB:"
+    },
+    "glossary": {
+      "label": "Γλωσσάρι",
+      "title": "Επιβολή συγκεκριμένων μεταφράσεων για όρους σε αυτό το βιβλίο — χρήσιμο για τεχνικά, επαγγελματικά ή εξειδικευμένα έργα.",
+      "none": "Κανένα",
+      "empty": "Δεν έχουν μεταφορτωθεί ακόμη γλωσσάρια.",
+      "entryCount": "{n} όροι",
+      "upload": "Μεταφόρτωση CSV…",
+      "uploading": "Μεταφόρτωση σε εξέλιξη…",
+      "hint": "CSV με δύο στήλες: όρος πηγής, μετάφραση. Προαιρετική τρίτη στήλη: σημείωση. Η πρώτη σειρά μπορεί να είναι επικεφαλίδα. UTF-8.",
+      "delete": "Αφαίρεση γλωσσαρίου",
+      "deleteConfirm": "Αφαίρεση του γλωσσαρίου \"{name}\"; Όσα βιβλία το χρησιμοποιούν θα επιστρέψουν στην κατάσταση χωρίς γλωσσάρι."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Ιδιωματική",
+        "hint": "φυσική & ρέουσα — τα περισσότερα βιβλία"
+      },
+      "literary": {
+        "label": "Λογοτεχνική",
+        "hint": "μυθιστορήματα & λογοτεχνικά έργα"
+      },
+      "technical": {
+        "label": "Τεχνική",
+        "hint": "επαγγελματικά βιβλία & βιβλία αναφοράς"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "φθηνότερο, γρήγορο",
+      "higherQuality": "υψηλότερη ποιότητα",
+      "bestQuality": "καλύτερη ποιότητα",
+      "newestFast": "νεότερο, γρήγορο",
+      "cheapest": "φθηνότερο",
+      "bestQualityStable": "καλύτερη ποιότητα, σταθερό",
+      "balanced": "ισορροπημένο",
+      "freeTierFast": "δωρεάν επίπεδο, γρήγορο",
+      "flagshipCoding": "κορυφαίο για κώδικα/agentic",
+      "longContext": "μεγάλο πλαίσιο, σταθερό",
+      "cheaper": "φθηνότερο",
+      "latestLongContext": "τελευταίο, 256K πλαίσιο"
+    }
+  }
+}

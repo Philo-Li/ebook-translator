@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Ücretsiz E-Kitap Çevirmeni — EPUB / PDF / AI / 40 Dil",
+    "description": "Tamamen tarayıcınızda çalışan ücretsiz AI e-kitap çevirmeni. EPUB ve PDF dosyalarını 40'tan fazla dile çevirin, yan yana iki dilli çıktı alın. Kendi API anahtarınızı kullanın."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Proje",
+    "title": "Ücretsiz E-Kitap Çevirmeni",
+    "subtitle": "Bir EPUB yükleyin, kendi LLM API key'inizi getirin ve orijinal ile çevrilmiş metnin paragraf paragraf iç içe geçtiği iki dilli bir sürüm elde edin. Dosya tamamen tarayıcınızda ayrıştırılır — kitabınız asla herhangi bir sunucuya dokunmaz.",
+    "steps": {
+      "settings": "ayarlar",
+      "upload": "yükle",
+      "preview": "önizleme",
+      "browse": "göz at"
+    },
+    "actions": {
+      "cancelRunning": "İşlemi iptal et",
+      "translateAllRemaining": "Kalanların tümünü çevir",
+      "downloadEpub": "⬇ EPUB indir",
+      "building": "Oluşturuluyor…",
+      "back": "← Geri",
+      "settingsModel": "← Ayarlar / model",
+      "show": "Göster",
+      "hide": "Gizle",
+      "cancel": "İptal",
+      "retranslate": "Yeniden çevir",
+      "resume": "Devam et",
+      "translateChapter": "Bu bölümü çevir",
+      "continue": "Devam et →"
+    },
+    "settings": {
+      "provider": "Sağlayıcı",
+      "model": "Model",
+      "apiKey": "API Key",
+      "apiKeyPlaceholder": "{provider} anahtarınızı yapıştırın",
+      "apiKeyHint": "{link} adresinden bir tane edinin. Anahtarınız sadece {provider} servisine gönderilir, asla {host} adresine gönderilmez.",
+      "rememberKey": "Anahtarı sadece bu tarayıcıda hatırla (localStorage). Ortak kullanılan cihazlarda işareti kaldırın.",
+      "showApiKey": "API key göster",
+      "hideApiKey": "API key gizle",
+      "translateFrom": "Kaynak dil",
+      "translateTo": "Hedef dil",
+      "tone": "Ton",
+      "customProvider": "Özel (OpenAI uyumlu)",
+      "customModel": "Model Kimliği",
+      "customModelPlaceholder": "örn. gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API Uç Noktası",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "OpenAI uyumlu bir /chat/completions uç noktasının tam URL'si.",
+      "openrouterModelPlaceholder": "örn. google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "örn. kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Devam etmek için bir API key girin."
+    },
+    "upload": {
+      "parsing": "EPUB ayrıştırılıyor…",
+      "parsingPdf": "PDF ayrıştırılıyor — metin çıkarılıyor ve paragraflar yeniden oluşturuluyor…",
+      "dropTitle": "Bir EPUB dosyasını buraya bırakın",
+      "dropSubtitle": "veya bir dosya seçmek için tıklayın",
+      "noChapters": "Bu EPUB dosyasında okunabilir bölüm bulunamadı.",
+      "ocrRunning": "{model} ile sayfalar OCR'dan geçiriliyor…",
+      "ocrPageOf": "Sayfa {current} / {total}",
+      "ocrFailedCount": "{count} başarısız",
+      "scannedPdfDetected": "{file}, metin katmanı olmayan taranmış bir PDF ({pages} sayfa).",
+      "modelLacksVision": "Seçtiğiniz {provider} modeli \"{model}\" görsel girdisi kabul etmiyor, bu yüzden taranmış sayfaları OCR'dan geçiremez.",
+      "switchToVision": "Şuna geç:",
+      "runOcr": "OCR'ı çalıştır",
+      "providerHasNoVision": "{provider}, bu seçicide görsel yeteneği olan bir model sunmuyor. Sağlayıcıyı değiştirmek için Ayarlar'ı açın (Gemini, OpenAI veya Claude'un hepsi OCR'ı destekler).",
+      "recentBooks": "Son kitaplar",
+      "progressParagraphs": "{done} / {total} paragraf",
+      "progressPages": "{done} / {total} sayfa",
+      "deleteBook": "Geçmişten kaldır",
+      "deleteConfirm": "\"{name}\" geçmişten kaldırılsın mı? Dosya ve çevirileri silinecektir.",
+      "untitled": "Başlıksız",
+      "relativeJustNow": "az önce",
+      "relativeMinutesAgo": "{n} dk önce",
+      "relativeHoursAgo": "{n} sa önce",
+      "relativeDaysAgo": "{n} gün önce"
+    },
+    "preview": {
+      "pages": "{count} sayfa",
+      "scannedTag": "taranmış (OCR gerekiyor)",
+      "textLayerTag": "metin katmanı algılandı",
+      "prev": "Önceki",
+      "next": "Sonraki",
+      "pageOf": "Sayfa {current} / {total}",
+      "pageList": "Sayfalar ({count})",
+      "pageLabel": "Sayfa {n}",
+      "willOcrWith": "Tüm sayfalar {model} ile OCR'dan geçirilecek.",
+      "willTranslate": "Metin çıkarıldı. Çevrilecek bölümleri seçmek için devam edin.",
+      "startOcr": "OCR'ı başlat ({count} sayfa)",
+      "continue": "Devam et →",
+      "singlePage": {
+        "button": "Bu sayfayı çevir",
+        "tooltip": "Kitabın tamamına başlamadan önce kaliteyi önizleyebilmeniz için sadece bu sayfayı OCR'dan geçirin ve çevirin.",
+        "running": "Bu sayfa OCR'dan geçiriliyor ve çevriliyor…",
+        "translating": "Bu sayfa çevriliyor…",
+        "empty": "Bu sayfada çevrilebilir metin bulunamadı.",
+        "resultHeader": "Sayfa {page} — iki dilli önizleme",
+        "needsVision": "Mevcut model görselleri OCR'dan geçiremiyor. Önce görsel yeteneği olan bir modele geçin."
+      }
+    },
+    "browse": {
+      "chapters": "Bölümler",
+      "toneTitle": "Çeviri tonu — yazım stilini etkiler",
+      "paragraphCount": "{nodes} paragraf · {translated} çevrildi",
+      "errorOne": "{count} paragraf başarısız oldu. Tekrar denemek için yeniden çevirebilirsiniz — tamamlanmış paragraflar atlanır.",
+      "errorMany": "{count} paragraf başarısız oldu. Tekrar denemek için yeniden çevirebilirsiniz — tamamlanmış paragraflar atlanır.",
+      "noTranslatableText": "Bu bölümde çevrilebilir metin yok (kapak, ön bilgiler vb.).",
+      "translatingAria": "Çevriliyor",
+      "translatingLabel": "çevriliyor…",
+      "buildFailed": "EPUB oluşturulamadı:"
+    },
+    "glossary": {
+      "label": "Sözlük",
+      "title": "Bu kitaptaki terimler için belirli çevirileri zorunlu kılın — teknik, profesyonel veya alana özgü çalışmalar için kullanışlıdır.",
+      "none": "Yok",
+      "empty": "Henüz sözlük yüklenmedi.",
+      "entryCount": "{n} terim",
+      "upload": "CSV yükle…",
+      "uploading": "Yükleniyor…",
+      "hint": "İki sütunlu CSV: kaynak terim, çeviri. İsteğe bağlı üçüncü sütun: not. İlk satır başlık olabilir. UTF-8.",
+      "delete": "Sözlüğü kaldır",
+      "deleteConfirm": "\"{name}\" sözlüğü kaldırılsın mı? Bunu kullanan tüm kitaplar sözlüksüz duruma dönecektir."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Deyimsel",
+        "hint": "doğal ve akıcı — çoğu kitap"
+      },
+      "literary": {
+        "label": "Edebi",
+        "hint": "romanlar ve edebi eserler"
+      },
+      "technical": {
+        "label": "Teknik",
+        "hint": "profesyonel ve referans kitapları"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "en ucuz, hızlı",
+      "higherQuality": "daha yüksek kalite",
+      "bestQuality": "en iyi kalite",
+      "newestFast": "en yeni, hızlı",
+      "cheapest": "en ucuz",
+      "bestQualityStable": "en iyi kalite, kararlı",
+      "balanced": "dengeli",
+      "freeTierFast": "ücretsiz katman, hızlı",
+      "flagshipCoding": "amiral gemisi kodlama/aracı",
+      "longContext": "uzun bağlam, kararlı",
+      "cheaper": "daha ucuz",
+      "latestLongContext": "en son, 256K bağlam"
+    }
+  }
+}

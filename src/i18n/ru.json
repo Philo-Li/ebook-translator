@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Бесплатный переводчик книг — EPUB / PDF / ИИ / 40 языков",
+    "description": "Бесплатный переводчик электронных книг на основе ИИ, работающий полностью в браузере. Переводите EPUB и PDF на 40+ языков с двуязычным выводом. Используйте свой API-ключ."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Проект",
+    "title": "Бесплатный переводчик книг",
+    "subtitle": "Загрузите EPUB, используйте свой LLM API key и получите двуязычное издание, где оригинал и перевод чередуются абзац за абзацем. Файл обрабатывается полностью в вашем браузере — ваша книга не передается на сервер.",
+    "steps": {
+      "settings": "настройки",
+      "upload": "загрузить",
+      "preview": "предпросмотр",
+      "browse": "обзор"
+    },
+    "actions": {
+      "cancelRunning": "Отменить выполнение",
+      "translateAllRemaining": "Перевести все оставшиеся",
+      "downloadEpub": "⬇ Скачать EPUB",
+      "building": "Сборка…",
+      "back": "← Назад",
+      "settingsModel": "← Настройки / модель",
+      "show": "Показать",
+      "hide": "Скрыть",
+      "cancel": "Отмена",
+      "retranslate": "Перевести заново",
+      "resume": "Продолжить",
+      "translateChapter": "Перевести эту главу",
+      "continue": "Продолжить →"
+    },
+    "settings": {
+      "provider": "Провайдер",
+      "model": "Модель",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "Вставьте ваш ключ {provider}",
+      "apiKeyHint": "Получите его по ссылке {link}. Ваш ключ отправляется только в {provider}, а не на {host}.",
+      "rememberKey": "Запомнить ключ только в этом браузере (localStorage). Снимите галочку, если устройство общее.",
+      "showApiKey": "Показать API key",
+      "hideApiKey": "Скрыть API key",
+      "translateFrom": "Перевести с",
+      "translateTo": "Перевести на",
+      "tone": "Тон",
+      "customProvider": "Свой (совместимый с OpenAI)",
+      "customModel": "ID модели",
+      "customModelPlaceholder": "напр. gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API Endpoint",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "Полный URL эндпоинта /chat/completions, совместимого с OpenAI.",
+      "openrouterModelPlaceholder": "напр. google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "напр. kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Введите API key, чтобы продолжить."
+    },
+    "upload": {
+      "parsing": "Обработка EPUB…",
+      "parsingPdf": "Обработка PDF — извлечение текста и восстановление абзацев…",
+      "dropTitle": "Перетащите EPUB сюда",
+      "dropSubtitle": "или нажмите, чтобы выбрать файл",
+      "noChapters": "В этом EPUB не найдено глав для чтения.",
+      "ocrRunning": "Распознавание текста (OCR) на страницах с помощью {model}…",
+      "ocrPageOf": "Страница {current} / {total}",
+      "ocrFailedCount": "{count} ошибок",
+      "scannedPdfDetected": "{file} — это сканированный PDF ({pages} стр.) без текстового слоя.",
+      "modelLacksVision": "Выбранная вами модель {provider} «{model}» не поддерживает ввод изображений, поэтому она не может распознать сканированные страницы.",
+      "switchToVision": "Переключиться на:",
+      "runOcr": "Запустить OCR",
+      "providerHasNoVision": "{provider} не предлагает модели с поддержкой зрения в этом списке. Откройте настройки, чтобы сменить провайдера (Gemini, OpenAI или Claude поддерживают OCR).",
+      "recentBooks": "Недавние книги",
+      "progressParagraphs": "{done} / {total} абзацев",
+      "progressPages": "{done} / {total} страниц",
+      "deleteBook": "Удалить из истории",
+      "deleteConfirm": "Удалить «{name}» из истории? Файл и его переводы будут удалены.",
+      "untitled": "Без названия",
+      "relativeJustNow": "только что",
+      "relativeMinutesAgo": "{n} мин. назад",
+      "relativeHoursAgo": "{n} ч. назад",
+      "relativeDaysAgo": "{n} д. назад"
+    },
+    "preview": {
+      "pages": "{count} страниц",
+      "scannedTag": "сканировано (требуется OCR)",
+      "textLayerTag": "обнаружен текстовый слой",
+      "prev": "Назад",
+      "next": "Вперед",
+      "pageOf": "Страница {current} / {total}",
+      "pageList": "Страницы ({count})",
+      "pageLabel": "Страница {n}",
+      "willOcrWith": "Все страницы будут распознаны с помощью {model}.",
+      "willTranslate": "Текст извлечен. Продолжите, чтобы выбрать главы для перевода.",
+      "startOcr": "Начать OCR ({count} страниц)",
+      "continue": "Продолжить →",
+      "singlePage": {
+        "button": "Перевести эту страницу",
+        "tooltip": "Выполнить OCR и перевод только этой страницы, чтобы оценить качество перед обработкой всей книги.",
+        "running": "Распознавание и перевод страницы…",
+        "translating": "Перевод страницы…",
+        "empty": "На этой странице не найдено текста для перевода.",
+        "resultHeader": "Страница {page} — двуязычный предпросмотр",
+        "needsVision": "Текущая модель не поддерживает OCR для изображений. Сначала переключитесь на модель с поддержкой зрения."
+      }
+    },
+    "browse": {
+      "chapters": "Главы",
+      "toneTitle": "Тон перевода — влияет на стиль текста",
+      "paragraphCount": "{nodes} абзацев · {translated} переведено",
+      "errorOne": "{count} абзац не удалось перевести. Попробуйте перевести еще раз — уже переведенные абзацы будут пропущены.",
+      "errorMany": "{count} абзацев не удалось перевести. Попробуйте перевести еще раз — уже переведенные абзацы будут пропущены.",
+      "noTranslatableText": "В этой главе нет текста для перевода (обложка, вступление и т. д.).",
+      "translatingAria": "Перевод…",
+      "translatingLabel": "перевод…",
+      "buildFailed": "Не удалось создать EPUB:"
+    },
+    "glossary": {
+      "label": "Глоссарий",
+      "title": "Задайте конкретные переводы для терминов в этой книге — полезно для технических, профессиональных или узкоспециализированных работ.",
+      "none": "Нет",
+      "empty": "Глоссарии еще не загружены.",
+      "entryCount": "{n} терминов",
+      "upload": "Загрузить CSV…",
+      "uploading": "Загрузка…",
+      "hint": "CSV с двумя столбцами: исходный термин, перевод. Необязательный третий столбец: примечание. Первая строка может быть заголовком. UTF-8.",
+      "delete": "Удалить глоссарий",
+      "deleteConfirm": "Удалить глоссарий \"{name}\"? Книги, использующие его, перейдут на режим без глоссария."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Идиоматический",
+        "hint": "естественный и беглый — большинство книг"
+      },
+      "literary": {
+        "label": "Литературный",
+        "hint": "романы и литературные произведения"
+      },
+      "technical": {
+        "label": "Технический",
+        "hint": "профессиональные и справочные издания"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "самый дешевый, быстрый",
+      "higherQuality": "более высокое качество",
+      "bestQuality": "лучшее качество",
+      "newestFast": "новейший, быстрый",
+      "cheapest": "самый дешевый",
+      "bestQualityStable": "лучшее качество, стабильный",
+      "balanced": "сбалансированный",
+      "freeTierFast": "бесплатный уровень, быстрый",
+      "flagshipCoding": "флагманский для кода/агентов",
+      "longContext": "длинный контекст, стабильный",
+      "cheaper": "дешевле",
+      "latestLongContext": "последний, контекст 256K"
+    }
+  }
+}

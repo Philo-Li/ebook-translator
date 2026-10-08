@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "ফ্রি ইবুক অনুবাদক — EPUB / PDF / AI / 40টি ভাষা",
+    "description": "ব্রাউজারে চলা ফ্রি AI ইবুক অনুবাদক। EPUB এবং PDF ফাইলকে 40+ ভাষায় অনুবাদ করুন, পাশাপাশি দ্বিভাষিক আউটপুটসহ। নিজের API key ব্যবহার করুন।"
+  },
+  "ebookTranslator": {
+    "eyebrow": "প্রজেক্ট",
+    "title": "ফ্রি ইবুক অনুবাদক",
+    "subtitle": "একটি EPUB আপলোড করুন, আপনার নিজস্ব LLM API key ব্যবহার করুন এবং মূল ও অনূদিত টেক্সট অনুচ্ছেদ অনুযায়ী সাজানো একটি দ্বিভাষিক সংস্করণ পান। ফাইলটি সম্পূর্ণভাবে আপনার ব্রাউজারে পার্স করা হয় — আপনার বইটি কোনো সার্ভারে পৌঁছায় না।",
+    "steps": {
+      "settings": "সেটিংস",
+      "upload": "আপলোড",
+      "preview": "প্রিভিউ",
+      "browse": "ব্রাউজ করুন"
+    },
+    "actions": {
+      "cancelRunning": "চলমান কাজ বাতিল করুন",
+      "translateAllRemaining": "বাকি সব অনুবাদ করুন",
+      "downloadEpub": "⬇ EPUB ডাউনলোড করুন",
+      "building": "তৈরি হচ্ছে…",
+      "back": "← ফিরে যান",
+      "settingsModel": "← সেটিংস / মডেল",
+      "show": "দেখান",
+      "hide": "লুকান",
+      "cancel": "বাতিল",
+      "retranslate": "পুনরায় অনুবাদ করুন",
+      "resume": "পুনরায় শুরু করুন",
+      "translateChapter": "এই অধ্যায়টি অনুবাদ করুন",
+      "continue": "চালিয়ে যান →"
+    },
+    "settings": {
+      "provider": "সরবরাহকারী",
+      "model": "মডেল",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "আপনার {provider} key পেস্ট করুন",
+      "apiKeyHint": "{link} থেকে একটি সংগ্রহ করুন। আপনার key শুধুমাত্র {provider}-এ পাঠানো হয়, কখনোই {host}-এ নয়।",
+      "rememberKey": "শুধুমাত্র এই ব্রাউজারে key মনে রাখুন (localStorage)। শেয়ার করা ডিভাইসের জন্য টিক চিহ্ন সরিয়ে দিন।",
+      "showApiKey": "API key দেখান",
+      "hideApiKey": "API key লুকান",
+      "translateFrom": "থেকে অনুবাদ",
+      "translateTo": "তে অনুবাদ",
+      "tone": "ধরন",
+      "customProvider": "কাস্টম (OpenAI-সামঞ্জস্যপূর্ণ)",
+      "customModel": "মডেল ID",
+      "customModelPlaceholder": "যেমন: gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API Endpoint",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "একটি OpenAI-সামঞ্জস্যপূর্ণ /chat/completions endpoint-এর পূর্ণ URL।",
+      "openrouterModelPlaceholder": "যেমন: google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "যেমন: kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "চালিয়ে যেতে একটি API key লিখুন।"
+    },
+    "upload": {
+      "parsing": "EPUB পার্স করা হচ্ছে…",
+      "parsingPdf": "PDF পার্স করা হচ্ছে — টেক্সট বের করা এবং অনুচ্ছেদ পুনর্গঠন করা হচ্ছে…",
+      "dropTitle": "এখানে একটি EPUB ড্রপ করুন",
+      "dropSubtitle": "অথবা ফাইল বেছে নিতে ক্লিক করুন",
+      "noChapters": "এই EPUB-এ কোনো পাঠযোগ্য অধ্যায় পাওয়া যায়নি।",
+      "ocrRunning": "{model} দিয়ে পৃষ্ঠাগুলোর OCR করা হচ্ছে…",
+      "ocrPageOf": "পৃষ্ঠা {current} / {total}",
+      "ocrFailedCount": "{count} ব্যর্থ হয়েছে",
+      "scannedPdfDetected": "{file} একটি স্ক্যান করা PDF ({pages} পৃষ্ঠা), এতে কোনো টেক্সট লেয়ার নেই।",
+      "modelLacksVision": "আপনার নির্বাচিত {provider} মডেল \"{model}\" ইমেজ ইনপুট গ্রহণ করে না, তাই এটি স্ক্যান করা পৃষ্ঠার OCR করতে পারবে না।",
+      "switchToVision": "পরিবর্তন করুন:",
+      "runOcr": "OCR চালান",
+      "providerHasNoVision": "{provider} এই পিকারে কোনো ভিশন-সক্ষম মডেল অফার করে না। প্রোভাইডার পরিবর্তন করতে সেটিংস খুলুন (Gemini, OpenAI, বা Claude সবাই OCR সমর্থন করে)।",
+      "recentBooks": "সাম্প্রতিক বই",
+      "progressParagraphs": "{done} / {total} অনুচ্ছেদ",
+      "progressPages": "{done} / {total} পৃষ্ঠা",
+      "deleteBook": "ইতিহাস থেকে সরান",
+      "deleteConfirm": "ইতিহাস থেকে \"{name}\" সরিয়ে ফেলবেন? ফাইল এবং এর অনুবাদগুলো মুছে ফেলা হবে।",
+      "untitled": "শিরোনামহীন",
+      "relativeJustNow": "এইমাত্র",
+      "relativeMinutesAgo": "{n} মিনিট আগে",
+      "relativeHoursAgo": "{n} ঘণ্টা আগে",
+      "relativeDaysAgo": "{n} দিন আগে"
+    },
+    "preview": {
+      "pages": "{count} পৃষ্ঠা",
+      "scannedTag": "স্ক্যান করা (OCR প্রয়োজন)",
+      "textLayerTag": "টেক্সট লেয়ার শনাক্ত হয়েছে",
+      "prev": "পূর্ববর্তী",
+      "next": "পরবর্তী",
+      "pageOf": "পৃষ্ঠা {current} / {total}",
+      "pageList": "পৃষ্ঠা ({count})",
+      "pageLabel": "পৃষ্ঠা {n}",
+      "willOcrWith": "{model} দিয়ে সব পৃষ্ঠার OCR করা হবে।",
+      "willTranslate": "টেক্সট বের করা হয়েছে। অনুবাদ করার জন্য অধ্যায় নির্বাচন করতে এগিয়ে যান।",
+      "startOcr": "OCR শুরু করুন ({count} পৃষ্ঠা)",
+      "continue": "এগিয়ে যান →",
+      "singlePage": {
+        "button": "এই পৃষ্ঠাটি অনুবাদ করুন",
+        "tooltip": "পুরো বইয়ের কাজ শুরু করার আগে মান যাচাই করতে শুধু এই পৃষ্ঠাটি OCR ও অনুবাদ করুন।",
+        "running": "এই পৃষ্ঠাটি OCR ও অনুবাদ করা হচ্ছে…",
+        "translating": "এই পৃষ্ঠাটি অনুবাদ করা হচ্ছে…",
+        "empty": "এই পৃষ্ঠায় অনুবাদযোগ্য কোনো টেক্সট পাওয়া যায়নি।",
+        "resultHeader": "পৃষ্ঠা {page} — দ্বিভাষিক প্রিভিউ",
+        "needsVision": "বর্তমান মডেলটি ইমেজ OCR করতে পারে না। প্রথমে একটি ভিশন-সক্ষম মডেলে পরিবর্তন করুন।"
+      }
+    },
+    "browse": {
+      "chapters": "অধ্যায়গুলো",
+      "toneTitle": "অনুবাদের ধরন — লেখার শৈলীকে প্রভাবিত করে",
+      "paragraphCount": "{nodes}টি অনুচ্ছেদ · {translated}টি অনূদিত",
+      "errorOne": "{count}টি অনুচ্ছেদ ব্যর্থ হয়েছে। আপনি পুনরায় চেষ্টা করতে পারেন — ইতিমধ্যে সম্পন্ন অনুচ্ছেদগুলো বাদ দেওয়া হবে।",
+      "errorMany": "{count}টি অনুচ্ছেদ ব্যর্থ হয়েছে। আপনি পুনরায় চেষ্টা করতে পারেন — ইতিমধ্যে সম্পন্ন অনুচ্ছেদগুলো বাদ দেওয়া হবে।",
+      "noTranslatableText": "এই অধ্যায়ে কোনো অনুবাদযোগ্য টেক্সট নেই (কভার, শুরুর অংশ ইত্যাদি)।",
+      "translatingAria": "অনুবাদ করা হচ্ছে",
+      "translatingLabel": "অনুবাদ হচ্ছে…",
+      "buildFailed": "EPUB তৈরি করতে ব্যর্থ হয়েছে:"
+    },
+    "glossary": {
+      "label": "শব্দকোষ",
+      "title": "এই বইয়ের নির্দিষ্ট কিছু শব্দের জন্য অনুবাদ নির্ধারণ করুন — প্রযুক্তিগত, পেশাদার বা বিশেষ কোনো বিষয়ের কাজের জন্য এটি কার্যকর।",
+      "none": "কোনটিই নয়",
+      "empty": "এখনো কোনো শব্দকোষ আপলোড করা হয়নি।",
+      "entryCount": "{n} টি শব্দ",
+      "upload": "CSV আপলোড করুন…",
+      "uploading": "আপলোড করা হচ্ছে…",
+      "hint": "দুটি কলাম বিশিষ্ট CSV: মূল শব্দ, অনুবাদ। ঐচ্ছিক তৃতীয় কলাম: নোট। প্রথম সারিটি হেডার হতে পারে। UTF-8।",
+      "delete": "শব্দকোষ মুছে ফেলুন",
+      "deleteConfirm": "\"{name}\" শব্দকোষটি মুছে ফেলবেন? এটি ব্যবহারকারী যেকোনো বই কোনো শব্দকোষ ছাড়াই চলবে।"
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "সাবলীল",
+        "hint": "প্রাকৃতিক ও সাবলীল — অধিকাংশ বই"
+      },
+      "literary": {
+        "label": "সাহিত্যিক",
+        "hint": "উপন্যাস ও সাহিত্যকর্ম"
+      },
+      "technical": {
+        "label": "কারিগরি",
+        "hint": "পেশাদার ও রেফারেন্স বই"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "সবচেয়ে সস্তা, দ্রুত",
+      "higherQuality": "উচ্চতর মান",
+      "bestQuality": "সেরা মান",
+      "newestFast": "নতুনতম, দ্রুত",
+      "cheapest": "সবচেয়ে সস্তা",
+      "bestQualityStable": "সেরা মান, স্থিতিশীল",
+      "balanced": "ভারসাম্যপূর্ণ",
+      "freeTierFast": "ফ্রি টিয়ার, দ্রুত",
+      "flagshipCoding": "ফ্ল্যাগশিপ কোডিং/এজেন্টিক",
+      "longContext": "দীর্ঘ কনটেক্সট, স্থিতিশীল",
+      "cheaper": "আরও সস্তা",
+      "latestLongContext": "সর্বশেষ, 256K কনটেক্সট"
+    }
+  }
+}

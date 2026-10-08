@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Gratis e-bogsoversætter — EPUB / PDF / AI / 40 sprog",
+    "description": "Gratis AI-e-bogsoversætter, der kører helt i din browser. Oversæt EPUB- og PDF-filer til 40+ sprog med tosproget output side om side. Brug din egen API-nøgle."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Projekt",
+    "title": "Gratis e-bogsoversætter",
+    "subtitle": "Upload en EPUB, brug din egen LLM API-nøgle, og få en tosproget udgave tilbage, hvor den originale og oversatte tekst er flettet sammen afsnit for afsnit. Filen analyseres udelukkende i din browser — din bog rører aldrig nogen server.",
+    "steps": {
+      "settings": "indstillinger",
+      "upload": "upload",
+      "preview": "forhåndsvisning",
+      "browse": "gennemse"
+    },
+    "actions": {
+      "cancelRunning": "Annuller kørsel",
+      "translateAllRemaining": "Oversæt alle resterende",
+      "downloadEpub": "⬇ Download EPUB",
+      "building": "Bygger…",
+      "back": "← Tilbage",
+      "settingsModel": "← Indstillinger / model",
+      "show": "Vis",
+      "hide": "Skjul",
+      "cancel": "Annuller",
+      "retranslate": "Gen-oversæt",
+      "resume": "Genoptag",
+      "translateChapter": "Oversæt dette kapitel",
+      "continue": "Fortsæt →"
+    },
+    "settings": {
+      "provider": "Udbyder",
+      "model": "Model",
+      "apiKey": "API-nøgle",
+      "apiKeyPlaceholder": "Indsæt din {provider}-nøgle",
+      "apiKeyHint": "Få en på {link}. Din nøgle sendes kun til {provider}, aldrig til {host}.",
+      "rememberKey": "Husk nøgle kun i denne browser (localStorage). Fjern markering for delte enheder.",
+      "showApiKey": "Vis API-nøgle",
+      "hideApiKey": "Skjul API-nøgle",
+      "translateFrom": "Oversæt fra",
+      "translateTo": "Oversæt til",
+      "tone": "Tone",
+      "customProvider": "Brugerdefineret (OpenAI-kompatibel)",
+      "customModel": "Model-ID",
+      "customModelPlaceholder": "f.eks. gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API-slutpunkt",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "Fuldt URL til et OpenAI-kompatibelt /chat/completions-slutpunkt.",
+      "openrouterModelPlaceholder": "f.eks. google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "f.eks. kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Indtast en API-nøgle for at fortsætte."
+    },
+    "upload": {
+      "parsing": "Analyserer EPUB…",
+      "parsingPdf": "Analyserer PDF — udtrækker tekst og rekonstruerer afsnit…",
+      "dropTitle": "Slip en EPUB her",
+      "dropSubtitle": "eller klik for at vælge en fil",
+      "noChapters": "Ingen læsbare kapitler fundet i denne EPUB.",
+      "ocrRunning": "OCR-behandler sider med {model}…",
+      "ocrPageOf": "Side {current} / {total}",
+      "ocrFailedCount": "{count} fejlede",
+      "scannedPdfDetected": "{file} er en scannet PDF ({pages} sider) uden tekstlag.",
+      "modelLacksVision": "Din valgte {provider}-model \"{model}\" accepterer ikke billedinput, så den kan ikke OCR-behandle scannede sider.",
+      "switchToVision": "Skift til:",
+      "runOcr": "Kør OCR",
+      "providerHasNoVision": "{provider} tilbyder ikke en model med billedgenkendelse i denne vælger. Åbn Indstillinger for at skifte udbyder (Gemini, OpenAI eller Claude understøtter alle OCR).",
+      "recentBooks": "Nylige bøger",
+      "progressParagraphs": "{done} / {total} afsnit",
+      "progressPages": "{done} / {total} sider",
+      "deleteBook": "Fjern fra historik",
+      "deleteConfirm": "Fjern \"{name}\" fra historik? Filen og dens oversættelser vil blive slettet.",
+      "untitled": "Uden titel",
+      "relativeJustNow": "lige nu",
+      "relativeMinutesAgo": "{n} min siden",
+      "relativeHoursAgo": "{n} t siden",
+      "relativeDaysAgo": "{n} d siden"
+    },
+    "preview": {
+      "pages": "{count} sider",
+      "scannedTag": "scannet (kræver OCR)",
+      "textLayerTag": "tekstlag fundet",
+      "prev": "Forrige",
+      "next": "Næste",
+      "pageOf": "Side {current} / {total}",
+      "pageList": "Sider ({count})",
+      "pageLabel": "Side {n}",
+      "willOcrWith": "Vil OCR-behandle alle sider med {model}.",
+      "willTranslate": "Tekst udtrukket. Fortsæt for at vælge kapitler, der skal oversættes.",
+      "startOcr": "Start OCR ({count} sider)",
+      "continue": "Fortsæt →",
+      "singlePage": {
+        "button": "Oversæt denne side",
+        "tooltip": "OCR-behandl og oversæt kun denne side, så du kan forhåndsvise kvaliteten, før du forpligter dig til hele bogen.",
+        "running": "OCR-behandler & oversætter denne side…",
+        "translating": "Oversætter denne side…",
+        "empty": "Ingen oversætbar tekst fundet på denne side.",
+        "resultHeader": "Side {page} — tosproget forhåndsvisning",
+        "needsVision": "Den nuværende model kan ikke OCR-behandle billeder. Skift til en model med billedgenkendelse først."
+      }
+    },
+    "browse": {
+      "chapters": "Kapitler",
+      "toneTitle": "Oversættelsestone — påvirker skrivestilen",
+      "paragraphCount": "{nodes} afsnit · {translated} oversat",
+      "errorOne": "{count} afsnit mislykkedes. Du kan oversætte igen for at prøve forfra — afsnit, der allerede er færdige, springes over.",
+      "errorMany": "{count} afsnit mislykkedes. Du kan oversætte igen for at prøve forfra — afsnit, der allerede er færdige, springes over.",
+      "noTranslatableText": "Dette kapitel har ingen tekst, der kan oversættes (forside, indledende sider osv.).",
+      "translatingAria": "Oversætter",
+      "translatingLabel": "oversætter…",
+      "buildFailed": "Kunne ikke oprette EPUB:"
+    },
+    "glossary": {
+      "label": "Ordliste",
+      "title": "Tving specifikke oversættelser for termer i denne bog — nyttigt til tekniske, professionelle eller domænespecifikke værker.",
+      "none": "Ingen",
+      "empty": "Ingen ordlister uploadet endnu.",
+      "entryCount": "{n} termer",
+      "upload": "Upload CSV…",
+      "uploading": "Uploader…",
+      "hint": "CSV med to kolonner: kildeterm, oversættelse. Valgfri tredje kolonne: note. Første række kan være en overskrift. UTF-8.",
+      "delete": "Fjern ordliste",
+      "deleteConfirm": "Fjern ordlisten \"{name}\"? Alle bøger, der bruger den, vil vende tilbage til ingen ordliste."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Idiomatisk",
+        "hint": "naturlig & flydende — de fleste bøger"
+      },
+      "literary": {
+        "label": "Litterær",
+        "hint": "romaner & litterære værker"
+      },
+      "technical": {
+        "label": "Teknisk",
+        "hint": "fag- & opslagsbøger"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "billigst, hurtig",
+      "higherQuality": "højere kvalitet",
+      "bestQuality": "bedste kvalitet",
+      "newestFast": "nyeste, hurtig",
+      "cheapest": "billigst",
+      "bestQualityStable": "bedste kvalitet, stabil",
+      "balanced": "balanceret",
+      "freeTierFast": "gratis niveau, hurtig",
+      "flagshipCoding": "flagskib kodning/agentisk",
+      "longContext": "lang kontekst, stabil",
+      "cheaper": "billigere",
+      "latestLongContext": "nyeste, 256K kontekst"
+    }
+  }
+}

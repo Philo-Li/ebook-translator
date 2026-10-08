@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Ilmainen e-kirjankääntäjä — EPUB / PDF / AI / 40 kieltä",
+    "description": "Ilmainen AI-e-kirjakääntäjä, joka toimii kokonaan selaimessasi. Käännä EPUB- ja PDF-tiedostoja yli 40 kielelle kaksikielisellä rinnakkaisnäytöllä. Käytä omaa API-avaintasi."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Projekti",
+    "title": "Ilmainen e-kirjankääntäjä",
+    "subtitle": "Lataa EPUB, käytä omaa LLM API key -avaintasi ja saat takaisin kaksikielisen painoksen, jossa alkuperäinen ja käännetty teksti on lomitettu kappaleittain. Tiedosto käsitellään kokonaan selaimessasi — kirjasi ei koskaan päädy palvelimelle.",
+    "steps": {
+      "settings": "asetukset",
+      "upload": "lataa",
+      "preview": "esikatselu",
+      "browse": "selaa"
+    },
+    "actions": {
+      "cancelRunning": "Peruuta suoritus",
+      "translateAllRemaining": "Käännä kaikki loput",
+      "downloadEpub": "⬇ Lataa EPUB",
+      "building": "Rakennetaan…",
+      "back": "← Takaisin",
+      "settingsModel": "← Asetukset / malli",
+      "show": "Näytä",
+      "hide": "Piilota",
+      "cancel": "Peruuta",
+      "retranslate": "Käännä uudelleen",
+      "resume": "Jatka",
+      "translateChapter": "Käännä tämä luku",
+      "continue": "Jatka →"
+    },
+    "settings": {
+      "provider": "Palveluntarjoaja",
+      "model": "Malli",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "Liitä {provider}-avaimesi",
+      "apiKeyHint": "Hanki sellainen osoitteesta {link}. Avaimesi lähetetään vain palveluun {provider}, ei koskaan sivustolle {host}.",
+      "rememberKey": "Muista avain vain tässä selaimessa (localStorage). Poista valinta jaetuilla laitteilla.",
+      "showApiKey": "Näytä API key",
+      "hideApiKey": "Piilota API key",
+      "translateFrom": "Käännä kielestä",
+      "translateTo": "Käännä kielelle",
+      "tone": "Sävy",
+      "customProvider": "Mukautettu (OpenAI-yhteensopiva)",
+      "customModel": "Mallin tunnus",
+      "customModelPlaceholder": "esim. gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API-päätepiste",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "Täysi URL-osoite OpenAI-yhteensopivaan /chat/completions-päätepisteeseen.",
+      "openrouterModelPlaceholder": "esim. google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "esim. kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Syötä API key jatkaaksesi."
+    },
+    "upload": {
+      "parsing": "Jäsennetään EPUB-tiedostoa…",
+      "parsingPdf": "Jäsennellään PDF-tiedostoa — puretaan tekstiä ja muodostetaan kappaleita uudelleen…",
+      "dropTitle": "Pudota EPUB tähän",
+      "dropSubtitle": "tai valitse tiedosto klikkaamalla",
+      "noChapters": "Tästä EPUB-tiedostosta ei löytynyt luettavia lukuja.",
+      "ocrRunning": "Suoritetaan OCR-tunnistusta sivuille mallilla {model}…",
+      "ocrPageOf": "Sivu {current} / {total}",
+      "ocrFailedCount": "{count} epäonnistui",
+      "scannedPdfDetected": "{file} on skannattu PDF ({pages} sivua), jossa ei ole tekstikerrosta.",
+      "modelLacksVision": "Valitsemasi {provider}-malli \"{model}\" ei tue kuvia, joten se ei voi suorittaa OCR-tunnistusta skannatuille sivuille.",
+      "switchToVision": "Vaihda malliin:",
+      "runOcr": "Suorita OCR",
+      "providerHasNoVision": "{provider} ei tarjoa kuvantunnistukseen kykenevää mallia tässä valikossa. Avaa asetukset vaihtaaksesi palveluntarjoajaa (Gemini, OpenAI tai Claude tukevat kaikki OCR-tunnistusta).",
+      "recentBooks": "Viimeisimmät kirjat",
+      "progressParagraphs": "{done} / {total} kappaletta",
+      "progressPages": "{done} / {total} sivua",
+      "deleteBook": "Poista historiasta",
+      "deleteConfirm": "Poistetaanko \"{name}\" historiasta? Tiedosto ja sen käännökset poistetaan.",
+      "untitled": "Nimetön",
+      "relativeJustNow": "juuri nyt",
+      "relativeMinutesAgo": "{n} min sitten",
+      "relativeHoursAgo": "{n} t sitten",
+      "relativeDaysAgo": "{n} pv sitten"
+    },
+    "preview": {
+      "pages": "{count} sivua",
+      "scannedTag": "skannattu (vaatii OCR-tunnistuksen)",
+      "textLayerTag": "tekstikerros havaittu",
+      "prev": "Edellinen",
+      "next": "Seuraava",
+      "pageOf": "Sivu {current} / {total}",
+      "pageList": "Sivut ({count})",
+      "pageLabel": "Sivu {n}",
+      "willOcrWith": "Suorittaa OCR-tunnistuksen kaikille sivuille mallilla {model}.",
+      "willTranslate": "Teksti purettu. Jatka valitsemalla luvut käännettäväksi.",
+      "startOcr": "Aloita OCR ({count} sivua)",
+      "continue": "Jatka →",
+      "singlePage": {
+        "button": "Käännä tämä sivu",
+        "tooltip": "Suorita OCR ja käännä vain tämä sivu, jotta voit esikatsella laatua ennen koko kirjan käsittelyä.",
+        "running": "Suoritetaan OCR-tunnistusta ja käännetään tätä sivua…",
+        "translating": "Käännetään tätä sivua…",
+        "empty": "Sivulta ei löytynyt käännettävää tekstiä.",
+        "resultHeader": "Sivu {page} — kaksikielinen esikatselu",
+        "needsVision": "Nykyinen malli ei tue kuvien OCR-tunnistusta. Vaihda ensin malliin, joka tukee kuvantunnistusta."
+      }
+    },
+    "browse": {
+      "chapters": "Luvut",
+      "toneTitle": "Käännöksen sävy — vaikuttaa kirjoitustyyliin",
+      "paragraphCount": "{nodes} kappaletta · {translated} käännetty",
+      "errorOne": "{count} kappale epäonnistui. Voit yrittää uudelleen — jo käännetyt kappaleet ohitetaan.",
+      "errorMany": "{count} kappaletta epäonnistui. Voit yrittää uudelleen — jo käännetyt kappaleet ohitetaan.",
+      "noTranslatableText": "Tässä luvussa ei ole käännettävää tekstiä (kansi, alkusanat jne.).",
+      "translatingAria": "Käännetään",
+      "translatingLabel": "käännetään…",
+      "buildFailed": "EPUB-tiedoston luominen epäonnistui:"
+    },
+    "glossary": {
+      "label": "Sanasto",
+      "title": "Pakota tietyt käännökset tämän kirjan termeille — hyödyllistä teknisissä, ammatillisissa tai alakohtaisissa teoksissa.",
+      "none": "Ei mitään",
+      "empty": "Sanastoja ei ole vielä ladattu.",
+      "entryCount": "{n} termiä",
+      "upload": "Lataa CSV…",
+      "uploading": "Ladataan…",
+      "hint": "CSV, jossa on kaksi saraketta: lähdetermi, käännös. Valinnainen kolmas sarake: huomautus. Ensimmäinen rivi voi olla otsikkorivi. UTF-8.",
+      "delete": "Poista sanasto",
+      "deleteConfirm": "Poistetaanko sanasto \"{name}\"? Kaikki sitä käyttävät kirjat palaavat tilaan, jossa sanastoa ei ole käytössä."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Luonteva",
+        "hint": "luonnollinen & sujuva — useimmat kirjat"
+      },
+      "literary": {
+        "label": "Kirjallinen",
+        "hint": "romaanit & kaunokirjallisuus"
+      },
+      "technical": {
+        "label": "Tekninen",
+        "hint": "ammatti- & hakuteokset"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "halvin, nopea",
+      "higherQuality": "korkeampi laatu",
+      "bestQuality": "paras laatu",
+      "newestFast": "uusin, nopea",
+      "cheapest": "halvin",
+      "bestQualityStable": "paras laatu, vakaa",
+      "balanced": "tasapainoinen",
+      "freeTierFast": "ilmaisversio, nopea",
+      "flagshipCoding": "lippulaiva koodaukseen/agenttikäyttöön",
+      "longContext": "pitkä konteksti, vakaa",
+      "cheaper": "halvempi",
+      "latestLongContext": "viimeisin, 256K konteksti"
+    }
+  }
+}

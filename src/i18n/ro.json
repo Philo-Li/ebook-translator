@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Traducător gratuit de ebook-uri — EPUB / PDF / IA / 40 limbi",
+    "description": "Traducător gratuit de ebook-uri cu IA, care rulează complet în browserul tău. Tradu fișiere EPUB și PDF în peste 40 de limbi cu ieșire bilingvă alăturată. Folosește propria cheie API."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Proiect",
+    "title": "Traducător gratuit de ebook-uri",
+    "subtitle": "Încarcă un EPUB, folosește propria cheie API LLM și primește o ediție bilingvă cu textul original și cel tradus intercalate paragraf cu paragraf. Fișierul este procesat integral în browserul tău — cartea ta nu ajunge niciodată pe vreun server.",
+    "steps": {
+      "settings": "setări",
+      "upload": "încărcare",
+      "preview": "previzualizare",
+      "browse": "răsfoiește"
+    },
+    "actions": {
+      "cancelRunning": "Anulează rularea",
+      "translateAllRemaining": "Tradu tot ce a rămas",
+      "downloadEpub": "⬇ Descarcă EPUB",
+      "building": "Se generează…",
+      "back": "← Înapoi",
+      "settingsModel": "← Setări / model",
+      "show": "Afișează",
+      "hide": "Ascunde",
+      "cancel": "Anulează",
+      "retranslate": "Retraduce",
+      "resume": "Reluare",
+      "translateChapter": "Tradu acest capitol",
+      "continue": "Continuă →"
+    },
+    "settings": {
+      "provider": "Furnizor",
+      "model": "Model",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "Lipește cheia {provider}",
+      "apiKeyHint": "Obține una la {link}. Cheia ta este trimisă doar către {provider}, niciodată către {host}.",
+      "rememberKey": "Reține cheia doar în acest browser (localStorage). Debifează pentru dispozitive partajate.",
+      "showApiKey": "Afișează API key",
+      "hideApiKey": "Ascunde API key",
+      "translateFrom": "Tradu din",
+      "translateTo": "Tradu în",
+      "tone": "Ton",
+      "customProvider": "Personalizat (compatibil OpenAI)",
+      "customModel": "ID Model",
+      "customModelPlaceholder": "de ex. gpt-4o, deepseek-chat, …",
+      "customEndpoint": "Endpoint API",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "URL complet către un endpoint /chat/completions compatibil OpenAI.",
+      "openrouterModelPlaceholder": "de ex. google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "de ex. kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Introdu un API key pentru a continua."
+    },
+    "upload": {
+      "parsing": "Se analizează EPUB…",
+      "parsingPdf": "Analizez PDF — extrag textul și reconstruiesc paragrafele…",
+      "dropTitle": "Trage un EPUB aici",
+      "dropSubtitle": "sau clic pentru a alege un fișier",
+      "noChapters": "Nu s-au găsit capitole lizibile în acest EPUB.",
+      "ocrRunning": "Efectuez OCR pe pagini cu {model}…",
+      "ocrPageOf": "Pagina {current} / {total}",
+      "ocrFailedCount": "{count} eșuate",
+      "scannedPdfDetected": "{file} este un PDF scanat ({pages} pagini) fără strat de text.",
+      "modelLacksVision": "Modelul {provider} selectat „{model}” nu acceptă input de tip imagine, deci nu poate efectua OCR pe paginile scanate.",
+      "switchToVision": "Comută la:",
+      "runOcr": "Rulează OCR",
+      "providerHasNoVision": "{provider} nu oferă un model cu capabilități vizuale în acest selector. Deschide Setări pentru a schimba furnizorul (Gemini, OpenAI sau Claude suportă toate OCR).",
+      "recentBooks": "Cărți recente",
+      "progressParagraphs": "{done} / {total} paragrafe",
+      "progressPages": "{done} / {total} pagini",
+      "deleteBook": "Elimină din istoric",
+      "deleteConfirm": "Elimini „{name}” din istoric? Fișierul și traducerile sale vor fi șterse.",
+      "untitled": "Fără titlu",
+      "relativeJustNow": "chiar acum",
+      "relativeMinutesAgo": "acum {n} min",
+      "relativeHoursAgo": "acum {n} h",
+      "relativeDaysAgo": "acum {n} z"
+    },
+    "preview": {
+      "pages": "{count} pagini",
+      "scannedTag": "scanat (necesită OCR)",
+      "textLayerTag": "strat de text detectat",
+      "prev": "Înapoi",
+      "next": "Înainte",
+      "pageOf": "Pagina {current} / {total}",
+      "pageList": "Pagini ({count})",
+      "pageLabel": "Pagina {n}",
+      "willOcrWith": "Se va efectua OCR pe toate paginile cu {model}.",
+      "willTranslate": "Text extras. Continuă pentru a alege capitolele de tradus.",
+      "startOcr": "Pornește OCR ({count} pagini)",
+      "continue": "Continuă →",
+      "singlePage": {
+        "button": "Traduceți această pagină",
+        "tooltip": "Efectuează OCR și traduce doar această pagină pentru a previzualiza calitatea înainte de a te angaja la întreaga carte.",
+        "running": "Efectuez OCR și traduc această pagină…",
+        "translating": "Traduc această pagină…",
+        "empty": "Nu a fost găsit text traductibil pe această pagină.",
+        "resultHeader": "Pagina {page} — previzualizare bilingvă",
+        "needsVision": "Modelul curent nu poate efectua OCR pe imagini. Comută mai întâi la un model cu capabilități vizuale."
+      }
+    },
+    "browse": {
+      "chapters": "Capitole",
+      "toneTitle": "Tonul traducerii — afectează stilul scrierii",
+      "paragraphCount": "{nodes} paragrafe · {translated} traduse",
+      "errorOne": "{count} paragraf a eșuat. Poți retraduce pentru a reîncerca — paragrafele deja finalizate sunt omise.",
+      "errorMany": "{count} paragrafe au eșuat. Poți retraduce pentru a reîncerca — paragrafele deja finalizate sunt omise.",
+      "noTranslatableText": "Acest capitol nu are text traductibil (copertă, pagini introductive etc.).",
+      "translatingAria": "Se traduce",
+      "translatingLabel": "se traduce…",
+      "buildFailed": "Eșec la generarea EPUB:"
+    },
+    "glossary": {
+      "label": "Glosar",
+      "title": "Impune traduceri specifice pentru termenii din această carte — util pentru lucrări tehnice, profesionale sau specifice unui domeniu.",
+      "none": "Niciunul",
+      "empty": "Nu există glosare încărcate încă.",
+      "entryCount": "{n} termeni",
+      "upload": "Încarcă CSV…",
+      "uploading": "Se încarcă…",
+      "hint": "CSV cu două coloane: termen sursă, traducere. A treia coloană opțională: notă. Primul rând poate fi un antet. UTF-8.",
+      "delete": "Elimină glosarul",
+      "deleteConfirm": "Elimini glosarul \"{name}\"? Orice carte care îl folosește va reveni la starea fără glosar."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Idiomatic",
+        "hint": "natural și fluent — majoritatea cărților"
+      },
+      "literary": {
+        "label": "Literar",
+        "hint": "romane și opere literare"
+      },
+      "technical": {
+        "label": "Tehnic",
+        "hint": "cărți profesionale și de referință"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "cel mai ieftin, rapid",
+      "higherQuality": "calitate superioară",
+      "bestQuality": "cea mai bună calitate",
+      "newestFast": "cel mai nou, rapid",
+      "cheapest": "cel mai ieftin",
+      "bestQualityStable": "cea mai bună calitate, stabil",
+      "balanced": "echilibrat",
+      "freeTierFast": "nivel gratuit, rapid",
+      "flagshipCoding": "vârf de gamă programare/agentic",
+      "longContext": "context lung, stabil",
+      "cheaper": "mai ieftin",
+      "latestLongContext": "cel mai recent, context 256K"
+    }
+  }
+}

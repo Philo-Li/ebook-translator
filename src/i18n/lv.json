@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Bezmaksas e-grāmatu tulkotājs — EPUB / PDF / AI / 40 valodu",
+    "description": "Bezmaksas AI e-grāmatu tulkotājs, kas pilnībā darbojas jūsu pārlūkprogrammā. Tulkojiet EPUB un PDF failus 40+ valodās ar divvalodu paralēlu izvadi. Izmantojiet savu API atslēgu."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Projekts",
+    "title": "Bezmaksas e-grāmatu tulkotājs",
+    "subtitle": "Augšupielādējiet EPUB, izmantojiet savu LLM API key un saņemiet divvalodu izdevumu, kurā oriģinālais un tulkotais teksts ir sakārtots pa rindkopām. Fails tiek apstrādāts tikai jūsu pārlūkprogrammā — jūsu grāmata nekad nenonāk nevienā serverī.",
+    "steps": {
+      "settings": "iestatījumi",
+      "upload": "augšupielādēt",
+      "preview": "priekšskatījums",
+      "browse": "pārlūkot"
+    },
+    "actions": {
+      "cancelRunning": "Atcelt izpildi",
+      "translateAllRemaining": "Tulkot visu atlikušo",
+      "downloadEpub": "⬇ Lejupielādēt EPUB",
+      "building": "Notiek izveide…",
+      "back": "← Atpakaļ",
+      "settingsModel": "← Iestatījumi / modelis",
+      "show": "Rādīt",
+      "hide": "Paslēpt",
+      "cancel": "Atcelt",
+      "retranslate": "Pārtulkot no jauna",
+      "resume": "Turpināt",
+      "translateChapter": "Tulkot šo nodaļu",
+      "continue": "Turpināt →"
+    },
+    "settings": {
+      "provider": "Pakalpojumu sniedzējs",
+      "model": "Modelis",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "Ielīmē savu {provider} atslēgu",
+      "apiKeyHint": "Iegūsti to vietnē {link}. Tava atslēga tiek nosūtīta tikai {provider}, nekad {host}.",
+      "rememberKey": "Atcerēties atslēgu tikai šajā pārlūkprogrammā (localStorage). Noņem atzīmi koplietotās ierīcēs.",
+      "showApiKey": "Rādīt API key",
+      "hideApiKey": "Slēpt API key",
+      "translateFrom": "Tulkot no",
+      "translateTo": "Tulkot uz",
+      "tone": "Tonis",
+      "customProvider": "Pielāgots (OpenAI-savietojams)",
+      "customModel": "Modeļa ID",
+      "customModelPlaceholder": "piem., gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API galapunkts",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "Pilna URL adrese uz OpenAI-savietojamu /chat/completions galapunktu.",
+      "openrouterModelPlaceholder": "piem., google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "piem., kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Ievadi API key, lai turpinātu."
+    },
+    "upload": {
+      "parsing": "Analizē EPUB…",
+      "parsingPdf": "Apstrādā PDF — izvelk tekstu un rekonstruē rindkopas…",
+      "dropTitle": "Iemet EPUB šeit",
+      "dropSubtitle": "vai klikšķini, lai izvēlētos failu",
+      "noChapters": "Šajā EPUB netika atrasta neviena lasāma nodaļa.",
+      "ocrRunning": "Veic OCR lapām ar {model}…",
+      "ocrPageOf": "Lapa {current} / {total}",
+      "ocrFailedCount": "{count} neizdevās",
+      "scannedPdfDetected": "{file} ir skenēts PDF ({pages} lapas) bez teksta slāņa.",
+      "modelLacksVision": "Jūsu izvēlētais {provider} modelis \"{model}\" nepieņem attēlus, tāpēc tas nevar veikt OCR skenētām lapām.",
+      "switchToVision": "Pārslēgties uz:",
+      "runOcr": "Veikt OCR",
+      "providerHasNoVision": "{provider} nepiedāvā redzes spējīgu modeli šajā izvēlnē. Atveriet iestatījumus, lai pārslēgtu pakalpojumu sniedzēju (Gemini, OpenAI vai Claude atbalsta OCR).",
+      "recentBooks": "Jaunākās grāmatas",
+      "progressParagraphs": "{done} / {total} rindkopas",
+      "progressPages": "{done} / {total} lappuses",
+      "deleteBook": "Dzēst no vēstures",
+      "deleteConfirm": "Dzēst \"{name}\" no vēstures? Fails un tā tulkojumi tiks izdzēsti.",
+      "untitled": "Bez nosaukuma",
+      "relativeJustNow": "tikko",
+      "relativeMinutesAgo": "pirms {n} min.",
+      "relativeHoursAgo": "pirms {n} st.",
+      "relativeDaysAgo": "pirms {n} d."
+    },
+    "preview": {
+      "pages": "{count} lapas",
+      "scannedTag": "skenēts (nepieciešams OCR)",
+      "textLayerTag": "atrasts teksta slānis",
+      "prev": "Iepriekšējā",
+      "next": "Nākamā",
+      "pageOf": "Lapa {current} / {total}",
+      "pageList": "Lapas ({count})",
+      "pageLabel": "Lapa {n}",
+      "willOcrWith": "Veiks OCR visām lapām ar {model}.",
+      "willTranslate": "Teksts izvilkts. Turpiniet, lai izvēlētos nodaļas tulkošanai.",
+      "startOcr": "Sākt OCR ({count} lapas)",
+      "continue": "Turpināt →",
+      "singlePage": {
+        "button": "Tulkot šo lapu",
+        "tooltip": "Veikt OCR + tulkot tikai šo lapu, lai varētu priekšskatīt kvalitāti pirms visas grāmatas apstrādes.",
+        "running": "Veic OCR un tulko šo lapu…",
+        "translating": "Tulko šo lapu…",
+        "empty": "Šajā lapā nav atrasts tulkojams teksts.",
+        "resultHeader": "Lapa {page} — divvalodu priekšskatījums",
+        "needsVision": "Pašreizējais modelis nevar veikt OCR attēliem. Vispirms pārslēdzieties uz redzes spējīgu modeli."
+      }
+    },
+    "browse": {
+      "chapters": "Nodaļas",
+      "toneTitle": "Tulkošanas tonis — ietekmē rakstīšanas stilu",
+      "paragraphCount": "{nodes} rindkopas · {translated} iztulkotas",
+      "errorOne": "{count} rindkopa neizdevās. Vari tulkot vēlreiz — jau pabeigtās rindkopas tiks izlaistas.",
+      "errorMany": "{count} rindkopas neizdevās. Vari tulkot vēlreiz — jau pabeigtās rindkopas tiks izlaistas.",
+      "noTranslatableText": "Šajā nodaļā nav tulkojama teksta (vāks, ievaddaļa utt.).",
+      "translatingAria": "Tulko",
+      "translatingLabel": "tulko…",
+      "buildFailed": "Neizdevās izveidot EPUB:"
+    },
+    "glossary": {
+      "label": "Glosārijs",
+      "title": "Uzspiest konkrētus tulkojumus šīs grāmatas terminiem — noderīgi tehniskiem, profesionāliem vai specifiskiem darbiem.",
+      "none": "Nav",
+      "empty": "Vēl nav augšupielādēts neviens glosārijs.",
+      "entryCount": "{n} termini",
+      "upload": "Augšupielādēt CSV…",
+      "uploading": "Augšupielādē…",
+      "hint": "CSV ar divām kolonnām: avota termins, tulkojums. Papildu trešā kolonna: piezīme. Pirmā rinda var būt galvene. UTF-8.",
+      "delete": "Noņemt glosāriju",
+      "deleteConfirm": "Noņemt glosāriju \"{name}\"? Visas grāmatas, kas to izmanto, atgriezīsies pie glosārija neizmantošanas."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Idiomātisks",
+        "hint": "dabisks un plūstošs — vairumam grāmatu"
+      },
+      "literary": {
+        "label": "Literārs",
+        "hint": "romāni un literārie darbi"
+      },
+      "technical": {
+        "label": "Tehnisks",
+        "hint": "profesionālā un uzziņu literatūra"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "lētākais, ātrs",
+      "higherQuality": "augstāka kvalitāte",
+      "bestQuality": "labākā kvalitāte",
+      "newestFast": "jaunākais, ātrs",
+      "cheapest": "lētākais",
+      "bestQualityStable": "labākā kvalitāte, stabils",
+      "balanced": "līdzsvarots",
+      "freeTierFast": "bezmaksas līmenis, ātrs",
+      "flagshipCoding": "vadošais kodēšanai/aģentiem",
+      "longContext": "garš konteksts, stabils",
+      "cheaper": "lētāks",
+      "latestLongContext": "jaunākais, 256K konteksts"
+    }
+  }
+}

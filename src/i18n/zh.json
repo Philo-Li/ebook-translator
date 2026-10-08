@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "免费电子书翻译器 — EPUB / PDF / AI / 40 种语言",
+    "description": "免费在线电子书翻译器，浏览器内运行，自带 API Key 即可使用。AI 智能翻译 EPUB 与 PDF，输出双语对照版本，支持 40+ 种语言。"
+  },
+  "ebookTranslator": {
+    "eyebrow": "项目",
+    "title": "免费电子书翻译器",
+    "subtitle": "上传 EPUB 或 PDF，使用你自己的 LLM API key，即可获得原文与译文逐段对照的双语版本。文件完全在浏览器中解析 —— 你的书籍绝不会上传到任何服务器。",
+    "steps": {
+      "settings": "设置",
+      "upload": "上传",
+      "preview": "预览",
+      "browse": "浏览"
+    },
+    "actions": {
+      "cancelRunning": "取消运行",
+      "translateAllRemaining": "翻译所有剩余部分",
+      "downloadEpub": "⬇ 下载 EPUB",
+      "building": "生成中…",
+      "back": "← 返回",
+      "settingsModel": "← 设置 / 模型",
+      "show": "显示",
+      "hide": "隐藏",
+      "cancel": "取消",
+      "retranslate": "重新翻译",
+      "resume": "继续",
+      "translateChapter": "翻译本章",
+      "continue": "继续 →"
+    },
+    "settings": {
+      "provider": "提供商",
+      "model": "模型",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "粘贴您的 {provider} 密钥",
+      "apiKeyHint": "在 {link} 获取。您的密钥仅发送至 {provider}，绝不会发送至 {host}。",
+      "rememberKey": "仅在此浏览器中记住密钥 (localStorage)。在公用设备上请取消勾选。",
+      "showApiKey": "显示 API key",
+      "hideApiKey": "隐藏 API key",
+      "translateFrom": "源语言",
+      "translateTo": "目标语言",
+      "tone": "语气",
+      "customProvider": "自定义 (兼容 OpenAI)",
+      "customModel": "模型 ID",
+      "customModelPlaceholder": "例如 gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API 端点",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "兼容 OpenAI 的 /chat/completions 端点的完整 URL。必须是 https:// 且能从公网访问。",
+      "openrouterModelPlaceholder": "例如 google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "例如 kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "输入 API key 以继续。"
+    },
+    "upload": {
+      "parsing": "正在解析 EPUB…",
+      "parsingPdf": "正在解析 PDF —— 提取文字并重建段落…",
+      "dropTitle": "将 EPUB 或 PDF 拖放到此处",
+      "dropSubtitle": "或点击选择文件",
+      "noChapters": "此文件中未找到可读章节。",
+      "ocrRunning": "{model} 正在识别页面…",
+      "ocrPageOf": "第 {current} / {total} 页",
+      "ocrFailedCount": "{count} 页失败",
+      "scannedPdfDetected": "{file} 是扫描版 PDF（{pages} 页），没有文字层。",
+      "modelLacksVision": "你当前选择的 {provider} 模型「{model}」不支持图像输入，无法识别扫描页。",
+      "switchToVision": "切换到：",
+      "runOcr": "开始识别",
+      "providerHasNoVision": "{provider} 在此选择器中没有支持视觉的模型。请到设置切换 provider（Gemini / OpenAI / Claude 都支持 OCR）。",
+      "recentBooks": "最近的书",
+      "progressParagraphs": "{done} / {total} 段",
+      "progressPages": "{done} / {total} 页",
+      "deleteBook": "从历史中删除",
+      "deleteConfirm": "从历史中删除「{name}」？文件和译文将一并删除。",
+      "untitled": "未命名",
+      "relativeJustNow": "刚刚",
+      "relativeMinutesAgo": "{n} 分钟前",
+      "relativeHoursAgo": "{n} 小时前",
+      "relativeDaysAgo": "{n} 天前"
+    },
+    "preview": {
+      "pages": "{count} 页",
+      "scannedTag": "扫描版（需要 OCR）",
+      "textLayerTag": "检测到文字层",
+      "prev": "上一页",
+      "next": "下一页",
+      "pageOf": "第 {current} / {total} 页",
+      "pageList": "页面 ({count})",
+      "pageLabel": "第 {n} 页",
+      "willOcrWith": "将用 {model} 识别全部页面。",
+      "willTranslate": "已提取文本，下一步可挑选章节翻译。",
+      "startOcr": "开始 OCR（{count} 页）",
+      "continue": "继续 →",
+      "singlePage": {
+        "button": "翻译本页",
+        "tooltip": "只对当前页做 OCR + 翻译，先看看质量再决定是否处理整本。",
+        "running": "正在识别并翻译当前页…",
+        "translating": "正在翻译当前页…",
+        "empty": "本页没有可翻译的文本。",
+        "resultHeader": "第 {page} 页 —— 双语预览",
+        "needsVision": "当前模型不支持图像识别，请先切换到支持视觉的模型。"
+      }
+    },
+    "browse": {
+      "chapters": "章节",
+      "toneTitle": "翻译语气 — 影响写作风格",
+      "paragraphCount": "{nodes} 段落 · {translated} 已翻译",
+      "errorOne": "{count} 个段落失败。您可以重新翻译以重试 — 已完成的段落将被跳过。",
+      "errorMany": "{count} 个段落失败。您可以重新翻译以重试 — 已完成的段落将被跳过。",
+      "noTranslatableText": "此章节没有可翻译的文本（封面、前言等）。",
+      "translatingAria": "正在翻译",
+      "translatingLabel": "翻译中…",
+      "buildFailed": "生成 EPUB 失败："
+    },
+    "glossary": {
+      "label": "术语表",
+      "title": "为本书中的术语强制指定译法 —— 适合技术、专业或领域类书籍。",
+      "none": "无",
+      "empty": "尚未上传任何术语表。",
+      "entryCount": "{n} 条",
+      "upload": "上传 CSV…",
+      "uploading": "上传中…",
+      "hint": "两列 CSV：原文，译文。可选第三列：备注。首行可为表头。UTF-8。",
+      "delete": "删除术语表",
+      "deleteConfirm": "确定删除术语表「{name}」？正在使用它的书将回退为不使用术语表。"
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "地道",
+        "hint": "自然流畅 — 多数书籍"
+      },
+      "literary": {
+        "label": "文学",
+        "hint": "小说与文学作品"
+      },
+      "technical": {
+        "label": "技术",
+        "hint": "专业与参考书籍"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "最便宜，快速",
+      "higherQuality": "较高质量",
+      "bestQuality": "最佳质量",
+      "newestFast": "最新，快速",
+      "cheapest": "最便宜",
+      "bestQualityStable": "最佳质量，稳定",
+      "balanced": "均衡",
+      "freeTierFast": "免费额度，快速",
+      "flagshipCoding": "旗舰级 编程/智能体",
+      "longContext": "长上下文，稳定",
+      "cheaper": "更便宜",
+      "latestLongContext": "最新，256K 上下文"
+    }
+  }
+}

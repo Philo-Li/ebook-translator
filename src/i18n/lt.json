@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Nemokamas el. knygų vertėjas — EPUB / PDF / AI / 40 kalbų",
+    "description": "Nemokamas AI el. knygų vertėjas, veikiantis visiškai jūsų naršyklėje. Verskite EPUB ir PDF failus į 40+ kalbų su dvikalbe gretima išvestimi. Naudokite savo API raktą."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Projektas",
+    "title": "Nemokamas el. knygų vertėjas",
+    "subtitle": "Įkelkite EPUB, naudokite savo LLM API key ir gaukite dvikalbį leidimą, kuriame originalus ir išverstas tekstas pateikiami pakaitomis po kiekvienos pastraipos. Failas apdorojamas tik jūsų naršyklėje — jūsų knyga niekada nepasiekia jokio serverio.",
+    "steps": {
+      "settings": "nustatymai",
+      "upload": "įkelti",
+      "preview": "peržiūra",
+      "browse": "naršyti"
+    },
+    "actions": {
+      "cancelRunning": "Atšaukti vykdymą",
+      "translateAllRemaining": "Išversti visus likusius",
+      "downloadEpub": "⬇ Atsisiųsti EPUB",
+      "building": "Kuriama…",
+      "back": "← Atgal",
+      "settingsModel": "← Nustatymai / modelis",
+      "show": "Rodyti",
+      "hide": "Slėpti",
+      "cancel": "Atšaukti",
+      "retranslate": "Perversti",
+      "resume": "Tęsti",
+      "translateChapter": "Išversti šį skyrių",
+      "continue": "Tęsti →"
+    },
+    "settings": {
+      "provider": "Teikėjas",
+      "model": "Modelis",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "Įklijuokite savo {provider} raktą",
+      "apiKeyHint": "Gaukite jį {link}. Jūsų raktas siunčiamas tik į {provider}, niekada į {host}.",
+      "rememberKey": "Įsiminti raktą tik šioje naršyklėje (localStorage). Atžymėkite, jei naudojatės bendru įrenginiu.",
+      "showApiKey": "Rodyti API key",
+      "hideApiKey": "Slėpti API key",
+      "translateFrom": "Versti iš",
+      "translateTo": "Versti į",
+      "tone": "Tonas",
+      "customProvider": "Pasirinktinis (suderinamas su OpenAI)",
+      "customModel": "Modelio ID",
+      "customModelPlaceholder": "pvz., gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API prieigos taškas",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "Pilnas URL į su OpenAI suderinamą /chat/completions prieigos tašką.",
+      "openrouterModelPlaceholder": "pvz., google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "pvz., kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Įveskite API key, kad tęstumėte."
+    },
+    "upload": {
+      "parsing": "Apdorojamas EPUB…",
+      "parsingPdf": "Analizuojamas PDF — išgaunamas tekstas ir atkuriamos pastraipos…",
+      "dropTitle": "Vilkite EPUB čia",
+      "dropSubtitle": "arba spustelėkite, kad pasirinktumėte failą",
+      "noChapters": "Šiame EPUB nerasta skaitomų skyrių.",
+      "ocrRunning": "Atliekamas puslapių OCR su {model}…",
+      "ocrPageOf": "{current} / {total} puslapis",
+      "ocrFailedCount": "{count} nepavyko",
+      "scannedPdfDetected": "{file} yra nuskaitytas PDF ({pages} psl.) be teksto sluoksnio.",
+      "modelLacksVision": "Jūsų pasirinktas {provider} modelis „{model}“ nepriima vaizdų, todėl negali atlikti nuskaitytų puslapių OCR.",
+      "switchToVision": "Perjungti į:",
+      "runOcr": "Vykdyti OCR",
+      "providerHasNoVision": "{provider} šiame pasirinkime nesiūlo modelio su vaizdo atpažinimo funkcija. Atidarykite nustatymus, kad pakeistumėte tiekėją (Gemini, OpenAI arba Claude palaiko OCR).",
+      "recentBooks": "Naujausios knygos",
+      "progressParagraphs": "{done} / {total} pastraipų",
+      "progressPages": "{done} / {total} puslapių",
+      "deleteBook": "Pašalinti iš istorijos",
+      "deleteConfirm": "Pašalinti „{name}“ iš istorijos? Failas ir jo vertimai bus ištrinti.",
+      "untitled": "Be pavadinimo",
+      "relativeJustNow": "ką tik",
+      "relativeMinutesAgo": "prieš {n} min.",
+      "relativeHoursAgo": "prieš {n} val.",
+      "relativeDaysAgo": "prieš {n} d."
+    },
+    "preview": {
+      "pages": "{count} puslapiai",
+      "scannedTag": "nuskaitytas (reikia OCR)",
+      "textLayerTag": "aptiktas teksto sluoksnis",
+      "prev": "Atgal",
+      "next": "Pirmyn",
+      "pageOf": "{current} / {total} puslapis",
+      "pageList": "Puslapiai ({count})",
+      "pageLabel": "{n} puslapis",
+      "willOcrWith": "Visi puslapiai bus apdoroti OCR su {model}.",
+      "willTranslate": "Tekstas išgautas. Tęskite pasirinkdami skyrius vertimui.",
+      "startOcr": "Pradėti OCR ({count} puslapiai)",
+      "continue": "Tęsti →",
+      "singlePage": {
+        "button": "Išversti šį puslapį",
+        "tooltip": "Atlikti OCR ir išversti tik šį puslapį, kad galėtumėte peržiūrėti kokybę prieš pradedant visą knygą.",
+        "running": "Atliekamas šio puslapio OCR ir vertimas…",
+        "translating": "Verčiamas šis puslapis…",
+        "empty": "Šiame puslapyje nerasta verčiamo teksto.",
+        "resultHeader": "{page} puslapis — dvikalbė peržiūra",
+        "needsVision": "Dabartinis modelis negali atlikti vaizdų OCR. Pirmiausia perjunkite į modelį su vaizdo atpažinimo funkcija."
+      }
+    },
+    "browse": {
+      "chapters": "Skyriai",
+      "toneTitle": "Vertimo tonas — veikia rašymo stilių",
+      "paragraphCount": "{nodes} pastraipos · {translated} išversta",
+      "errorOne": "Nepavyko išversti {count} pastraipos. Galite bandyti dar kartą — jau išverstos pastraipos bus praleistos.",
+      "errorMany": "Nepavyko išversti {count} pastraipų. Galite bandyti dar kartą — jau išverstos pastraipos bus praleistos.",
+      "noTranslatableText": "Šiame skyriuje nėra verčiamo teksto (viršelis, įžanga ir pan.).",
+      "translatingAria": "Verčiama",
+      "translatingLabel": "verčiama…",
+      "buildFailed": "Nepavyko sukurti EPUB:"
+    },
+    "glossary": {
+      "label": "Žodynėlis",
+      "title": "Nustatykite konkrečius vertimus šios knygos terminams — naudinga techniniams, profesiniams ar specifinės srities darbams.",
+      "none": "Nėra",
+      "empty": "Žodynėlių dar neįkelta.",
+      "entryCount": "{n} terminai",
+      "upload": "Įkelti CSV…",
+      "uploading": "Įkeliama…",
+      "hint": "CSV su dviem stulpeliais: šaltinio terminas, vertimas. Papildomas trečias stulpelis: pastaba. Pirma eilutė gali būti antraštė. UTF-8.",
+      "delete": "Pašalinti žodynėlį",
+      "deleteConfirm": "Pašalinti žodynėlį „{name}“? Visos jį naudojančios knygos bus grąžintos į būseną be žodynėlio."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Idiomiškas",
+        "hint": "natūralus ir sklandus — dauguma knygų"
+      },
+      "literary": {
+        "label": "Literatūrinis",
+        "hint": "romanai ir literatūros kūriniai"
+      },
+      "technical": {
+        "label": "Techninis",
+        "hint": "profesinė ir informacinė literatūra"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "pigiausias, greitas",
+      "higherQuality": "aukštesnė kokybė",
+      "bestQuality": "geriausia kokybė",
+      "newestFast": "naujausias, greitas",
+      "cheapest": "pigiausias",
+      "bestQualityStable": "geriausia kokybė, stabilus",
+      "balanced": "subalansuotas",
+      "freeTierFast": "nemokamas lygis, greitas",
+      "flagshipCoding": "pagrindinis programavimo / agentinis",
+      "longContext": "ilgas kontekstas, stabilus",
+      "cheaper": "pigesnis",
+      "latestLongContext": "naujausias, 256K kontekstas"
+    }
+  }
+}

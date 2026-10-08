@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Gratis ebookvertaler — EPUB / PDF / AI / 40 talen",
+    "description": "Gratis AI-ebookvertaler die volledig in je browser draait. Vertaal EPUB- en PDF-bestanden naar 40+ talen met tweetalige output naast elkaar. Gebruik je eigen API-sleutel."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Project",
+    "title": "Gratis ebookvertaler",
+    "subtitle": "Upload een EPUB, gebruik je eigen LLM API key en ontvang een tweetalige editie waarbij de originele en vertaalde tekst alinea voor alinea zijn afgewisseld. Het bestand wordt volledig in je browser verwerkt — je boek komt nooit op een server terecht.",
+    "steps": {
+      "settings": "instellingen",
+      "upload": "uploaden",
+      "preview": "voorbeeld",
+      "browse": "bladeren"
+    },
+    "actions": {
+      "cancelRunning": "Annuleren",
+      "translateAllRemaining": "Vertaal alle resterende",
+      "downloadEpub": "⬇ Download EPUB",
+      "building": "Bouwen…",
+      "back": "← Terug",
+      "settingsModel": "← Instellingen / model",
+      "show": "Tonen",
+      "hide": "Verbergen",
+      "cancel": "Annuleren",
+      "retranslate": "Opnieuw vertalen",
+      "resume": "Hervatten",
+      "translateChapter": "Vertaal dit hoofdstuk",
+      "continue": "Doorgaan →"
+    },
+    "settings": {
+      "provider": "Provider",
+      "model": "Model",
+      "apiKey": "API Key",
+      "apiKeyPlaceholder": "Plak je {provider} sleutel",
+      "apiKeyHint": "Vraag er een aan op {link}. Je sleutel wordt alleen naar {provider} verzonden, nooit naar {host}.",
+      "rememberKey": "Sleutel alleen in deze browser onthouden (localStorage). Vink uit voor gedeelde apparaten.",
+      "showApiKey": "API key tonen",
+      "hideApiKey": "API key verbergen",
+      "translateFrom": "Vertalen uit",
+      "translateTo": "Vertalen naar",
+      "tone": "Toon",
+      "customProvider": "Aangepast (OpenAI-compatibel)",
+      "customModel": "Model-ID",
+      "customModelPlaceholder": "bijv. gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API-endpoint",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "Volledige URL naar een OpenAI-compatibel /chat/completions-endpoint.",
+      "openrouterModelPlaceholder": "bijv. google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "bijv. kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Voer een API key in om door te gaan."
+    },
+    "upload": {
+      "parsing": "EPUB verwerken…",
+      "parsingPdf": "PDF wordt geparseerd — tekst wordt geëxtraheerd en alinea's worden gereconstrueerd…",
+      "dropTitle": "Sleep hier een EPUB naartoe",
+      "dropSubtitle": "of klik om een bestand te kiezen",
+      "noChapters": "Geen leesbare hoofdstukken gevonden in deze EPUB.",
+      "ocrRunning": "Pagina's worden via OCR verwerkt met {model}…",
+      "ocrPageOf": "Pagina {current} / {total}",
+      "ocrFailedCount": "{count} mislukt",
+      "scannedPdfDetected": "{file} is een gescande PDF ({pages} pagina's) zonder tekstlaag.",
+      "modelLacksVision": "Het door jou geselecteerde {provider}-model \"{model}\" accepteert geen afbeeldingen, dus het kan geen gescande pagina's via OCR verwerken.",
+      "switchToVision": "Overschakelen naar:",
+      "runOcr": "OCR uitvoeren",
+      "providerHasNoVision": "{provider} biedt geen model met visuele ondersteuning in deze keuzelijst. Open Instellingen om van provider te wisselen (Gemini, OpenAI of Claude ondersteunen allemaal OCR).",
+      "recentBooks": "Recente boeken",
+      "progressParagraphs": "{done} / {total} alinea's",
+      "progressPages": "{done} / {total} pagina's",
+      "deleteBook": "Verwijderen uit geschiedenis",
+      "deleteConfirm": "\"{name}\" uit geschiedenis verwijderen? Het bestand en de bijbehorende vertalingen worden verwijderd.",
+      "untitled": "Naamloos",
+      "relativeJustNow": "zojuist",
+      "relativeMinutesAgo": "{n} min. geleden",
+      "relativeHoursAgo": "{n} u. geleden",
+      "relativeDaysAgo": "{n} d. geleden"
+    },
+    "preview": {
+      "pages": "{count} pagina's",
+      "scannedTag": "gescand (OCR vereist)",
+      "textLayerTag": "tekstlaag gedetecteerd",
+      "prev": "Vorige",
+      "next": "Volgende",
+      "pageOf": "Pagina {current} / {total}",
+      "pageList": "Pagina's ({count})",
+      "pageLabel": "Pagina {n}",
+      "willOcrWith": "Zal alle pagina's via OCR verwerken met {model}.",
+      "willTranslate": "Tekst geëxtraheerd. Ga door om hoofdstukken te kiezen om te vertalen.",
+      "startOcr": "OCR starten ({count} pagina's)",
+      "continue": "Doorgaan →",
+      "singlePage": {
+        "button": "Vertaal deze pagina",
+        "tooltip": "OCR + vertaal alleen deze pagina zodat je de kwaliteit kunt bekijken voordat je het hele boek verwerkt.",
+        "running": "Deze pagina wordt via OCR verwerkt & vertaald…",
+        "translating": "Deze pagina wordt vertaald…",
+        "empty": "Geen vertaalbare tekst gevonden op deze pagina.",
+        "resultHeader": "Pagina {page} — tweetalig voorbeeld",
+        "needsVision": "Het huidige model kan geen OCR uitvoeren op afbeeldingen. Schakel eerst over naar een model met visuele ondersteuning."
+      }
+    },
+    "browse": {
+      "chapters": "Hoofdstukken",
+      "toneTitle": "Vertaaltoon — beïnvloedt de schrijfstijl",
+      "paragraphCount": "{nodes} alinea's · {translated} vertaald",
+      "errorOne": "{count} alinea mislukt. Je kunt opnieuw vertalen om het nogmaals te proberen — reeds voltooide alinea's worden overgeslagen.",
+      "errorMany": "{count} alinea's mislukt. Je kunt opnieuw vertalen om het nogmaals te proberen — reeds voltooide alinea's worden overgeslagen.",
+      "noTranslatableText": "Dit hoofdstuk bevat geen vertaalbare tekst (omslag, voorwerk, etc.).",
+      "translatingAria": "Vertalen",
+      "translatingLabel": "vertalen…",
+      "buildFailed": "EPUB maken mislukt:"
+    },
+    "glossary": {
+      "label": "Woordenlijst",
+      "title": "Forceer specifieke vertalingen voor termen in dit boek — handig voor technische, professionele of domeinspecifieke werken.",
+      "none": "Geen",
+      "empty": "Nog geen woordenlijsten geüpload.",
+      "entryCount": "{n} termen",
+      "upload": "CSV uploaden…",
+      "uploading": "Bezig met uploaden…",
+      "hint": "CSV met twee kolommen: bronterm, vertaling. Optionele derde kolom: opmerking. De eerste rij mag een koptekst zijn. UTF-8.",
+      "delete": "Woordenlijst verwijderen",
+      "deleteConfirm": "De woordenlijst \"{name}\" verwijderen? Boeken die deze gebruiken, vallen terug naar geen woordenlijst."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Idiomatisch",
+        "hint": "natuurlijk & vloeiend — de meeste boeken"
+      },
+      "literary": {
+        "label": "Literair",
+        "hint": "romans & literaire werken"
+      },
+      "technical": {
+        "label": "Technisch",
+        "hint": "professionele & naslagwerken"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "goedkoopst, snel",
+      "higherQuality": "hogere kwaliteit",
+      "bestQuality": "beste kwaliteit",
+      "newestFast": "nieuwst, snel",
+      "cheapest": "goedkoopst",
+      "bestQualityStable": "beste kwaliteit, stabiel",
+      "balanced": "gebalanceerd",
+      "freeTierFast": "gratis niveau, snel",
+      "flagshipCoding": "vlaggenschip coderen/agentisch",
+      "longContext": "lange context, stabiel",
+      "cheaper": "goedkoper",
+      "latestLongContext": "nieuwste, 256K context"
+    }
+  }
+}

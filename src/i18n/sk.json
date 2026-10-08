@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Bezplatný prekladač e-kníh — EPUB / PDF / AI / 40 jazykov",
+    "description": "Bezplatný AI prekladač e-kníh, ktorý beží úplne vo vašom prehliadači. Prekladajte súbory EPUB a PDF do viac ako 40 jazykov s dvojjazyčným paralelným výstupom. Použite vlastný API kľúč."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Projekt",
+    "title": "Bezplatný prekladač e-kníh",
+    "subtitle": "Nahrajte EPUB, použite svoj vlastný LLM API key a získajte bilingválne vydanie s pôvodným a preloženým textom striedajúcim sa po odsekoch. Súbor sa spracováva výhradne vo vašom prehliadači — vaša kniha sa nikdy nedostane na žiadny server.",
+    "steps": {
+      "settings": "nastavenia",
+      "upload": "nahrať",
+      "preview": "ukážka",
+      "browse": "prehľadávať"
+    },
+    "actions": {
+      "cancelRunning": "Zrušiť prebiehajúce",
+      "translateAllRemaining": "Preložiť všetko zostávajúce",
+      "downloadEpub": "⬇ Stiahnuť EPUB",
+      "building": "Vytvára sa…",
+      "back": "← Späť",
+      "settingsModel": "← Nastavenia / model",
+      "show": "Zobraziť",
+      "hide": "Skryť",
+      "cancel": "Zrušiť",
+      "retranslate": "Preložiť znova",
+      "resume": "Pokračovať",
+      "translateChapter": "Preložiť túto kapitolu",
+      "continue": "Pokračovať →"
+    },
+    "settings": {
+      "provider": "Poskytovateľ",
+      "model": "Model",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "Vložte svoj {provider} kľúč",
+      "apiKeyHint": "Získajte ho na {link}. Váš kľúč sa odosiela iba do {provider}, nikdy nie na {host}.",
+      "rememberKey": "Zapamätať kľúč iba v tomto prehliadači (localStorage). Zrušte začiarknutie pri zdieľaných zariadeniach.",
+      "showApiKey": "Zobraziť API key",
+      "hideApiKey": "Skryť API key",
+      "translateFrom": "Preložiť z",
+      "translateTo": "Preložiť do",
+      "tone": "Tón",
+      "customProvider": "Vlastné (kompatibilné s OpenAI)",
+      "customModel": "ID modelu",
+      "customModelPlaceholder": "napr. gpt-4o, deepseek-chat, …",
+      "customEndpoint": "Koncový bod API",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "Úplná URL adresa ku koncovému bodu /chat/completions kompatibilnému s OpenAI.",
+      "openrouterModelPlaceholder": "napr. google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "napr. kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Pre pokračovanie zadajte API key."
+    },
+    "upload": {
+      "parsing": "Spracúvam EPUB…",
+      "parsingPdf": "Analyzujem PDF — extrahujem text a rekonštruujem odseky…",
+      "dropTitle": "Sem presuňte EPUB",
+      "dropSubtitle": "alebo kliknite pre výber súboru",
+      "noChapters": "V tomto EPUB sa nenašli žiadne čitateľné kapitoly.",
+      "ocrRunning": "Vykonávam OCR stránok pomocou {model}…",
+      "ocrPageOf": "Strana {current} / {total}",
+      "ocrFailedCount": "{count} zlyhalo",
+      "scannedPdfDetected": "{file} je skenované PDF ({pages} strán) bez textovej vrstvy.",
+      "modelLacksVision": "Vami zvolený model {provider} „{model}“ neprijíma obrázkové vstupy, takže nedokáže vykonať OCR skenovaných stránok.",
+      "switchToVision": "Prepnúť na:",
+      "runOcr": "Spustiť OCR",
+      "providerHasNoVision": "{provider} neponúka v tomto výbere model schopný spracovať obraz. Otvorte Nastavenia a prepnite poskytovateľa (Gemini, OpenAI alebo Claude podporujú OCR).",
+      "recentBooks": "Nedávne knihy",
+      "progressParagraphs": "{done} / {total} odsekov",
+      "progressPages": "{done} / {total} strán",
+      "deleteBook": "Odstrániť z histórie",
+      "deleteConfirm": "Odstrániť „{name}“ z histórie? Súbor a jeho preklady budú vymazané.",
+      "untitled": "Bez názvu",
+      "relativeJustNow": "práve teraz",
+      "relativeMinutesAgo": "pred {n} min.",
+      "relativeHoursAgo": "pred {n} hod.",
+      "relativeDaysAgo": "pred {n} dňami"
+    },
+    "preview": {
+      "pages": "{count} strán",
+      "scannedTag": "skenované (vyžaduje OCR)",
+      "textLayerTag": "zistená textová vrstva",
+      "prev": "Predchádzajúca",
+      "next": "Nasledujúca",
+      "pageOf": "Strana {current} / {total}",
+      "pageList": "Strany ({count})",
+      "pageLabel": "Strana {n}",
+      "willOcrWith": "Vykoná OCR všetkých stránok pomocou {model}.",
+      "willTranslate": "Text extrahovaný. Pokračujte výberom kapitol na preklad.",
+      "startOcr": "Spustiť OCR ({count} strán)",
+      "continue": "Pokračovať →",
+      "singlePage": {
+        "button": "Preložiť túto stranu",
+        "tooltip": "Vykoná OCR a preklad iba tejto strany, aby ste si mohli overiť kvalitu pred spracovaním celej knihy.",
+        "running": "Vykonávam OCR a prekladám túto stranu…",
+        "translating": "Prekladám túto stranu…",
+        "empty": "Na tejto strane sa nenašiel žiadny preložiteľný text.",
+        "resultHeader": "Strana {page} — dvojjazyčná ukážka",
+        "needsVision": "Aktuálny model nedokáže vykonať OCR obrázkov. Najprv prepnite na model schopný spracovať obraz."
+      }
+    },
+    "browse": {
+      "chapters": "Kapitoly",
+      "toneTitle": "Tón prekladu — ovplyvňuje štýl písania",
+      "paragraphCount": "{nodes} odsekov · {translated} preložených",
+      "errorOne": "{count} odsek zlyhal. Môžete skúsiť preložiť znova — už hotové odseky budú vynechané.",
+      "errorMany": "{count} odsekov zlyhalo. Môžete skúsiť preložiť znova — už hotové odseky budú vynechané.",
+      "noTranslatableText": "Táto kapitola neobsahuje žiadny preložiteľný text (obálka, úvodné informácie atď.).",
+      "translatingAria": "Prekladám",
+      "translatingLabel": "prekladá sa…",
+      "buildFailed": "Nepodarilo sa vytvoriť EPUB:"
+    },
+    "glossary": {
+      "label": "Glosár",
+      "title": "Vynútiť špecifické preklady termínov v tejto knihe — užitočné pre technické, odborné alebo špecializované diela.",
+      "none": "Žiadny",
+      "empty": "Zatiaľ neboli nahrané žiadne glosáre.",
+      "entryCount": "{n} termínov",
+      "upload": "Nahrať CSV…",
+      "uploading": "Nahrávam…",
+      "hint": "CSV s dvoma stĺpcami: zdrojový termín, preklad. Voliteľný tretí stĺpec: poznámka. Prvý riadok môže byť hlavička. UTF-8.",
+      "delete": "Odstrániť glosár",
+      "deleteConfirm": "Odstrániť glosár „{name}“? Všetky knihy, ktoré ho používajú, sa vrátia k stavu bez glosára."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Idiomatický",
+        "hint": "prirodzený a plynulý — väčšina kníh"
+      },
+      "literary": {
+        "label": "Literárny",
+        "hint": "romány a literárne diela"
+      },
+      "technical": {
+        "label": "Technický",
+        "hint": "odborné a referenčné knihy"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "najlacnejší, rýchly",
+      "higherQuality": "vyššia kvalita",
+      "bestQuality": "najlepšia kvalita",
+      "newestFast": "najnovší, rýchly",
+      "cheapest": "najlacnejší",
+      "bestQualityStable": "najlepšia kvalita, stabilný",
+      "balanced": "vyvážený",
+      "freeTierFast": "bezplatná úroveň, rýchly",
+      "flagshipCoding": "vlajková loď pre kódovanie/agentov",
+      "longContext": "dlhý kontext, stabilný",
+      "cheaper": "lacnejší",
+      "latestLongContext": "najnovší, 256K kontext"
+    }
+  }
+}

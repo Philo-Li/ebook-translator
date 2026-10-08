@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "मुफ्त ईबुक अनुवादक — EPUB / PDF / AI / 40 भाषाएँ",
+    "description": "ब्राउज़र में चलने वाला मुफ्त AI ईबुक अनुवादक। EPUB और PDF फ़ाइलों को 40+ भाषाओं में अनुवाद करें, द्विभाषी आउटपुट के साथ। अपनी API key का उपयोग करें।"
+  },
+  "ebookTranslator": {
+    "eyebrow": "प्रोजेक्ट",
+    "title": "मुफ्त ईबुक अनुवादक",
+    "subtitle": "एक EPUB अपलोड करें, अपना LLM API key उपयोग करें, और मूल और अनुवादित टेक्स्ट के साथ पैराग्राफ-दर-पैराग्राफ जुड़ा हुआ एक द्विभाषी संस्करण प्राप्त करें। फ़ाइल पूरी तरह से आपके ब्राउज़र में पार्स की जाती है — आपकी किताब कभी किसी सर्वर को नहीं छूती है।",
+    "steps": {
+      "settings": "सेटिंग्स",
+      "upload": "अपलोड करें",
+      "preview": "पूर्वावलोकन",
+      "browse": "ब्राउज़ करें"
+    },
+    "actions": {
+      "cancelRunning": "चलना रद्द करें",
+      "translateAllRemaining": "बाकी सभी का अनुवाद करें",
+      "downloadEpub": "⬇ EPUB डाउनलोड करें",
+      "building": "बन रहा है…",
+      "back": "← पीछे",
+      "settingsModel": "← सेटिंग्स / मॉडल",
+      "show": "दिखाएं",
+      "hide": "छिपाएं",
+      "cancel": "रद्द करें",
+      "retranslate": "फिर से अनुवाद करें",
+      "resume": "फिर से शुरू करें",
+      "translateChapter": "इस अध्याय का अनुवाद करें",
+      "continue": "जारी रखें →"
+    },
+    "settings": {
+      "provider": "प्रदाता",
+      "model": "मॉडल",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "अपनी {provider} key पेस्ट करें",
+      "apiKeyHint": "{link} पर प्राप्त करें। आपकी key केवल {provider} को भेजी जाती है, {host} को कभी नहीं।",
+      "rememberKey": "key केवल इसी ब्राउज़र में याद रखें (localStorage)। साझा डिवाइस के लिए अनचेक करें।",
+      "showApiKey": "API key दिखाएं",
+      "hideApiKey": "API key छिपाएं",
+      "translateFrom": "यहाँ से अनुवाद करें",
+      "translateTo": "इसमें अनुवाद करें",
+      "tone": "लहजा",
+      "customProvider": "कस्टम (OpenAI-संगत)",
+      "customModel": "मॉडल ID",
+      "customModelPlaceholder": "जैसे: gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API Endpoint",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "OpenAI-संगत /chat/completions एंडपॉइंट का पूरा URL।",
+      "openrouterModelPlaceholder": "जैसे: google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "जैसे: kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "जारी रखने के लिए API key दर्ज करें।"
+    },
+    "upload": {
+      "parsing": "EPUB पार्स किया जा रहा है…",
+      "parsingPdf": "PDF पार्स किया जा रहा है — टेक्स्ट निकाला जा रहा है और पैराग्राफ फिर से बनाए जा रहे हैं…",
+      "dropTitle": "यहाँ EPUB फ़ाइल छोड़ें",
+      "dropSubtitle": "या फ़ाइल चुनने के लिए क्लिक करें",
+      "noChapters": "इस EPUB में कोई पठनीय अध्याय नहीं मिले।",
+      "ocrRunning": "{model} के साथ पेजों की OCR की जा रही है…",
+      "ocrPageOf": "पेज {current} / {total}",
+      "ocrFailedCount": "{count} विफल",
+      "scannedPdfDetected": "{file} एक स्कैन की गई PDF ({pages} पेज) है जिसमें कोई टेक्स्ट लेयर नहीं है।",
+      "modelLacksVision": "आपका चुना हुआ {provider} मॉडल \"{model}\" इमेज इनपुट स्वीकार नहीं करता है, इसलिए यह स्कैन किए गए पेजों की OCR नहीं कर सकता।",
+      "switchToVision": "बदलें:",
+      "runOcr": "OCR चलाएं",
+      "providerHasNoVision": "{provider} इस पिकर में विजन-सक्षम मॉडल प्रदान नहीं करता है। प्रदाता बदलने के लिए सेटिंग्स खोलें (Gemini, OpenAI, या Claude सभी OCR का समर्थन करते हैं)।",
+      "recentBooks": "हाल की पुस्तकें",
+      "progressParagraphs": "{done} / {total} अनुच्छेद",
+      "progressPages": "{done} / {total} पृष्ठ",
+      "deleteBook": "इतिहास से हटाएं",
+      "deleteConfirm": "क्या \"{name}\" को इतिहास से हटाना चाहते हैं? फ़ाइल और उसके अनुवाद हटा दिए जाएंगे।",
+      "untitled": "बिना शीर्षक",
+      "relativeJustNow": "अभी-अभी",
+      "relativeMinutesAgo": "{n} मिनट पहले",
+      "relativeHoursAgo": "{n} घंटे पहले",
+      "relativeDaysAgo": "{n} दिन पहले"
+    },
+    "preview": {
+      "pages": "{count} पेज",
+      "scannedTag": "स्कैन किया गया (OCR की आवश्यकता है)",
+      "textLayerTag": "टेक्स्ट लेयर मिली",
+      "prev": "पिछला",
+      "next": "अगला",
+      "pageOf": "पेज {current} / {total}",
+      "pageList": "पेज ({count})",
+      "pageLabel": "पेज {n}",
+      "willOcrWith": "{model} के साथ सभी पेजों की OCR की जाएगी।",
+      "willTranslate": "टेक्स्ट निकाल लिया गया है। अनुवाद करने के लिए अध्याय चुनने हेतु आगे बढ़ें।",
+      "startOcr": "OCR शुरू करें ({count} पेज)",
+      "continue": "जारी रखें →",
+      "singlePage": {
+        "button": "इस पेज का अनुवाद करें",
+        "tooltip": "केवल इस पेज की OCR और अनुवाद करें ताकि आप पूरी किताब के लिए प्रतिबद्ध होने से पहले गुणवत्ता का पूर्वावलोकन कर सकें।",
+        "running": "इस पेज की OCR और अनुवाद किया जा रहा है…",
+        "translating": "इस पेज का अनुवाद किया जा रहा है…",
+        "empty": "इस पेज पर अनुवाद योग्य कोई टेक्स्ट नहीं मिला।",
+        "resultHeader": "पेज {page} — द्विभाषी पूर्वावलोकन",
+        "needsVision": "वर्तमान मॉडल इमेज की OCR नहीं कर सकता। पहले विजन-सक्षम मॉडल पर स्विच करें।"
+      }
+    },
+    "browse": {
+      "chapters": "अध्याय",
+      "toneTitle": "अनुवाद का लहजा — लेखन शैली को प्रभावित करता है",
+      "paragraphCount": "{nodes} पैराग्राफ · {translated} अनुवादित",
+      "errorOne": "{count} पैराग्राफ विफल रहा। आप पुनः प्रयास करने के लिए फिर से अनुवाद कर सकते हैं — पहले से हो चुके पैराग्राफ छोड़ दिए जाएंगे।",
+      "errorMany": "{count} पैराग्राफ विफल रहे। आप पुनः प्रयास करने के लिए फिर से अनुवाद कर सकते हैं — पहले से हो चुके पैराग्राफ छोड़ दिए जाएंगे।",
+      "noTranslatableText": "इस अध्याय में कोई अनुवाद योग्य टेक्स्ट नहीं है (कवर, प्रस्तावना, आदि)।",
+      "translatingAria": "अनुवाद हो रहा है",
+      "translatingLabel": "अनुवाद हो रहा है…",
+      "buildFailed": "EPUB बनाने में विफल:"
+    },
+    "glossary": {
+      "label": "शब्दावली",
+      "title": "इस पुस्तक में शब्दों के लिए विशिष्ट अनुवाद लागू करें — तकनीकी, व्यावसायिक या डोमेन-विशिष्ट कार्यों के लिए उपयोगी।",
+      "none": "कोई नहीं",
+      "empty": "अभी तक कोई शब्दावली अपलोड नहीं की गई है।",
+      "entryCount": "{n} शब्द",
+      "upload": "CSV अपलोड करें…",
+      "uploading": "अपलोड हो रहा है…",
+      "hint": "दो कॉलम वाली CSV: स्रोत शब्द, अनुवाद। वैकल्पिक तीसरा कॉलम: नोट। पहली पंक्ति हेडर हो सकती है। UTF-8.",
+      "delete": "शब्दावली हटाएं",
+      "deleteConfirm": "क्या आप शब्दावली \"{name}\" को हटाना चाहते हैं? इसका उपयोग करने वाली कोई भी पुस्तक बिना शब्दावली के वापस आ जाएगी।"
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "मुहावरेदार",
+        "hint": "प्राकृतिक और धाराप्रवाह — अधिकांश पुस्तकें"
+      },
+      "literary": {
+        "label": "साहित्यिक",
+        "hint": "उपन्यास और साहित्यिक कृतियाँ"
+      },
+      "technical": {
+        "label": "तकनीकी",
+        "hint": "पेशेवर और संदर्भ पुस्तकें"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "सबसे सस्ता, तेज़",
+      "higherQuality": "उच्च गुणवत्ता",
+      "bestQuality": "सर्वोत्तम गुणवत्ता",
+      "newestFast": "नवीनतम, तेज़",
+      "cheapest": "सबसे सस्ता",
+      "bestQualityStable": "सर्वोत्तम गुणवत्ता, स्थिर",
+      "balanced": "संतुलित",
+      "freeTierFast": "मुफ़्त स्तर, तेज़",
+      "flagshipCoding": "फ्लैगशिप कोडिंग/एजेंटिक",
+      "longContext": "लंबा संदर्भ, स्थिर",
+      "cheaper": "अधिक सस्ता",
+      "latestLongContext": "नवीनतम, 256K संदर्भ"
+    }
+  }
+}

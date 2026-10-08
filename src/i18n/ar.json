@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "مترجم كتب إلكترونية مجاني — EPUB / PDF / AI / 40 لغة",
+    "description": "مترجم كتب إلكترونية مجاني يعمل بالذكاء الاصطناعي بالكامل في متصفحك. ترجم ملفات EPUB وPDF إلى أكثر من 40 لغة بإخراج ثنائي اللغة جنباً إلى جنب. استخدم مفتاح API الخاص بك."
+  },
+  "ebookTranslator": {
+    "eyebrow": "مشروع",
+    "title": "مترجم كتب إلكترونية مجاني",
+    "subtitle": "ارفع ملف EPUB، واستخدم LLM API key الخاص بك، واحصل على نسخة ثنائية اللغة مع دمج النص الأصلي والمترجم فقرة بفقرة. يتم تحليل الملف بالكامل في متصفحك — كتابك لا يلمس أي خادم أبداً.",
+    "steps": {
+      "settings": "الإعدادات",
+      "upload": "رفع",
+      "preview": "معاينة",
+      "browse": "تصفح"
+    },
+    "actions": {
+      "cancelRunning": "إلغاء التشغيل",
+      "translateAllRemaining": "ترجمة كل المتبقي",
+      "downloadEpub": "⬇ تحميل EPUB",
+      "building": "جاري الإنشاء…",
+      "back": "← عودة",
+      "settingsModel": "← الإعدادات / النموذج",
+      "show": "إظهار",
+      "hide": "إخفاء",
+      "cancel": "إلغاء",
+      "retranslate": "إعادة الترجمة",
+      "resume": "استئناف",
+      "translateChapter": "ترجمة هذا الفصل",
+      "continue": "متابعة →"
+    },
+    "settings": {
+      "provider": "المزود",
+      "model": "نموذج",
+      "apiKey": "مفتاح API",
+      "apiKeyPlaceholder": "الصق مفتاح {provider} الخاص بك",
+      "apiKeyHint": "احصل على واحد من {link}. يُرسل مفتاحك إلى {provider} فقط، ولا يُرسل أبداً إلى {host}.",
+      "rememberKey": "تذكر المفتاح في هذا المتصفح فقط (localStorage). قم بإلغاء التحديد للأجهزة المشتركة.",
+      "showApiKey": "إظهار مفتاح API",
+      "hideApiKey": "إخفاء مفتاح API",
+      "translateFrom": "الترجمة من",
+      "translateTo": "الترجمة إلى",
+      "tone": "الأسلوب",
+      "customProvider": "مخصص (متوافق مع OpenAI)",
+      "customModel": "معرف النموذج",
+      "customModelPlaceholder": "مثل gpt-4o، deepseek-chat، …",
+      "customEndpoint": "نقطة نهاية API",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "الرابط الكامل لنقطة نهاية /chat/completions متوافقة مع OpenAI.",
+      "openrouterModelPlaceholder": "مثل google/gemini-2.5-flash، anthropic/claude-sonnet-4، …",
+      "opencodeModelPlaceholder": "مثل kimi-k2.6، deepseek-v4-flash، glm-5.1، …",
+      "needApiKey": "أدخل مفتاح API للمتابعة."
+    },
+    "upload": {
+      "parsing": "جاري تحليل EPUB…",
+      "parsingPdf": "جاري تحليل PDF — استخراج النص وإعادة بناء الفقرات…",
+      "dropTitle": "أسقط ملف EPUB هنا",
+      "dropSubtitle": "أو انقر لاختيار ملف",
+      "noChapters": "لم يتم العثور على فصول قابلة للقراءة في ملف EPUB هذا.",
+      "ocrRunning": "جاري إجراء OCR للصفحات باستخدام {model}…",
+      "ocrPageOf": "صفحة {current} / {total}",
+      "ocrFailedCount": "فشل {count}",
+      "scannedPdfDetected": "{file} هو ملف PDF ممسوح ضوئياً ({pages} صفحات) بدون طبقة نصية.",
+      "modelLacksVision": "نموذج {provider} الذي اخترته \"{model}\" لا يقبل مدخلات الصور، لذا لا يمكنه إجراء OCR للصفحات الممسوحة ضوئياً.",
+      "switchToVision": "التبديل إلى:",
+      "runOcr": "تشغيل OCR",
+      "providerHasNoVision": "لا يوفر {provider} نموذجاً يدعم الرؤية في هذا الاختيار. افتح الإعدادات لتبديل المزود (Gemini أو OpenAI أو Claude جميعها تدعم OCR).",
+      "recentBooks": "الكتب الأخيرة",
+      "progressParagraphs": "{done} / {total} فقرة",
+      "progressPages": "{done} / {total} صفحة",
+      "deleteBook": "إزالة من السجل",
+      "deleteConfirm": "هل تريد إزالة \"{name}\" من السجل؟ سيتم حذف الملف وترجماته.",
+      "untitled": "بدون عنوان",
+      "relativeJustNow": "الآن",
+      "relativeMinutesAgo": "منذ {n} دقيقة",
+      "relativeHoursAgo": "منذ {n} ساعة",
+      "relativeDaysAgo": "منذ {n} يوم"
+    },
+    "preview": {
+      "pages": "{count} صفحات",
+      "scannedTag": "ممسوح ضوئياً (يحتاج إلى OCR)",
+      "textLayerTag": "تم اكتشاف طبقة نصية",
+      "prev": "السابق",
+      "next": "التالي",
+      "pageOf": "صفحة {current} / {total}",
+      "pageList": "الصفحات ({count})",
+      "pageLabel": "صفحة {n}",
+      "willOcrWith": "سيتم إجراء OCR لجميع الصفحات باستخدام {model}.",
+      "willTranslate": "تم استخراج النص. تابع لاختيار الفصول للترجمة.",
+      "startOcr": "بدء OCR ({count} صفحات)",
+      "continue": "متابعة →",
+      "singlePage": {
+        "button": "ترجمة هذه الصفحة",
+        "tooltip": "إجراء OCR وترجمة لهذه الصفحة فقط حتى تتمكن من معاينة الجودة قبل الالتزام بالكتاب بأكمله.",
+        "running": "جاري إجراء OCR وترجمة لهذه الصفحة…",
+        "translating": "جاري ترجمة هذه الصفحة…",
+        "empty": "لم يتم العثور على نص قابل للترجمة في هذه الصفحة.",
+        "resultHeader": "صفحة {page} — معاينة ثنائية اللغة",
+        "needsVision": "النموذج الحالي لا يمكنه إجراء OCR للصور. قم بالتبديل إلى نموذج يدعم الرؤية أولاً."
+      }
+    },
+    "browse": {
+      "chapters": "الفصول",
+      "toneTitle": "أسلوب الترجمة — يؤثر على نمط الكتابة",
+      "paragraphCount": "{nodes} فقرات · تم ترجمة {translated}",
+      "errorOne": "فشلت ترجمة {count} فقرة. يمكنك إعادة الترجمة للمحاولة مرة أخرى — سيتم تخطي الفقرات المترجمة بالفعل.",
+      "errorMany": "فشلت ترجمة {count} فقرات. يمكنك إعادة الترجمة للمحاولة مرة أخرى — سيتم تخطي الفقرات المترجمة بالفعل.",
+      "noTranslatableText": "لا يحتوي هذا الفصل على نص قابل للترجمة (الغلاف، المقدمة، إلخ).",
+      "translatingAria": "جاري الترجمة",
+      "translatingLabel": "جاري الترجمة…",
+      "buildFailed": "فشل إنشاء EPUB:"
+    },
+    "glossary": {
+      "label": "مسرد المصطلحات",
+      "title": "فرض ترجمات محددة للمصطلحات في هذا الكتاب — مفيد للأعمال التقنية أو المهنية أو المتخصصة في مجال معين.",
+      "none": "لا يوجد",
+      "empty": "لم يتم رفع أي مسارد بعد.",
+      "entryCount": "{n} مصطلح",
+      "upload": "رفع ملف CSV…",
+      "uploading": "جاري الرفع…",
+      "hint": "ملف CSV بعمودين: المصطلح الأصلي، والترجمة. عمود ثالث اختياري: ملاحظة. يمكن أن يكون الصف الأول ترويسة. ترميز UTF-8.",
+      "delete": "إزالة المسرد",
+      "deleteConfirm": "هل تريد إزالة المسرد \"{name}\"؟ أي كتب تستخدمه ستعود إلى حالة عدم وجود مسرد."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "اصطلاحي",
+        "hint": "طبيعي وسلس — معظم الكتب"
+      },
+      "literary": {
+        "label": "أدبي",
+        "hint": "روايات وأعمال أدبية"
+      },
+      "technical": {
+        "label": "تقني",
+        "hint": "كتب مهنية ومرجعية"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "الأرخص، سريع",
+      "higherQuality": "جودة أعلى",
+      "bestQuality": "أفضل جودة",
+      "newestFast": "الأحدث، سريع",
+      "cheapest": "الأرخص",
+      "bestQualityStable": "أفضل جودة، مستقر",
+      "balanced": "متوازن",
+      "freeTierFast": "فئة مجانية، سريع",
+      "flagshipCoding": "رائد في البرمجة/الوكلاء",
+      "longContext": "سياق طويل، مستقر",
+      "cheaper": "أرخص",
+      "latestLongContext": "الأحدث، سياق 256K"
+    }
+  }
+}

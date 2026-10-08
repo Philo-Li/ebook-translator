@@ -1,0 +1,11 @@
+{
+  "name": "ebook-translator-llm-proxy",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-05-12",
+  "workers_dev": true,
+  "vars": {
+    // Comma-separated list of browser origins allowed to call this proxy.
+    // Add your deployed site origin, e.g. "https://translator.example.com".
+    "ALLOWED_ORIGINS": "http://localhost:5173,http://127.0.0.1:5173"
+  }
+}

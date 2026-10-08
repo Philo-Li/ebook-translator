@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Безкоштовний перекладач електронних книг — EPUB / PDF / ШІ / 40 мов",
+    "description": "Безкоштовний перекладач електронних книг на основі ШІ, який працює повністю у вашому браузері. Перекладайте EPUB та PDF файли на 40+ мов із двомовним паралельним виведенням. Використовуйте свій API ключ."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Проєкт",
+    "title": "Безкоштовний перекладач електронних книг",
+    "subtitle": "Завантажте EPUB, додайте власний LLM API key та отримайте білінгвальне видання, де оригінальний і перекладений текст чергуються абзац за абзацом. Файл обробляється повністю у вашому браузері — ваша книга ніколи не потрапляє на жоден сервер.",
+    "steps": {
+      "settings": "налаштування",
+      "upload": "завантажити",
+      "preview": "попередній перегляд",
+      "browse": "огляд"
+    },
+    "actions": {
+      "cancelRunning": "Скасувати виконання",
+      "translateAllRemaining": "Перекласти решту",
+      "downloadEpub": "⬇ Завантажити EPUB",
+      "building": "Створення…",
+      "back": "← Назад",
+      "settingsModel": "← Налаштування / модель",
+      "show": "Показати",
+      "hide": "Приховати",
+      "cancel": "Скасувати",
+      "retranslate": "Перекласти повторно",
+      "resume": "Продовжити",
+      "translateChapter": "Перекласти цей розділ",
+      "continue": "Продовжити →"
+    },
+    "settings": {
+      "provider": "Провайдер",
+      "model": "Модель",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "Вставте свій ключ {provider}",
+      "apiKeyHint": "Отримайте його за посиланням {link}. Ваш ключ надсилається лише до {provider}, ніколи до {host}.",
+      "rememberKey": "Запам'ятати ключ лише в цьому браузері (localStorage). Зніміть прапорець для спільних пристроїв.",
+      "showApiKey": "Показати API key",
+      "hideApiKey": "Приховати API key",
+      "translateFrom": "Перекласти з",
+      "translateTo": "Перекласти на",
+      "tone": "Тон",
+      "customProvider": "Власний (сумісний з OpenAI)",
+      "customModel": "ID моделі",
+      "customModelPlaceholder": "напр. gpt-4o, deepseek-chat, …",
+      "customEndpoint": "Кінцева точка API",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "Повна URL-адреса кінцевої точки /chat/completions, сумісної з OpenAI.",
+      "openrouterModelPlaceholder": "напр. google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "напр. kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Введіть API key, щоб продовжити."
+    },
+    "upload": {
+      "parsing": "Парсинг EPUB…",
+      "parsingPdf": "Обробка PDF — видобування тексту та відновлення абзаців…",
+      "dropTitle": "Перетягніть EPUB сюди",
+      "dropSubtitle": "або натисніть, щоб вибрати файл",
+      "noChapters": "У цьому EPUB не знайдено розділів, придатних для читання.",
+      "ocrRunning": "Розпізнавання тексту (OCR) на сторінках за допомогою {model}…",
+      "ocrPageOf": "Сторінка {current} / {total}",
+      "ocrFailedCount": "{count} помилок",
+      "scannedPdfDetected": "{file} — це сканований PDF ({pages} сторінок) без текстового шару.",
+      "modelLacksVision": "Вибрана вами модель {provider} \"{model}\" не підтримує введення зображень, тому не може розпізнати скановані сторінки.",
+      "switchToVision": "Перемкнути на:",
+      "runOcr": "Запустити OCR",
+      "providerHasNoVision": "{provider} не пропонує модель із підтримкою зору в цьому списку. Відкрийте Налаштування, щоб змінити провайдера (Gemini, OpenAI або Claude підтримують OCR).",
+      "recentBooks": "Останні книги",
+      "progressParagraphs": "{done} / {total} абзаців",
+      "progressPages": "{done} / {total} сторінок",
+      "deleteBook": "Видалити з історії",
+      "deleteConfirm": "Видалити \"{name}\" з історії? Файл та його переклади будуть видалені.",
+      "untitled": "Без назви",
+      "relativeJustNow": "щойно",
+      "relativeMinutesAgo": "{n} хв тому",
+      "relativeHoursAgo": "{n} год тому",
+      "relativeDaysAgo": "{n} д тому"
+    },
+    "preview": {
+      "pages": "{count} сторінок",
+      "scannedTag": "скановано (потрібен OCR)",
+      "textLayerTag": "текстовий шар виявлено",
+      "prev": "Назад",
+      "next": "Далі",
+      "pageOf": "Сторінка {current} / {total}",
+      "pageList": "Сторінки ({count})",
+      "pageLabel": "Сторінка {n}",
+      "willOcrWith": "Усі сторінки будуть оброблені OCR за допомогою {model}.",
+      "willTranslate": "Текст видобуто. Продовжуйте, щоб вибрати розділи для перекладу.",
+      "startOcr": "Почати OCR ({count} сторінок)",
+      "continue": "Продовжити →",
+      "singlePage": {
+        "button": "Перекласти цю сторінку",
+        "tooltip": "Виконати OCR та переклад лише цієї сторінки, щоб переглянути якість перед обробкою всієї книги.",
+        "running": "Обробка OCR та переклад цієї сторінки…",
+        "translating": "Переклад цієї сторінки…",
+        "empty": "На цій сторінці не знайдено тексту для перекладу.",
+        "resultHeader": "Сторінка {page} — двомовний попередній перегляд",
+        "needsVision": "Поточна модель не може виконувати OCR зображень. Спочатку перемкніться на модель із підтримкою зору."
+      }
+    },
+    "browse": {
+      "chapters": "Розділи",
+      "toneTitle": "Тон перекладу — впливає на стиль письма",
+      "paragraphCount": "{nodes} абзаців · {translated} перекладено",
+      "errorOne": "{count} абзац не вдалося перекласти. Ви можете спробувати ще раз — уже перекладені абзаци будуть пропущені.",
+      "errorMany": "{count} абзаців не вдалося перекласти. Ви можете спробувати ще раз — уже перекладені абзаци будуть пропущені.",
+      "noTranslatableText": "У цьому розділі немає тексту для перекладу (обкладинка, вступна частина тощо).",
+      "translatingAria": "Перекладаю…",
+      "translatingLabel": "переклад…",
+      "buildFailed": "Не вдалося створити EPUB:"
+    },
+    "glossary": {
+      "label": "Глосарій",
+      "title": "Застосовуйте конкретні переклади для термінів у цій книзі — це корисно для технічних, професійних або вузькоспеціалізованих робіт.",
+      "none": "Немає",
+      "empty": "Глосарії ще не завантажені.",
+      "entryCount": "{n} термінів",
+      "upload": "Завантажити CSV…",
+      "uploading": "Завантаження…",
+      "hint": "CSV з двома стовпцями: вихідний термін, переклад. Додатковий третій стовпець: примітка. Перший рядок може бути заголовком. UTF-8.",
+      "delete": "Видалити глосарій",
+      "deleteConfirm": "Видалити глосарій \"{name}\"? Усі книги, що його використовують, повернуться до стану без глосарія."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Ідіоматичний",
+        "hint": "природно та вільно — більшість книг"
+      },
+      "literary": {
+        "label": "Літературний",
+        "hint": "романи та літературні твори"
+      },
+      "technical": {
+        "label": "Технічний",
+        "hint": "професійні та довідкові книги"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "найдешевший, швидкий",
+      "higherQuality": "вища якість",
+      "bestQuality": "найкраща якість",
+      "newestFast": "найновіший, швидкий",
+      "cheapest": "найдешевший",
+      "bestQualityStable": "найкраща якість, стабільний",
+      "balanced": "збалансований",
+      "freeTierFast": "безкоштовний рівень, швидкий",
+      "flagshipCoding": "флагманський для коду/агентний",
+      "longContext": "довгий контекст, стабільний",
+      "cheaper": "дешевший",
+      "latestLongContext": "останній, 256K контекст"
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "เครื่องมือแปลอีบุ๊กฟรี — EPUB / PDF / AI / 40 ภาษา",
+    "description": "เครื่องมือแปลอีบุ๊กฟรีด้วย AI ทำงานในเบราว์เซอร์ของคุณทั้งหมด แปลไฟล์ EPUB และ PDF เป็นกว่า 40 ภาษา พร้อมผลลัพธ์สองภาษาเทียบเคียง ใช้ API key ของคุณเอง"
+  },
+  "ebookTranslator": {
+    "eyebrow": "โปรเจกต์",
+    "title": "เครื่องมือแปลอีบุ๊กฟรี",
+    "subtitle": "อัปโหลดไฟล์ EPUB ใช้ API key ของ LLM ของคุณเอง และรับอีบุ๊กฉบับสองภาษาที่มีข้อความต้นฉบับและคำแปลสลับกันทีละย่อหน้า ไฟล์จะถูกประมวลผลในเบราว์เซอร์ของคุณทั้งหมด — หนังสือของคุณจะไม่ถูกส่งไปยังเซิร์ฟเวอร์ใดๆ.",
+    "steps": {
+      "settings": "ตั้งค่า",
+      "upload": "อัปโหลด",
+      "preview": "ดูตัวอย่าง",
+      "browse": "เลือกไฟล์"
+    },
+    "actions": {
+      "cancelRunning": "ยกเลิกการทำงาน",
+      "translateAllRemaining": "แปลส่วนที่เหลือทั้งหมด",
+      "downloadEpub": "⬇ ดาวน์โหลด EPUB",
+      "building": "กำลังสร้าง…",
+      "back": "← ย้อนกลับ",
+      "settingsModel": "← ตั้งค่า / โมเดล",
+      "show": "แสดง",
+      "hide": "ซ่อน",
+      "cancel": "ยกเลิก",
+      "retranslate": "แปลใหม่",
+      "resume": "ทำต่อ",
+      "translateChapter": "แปลบทนี้",
+      "continue": "ดำเนินการต่อ →"
+    },
+    "settings": {
+      "provider": "ผู้ให้บริการ",
+      "model": "โมเดล",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "วางคีย์ {provider} ของคุณ",
+      "apiKeyHint": "รับคีย์ได้ที่ {link} คีย์ของคุณจะถูกส่งไปยัง {provider} เท่านั้น และจะไม่ถูกส่งไปยัง {host}",
+      "rememberKey": "จำคีย์ในเบราว์เซอร์นี้เท่านั้น (localStorage) ยกเลิกการเลือกหากใช้เครื่องร่วมกับผู้อื่น",
+      "showApiKey": "แสดง API key",
+      "hideApiKey": "ซ่อน API key",
+      "translateFrom": "แปลจาก",
+      "translateTo": "แปลเป็น",
+      "tone": "โทน",
+      "customProvider": "กำหนดเอง (รองรับ OpenAI)",
+      "customModel": "ID โมเดล",
+      "customModelPlaceholder": "ต.ย. gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API เอนด์พอยต์",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "URL แบบเต็มสำหรับเอนด์พอยต์ /chat/completions ที่รองรับ OpenAI",
+      "openrouterModelPlaceholder": "ต.ย. google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "ต.ย. kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "ใส่ API key เพื่อดำเนินการต่อ"
+    },
+    "upload": {
+      "parsing": "กำลังประมวลผล EPUB…",
+      "parsingPdf": "กำลังแยกวิเคราะห์ PDF — กำลังดึงข้อความและจัดเรียงย่อหน้าใหม่…",
+      "dropTitle": "ลากไฟล์ EPUB มาวางที่นี่",
+      "dropSubtitle": "หรือคลิกเพื่อเลือกไฟล์",
+      "noChapters": "ไม่พบบทที่สามารถอ่านได้ใน EPUB นี้",
+      "ocrRunning": "กำลังทำ OCR หน้าต่างๆ ด้วย {model}…",
+      "ocrPageOf": "หน้า {current} / {total}",
+      "ocrFailedCount": "ล้มเหลว {count} รายการ",
+      "scannedPdfDetected": "{file} เป็นไฟล์ PDF แบบสแกน ({pages} หน้า) ซึ่งไม่มีเลเยอร์ข้อความ",
+      "modelLacksVision": "โมเดล \"{model}\" ของ {provider} ที่คุณเลือกไม่รองรับอินพุตที่เป็นรูปภาพ จึงไม่สามารถทำ OCR หน้าที่สแกนมาได้",
+      "switchToVision": "เปลี่ยนไปใช้:",
+      "runOcr": "เริ่มทำ OCR",
+      "providerHasNoVision": "{provider} ไม่มีโมเดลที่รองรับการมองเห็นในตัวเลือกนี้ โปรดเปิดการตั้งค่าเพื่อเปลี่ยนผู้ให้บริการ (Gemini, OpenAI หรือ Claude รองรับการทำ OCR ทั้งหมด)",
+      "recentBooks": "หนังสือล่าสุด",
+      "progressParagraphs": "{done} / {total} ย่อหน้า",
+      "progressPages": "{done} / {total} หน้า",
+      "deleteBook": "ลบออกจากประวัติ",
+      "deleteConfirm": "ลบ \"{name}\" ออกจากประวัติใช่หรือไม่? ไฟล์และคำแปลของไฟล์นี้จะถูกลบออก",
+      "untitled": "ไม่มีชื่อ",
+      "relativeJustNow": "เมื่อสักครู่",
+      "relativeMinutesAgo": "{n} นาทีที่แล้ว",
+      "relativeHoursAgo": "{n} ชั่วโมงที่แล้ว",
+      "relativeDaysAgo": "{n} วันที่แล้ว"
+    },
+    "preview": {
+      "pages": "{count} หน้า",
+      "scannedTag": "แบบสแกน (ต้องทำ OCR)",
+      "textLayerTag": "ตรวจพบเลเยอร์ข้อความ",
+      "prev": "ก่อนหน้า",
+      "next": "ถัดไป",
+      "pageOf": "หน้า {current} / {total}",
+      "pageList": "หน้า ({count})",
+      "pageLabel": "หน้า {n}",
+      "willOcrWith": "จะทำ OCR ทุกหน้าด้วย {model}",
+      "willTranslate": "ดึงข้อความเรียบร้อยแล้ว ดำเนินการต่อเพื่อเลือกบทที่จะแปล",
+      "startOcr": "เริ่มทำ OCR ({count} หน้า)",
+      "continue": "ดำเนินการต่อ →",
+      "singlePage": {
+        "button": "แปลหน้านี้",
+        "tooltip": "ทำ OCR และแปลเฉพาะหน้านี้เพื่อให้คุณดูตัวอย่างคุณภาพก่อนตัดสินใจทำทั้งเล่ม",
+        "running": "กำลังทำ OCR และแปลหน้านี้…",
+        "translating": "กำลังแปลหน้านี้…",
+        "empty": "ไม่พบข้อความที่แปลได้ในหน้านี้",
+        "resultHeader": "หน้า {page} — ตัวอย่างแบบสองภาษา",
+        "needsVision": "โมเดลปัจจุบันไม่สามารถทำ OCR รูปภาพได้ โปรดเปลี่ยนไปใช้โมเดลที่รองรับการมองเห็นก่อน"
+      }
+    },
+    "browse": {
+      "chapters": "บท",
+      "toneTitle": "โทนการแปล — มีผลต่อสไตล์การเขียน",
+      "paragraphCount": "{nodes} ย่อหน้า · แปลแล้ว {translated}",
+      "errorOne": "{count} ย่อหน้าล้มเหลว คุณสามารถแปลใหม่เพื่อลองอีกครั้ง — ย่อหน้าที่แปลแล้วจะถูกข้ามไป",
+      "errorMany": "{count} ย่อหน้าล้มเหลว คุณสามารถแปลใหม่เพื่อลองอีกครั้ง — ย่อหน้าที่แปลแล้วจะถูกข้ามไป",
+      "noTranslatableText": "บทนี้ไม่มีข้อความที่แปลได้ (หน้าปก, ส่วนนำ ฯลฯ)",
+      "translatingAria": "กำลังแปล",
+      "translatingLabel": "กำลังแปล…",
+      "buildFailed": "สร้าง EPUB ไม่สำเร็จ:"
+    },
+    "glossary": {
+      "label": "อภิธานศัพท์",
+      "title": "บังคับใช้คำแปลเฉพาะสำหรับคำศัพท์ในหนังสือเล่มนี้ ซึ่งมีประโยชน์สำหรับงานด้านเทคนิค วิชาชีพ หรือเฉพาะทาง",
+      "none": "ไม่มี",
+      "empty": "ยังไม่มีการอัปโหลดอภิธานศัพท์",
+      "entryCount": "{n} คำศัพท์",
+      "upload": "อัปโหลด CSV…",
+      "uploading": "กำลังอัปโหลด…",
+      "hint": "ไฟล์ CSV ที่มีสองคอลัมน์: คำศัพท์ต้นฉบับ, คำแปล คอลัมน์ที่สามเป็นตัวเลือกเพิ่มเติม: หมายเหตุ แถวแรกอาจเป็นส่วนหัวของตาราง ใช้รหัส UTF-8",
+      "delete": "ลบอภิธานศัพท์",
+      "deleteConfirm": "ลบอภิธานศัพท์ \"{name}\" ใช่หรือไม่? หนังสือเล่มใดก็ตามที่ใช้อภิธานศัพท์นี้จะกลับไปเป็นแบบไม่มีอภิธานศัพท์"
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "สำนวนภาษา",
+        "hint": "เป็นธรรมชาติและสละสลวย — หนังสือส่วนใหญ่"
+      },
+      "literary": {
+        "label": "วรรณกรรม",
+        "hint": "นวนิยายและงานวรรณกรรม"
+      },
+      "technical": {
+        "label": "ทางเทคนิค",
+        "hint": "หนังสือวิชาชีพและหนังสืออ้างอิง"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "ถูกที่สุด, เร็ว",
+      "higherQuality": "คุณภาพสูงกว่า",
+      "bestQuality": "คุณภาพดีที่สุด",
+      "newestFast": "ใหม่ล่าสุด, เร็ว",
+      "cheapest": "ถูกที่สุด",
+      "bestQualityStable": "คุณภาพดีที่สุด, เสถียร",
+      "balanced": "สมดุล",
+      "freeTierFast": "แบบฟรี, เร็ว",
+      "flagshipCoding": "รุ่นเรือธงสำหรับการเขียนโค้ด/เอเจนต์",
+      "longContext": "บริบทขนาดยาว, เสถียร",
+      "cheaper": "ถูกกว่า",
+      "latestLongContext": "ล่าสุด, บริบท 256K"
+    }
+  }
+}

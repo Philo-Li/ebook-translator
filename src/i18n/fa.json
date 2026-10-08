@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "مترجم رایگان کتاب الکترونیکی — EPUB / PDF / AI / 40 زبان",
+    "description": "مترجم رایگان کتاب الکترونیکی مبتنی بر هوش مصنوعی که کاملاً در مرورگر شما اجرا می‌شود. فایل‌های EPUB و PDF را به بیش از 40 زبان با خروجی دو زبانه ترجمه کنید. از API key خود استفاده کنید."
+  },
+  "ebookTranslator": {
+    "eyebrow": "پروژه",
+    "title": "مترجم رایگان کتاب الکترونیکی",
+    "subtitle": "یک فایل EPUB آپلود کنید، API key مدل LLM خود را وارد کنید و یک نسخه دوزبانه دریافت کنید که متن اصلی و ترجمه شده را پاراگراف به پاراگراف در کنار هم قرار می‌دهد. فایل کاملاً در مرورگر شما پردازش می‌شود — کتاب شما هرگز به هیچ سروری فرستاده نمی‌شود.",
+    "steps": {
+      "settings": "تنظیمات",
+      "upload": "آپلود",
+      "preview": "پیش‌نمایش",
+      "browse": "مرور"
+    },
+    "actions": {
+      "cancelRunning": "لغو اجرا",
+      "translateAllRemaining": "ترجمه تمام موارد باقی‌مانده",
+      "downloadEpub": "⬇ دانلود EPUB",
+      "building": "در حال ساخت…",
+      "back": "← بازگشت",
+      "settingsModel": "← تنظیمات / مدل",
+      "show": "نمایش",
+      "hide": "پنهان کردن",
+      "cancel": "لغو",
+      "retranslate": "ترجمه مجدد",
+      "resume": "ادامه",
+      "translateChapter": "ترجمه این فصل",
+      "continue": "ادامه →"
+    },
+    "settings": {
+      "provider": "سرویس‌دهنده",
+      "model": "مدل",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "کلید {provider} خود را اینجا بچسبانید",
+      "apiKeyHint": "یکی از {link} دریافت کنید. کلید شما فقط به {provider} ارسال می‌شود و هرگز به {host} فرستاده نخواهد شد.",
+      "rememberKey": "کلید را فقط در این مرورگر ذخیره کن (localStorage). برای دستگاه‌های اشتراکی تیک را بردارید.",
+      "showApiKey": "نمایش API key",
+      "hideApiKey": "مخفی کردن API key",
+      "translateFrom": "ترجمه از",
+      "translateTo": "ترجمه به",
+      "tone": "لحن",
+      "customProvider": "سفارشی (سازگار با OpenAI)",
+      "customModel": "شناسه مدل",
+      "customModelPlaceholder": "مثلاً gpt-4o، deepseek-chat، …",
+      "customEndpoint": "نقطه پایانی API",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "آدرس کامل (URL) به یک نقطه پایانی /chat/completions سازگار با OpenAI.",
+      "openrouterModelPlaceholder": "مثلاً google/gemini-2.5-flash، anthropic/claude-sonnet-4، …",
+      "opencodeModelPlaceholder": "مثلاً kimi-k2.6، deepseek-v4-flash، glm-5.1، …",
+      "needApiKey": "برای ادامه، یک API key وارد کنید."
+    },
+    "upload": {
+      "parsing": "در حال تجزیه EPUB…",
+      "parsingPdf": "در حال تجزیه PDF — استخراج متن و بازسازی پاراگراف‌ها…",
+      "dropTitle": "فایل EPUB را اینجا رها کنید",
+      "dropSubtitle": "یا برای انتخاب فایل کلیک کنید",
+      "noChapters": "هیچ فصل قابل خواندنی در این EPUB پیدا نشد.",
+      "ocrRunning": "در حال OCR صفحات با {model}…",
+      "ocrPageOf": "صفحه {current} از {total}",
+      "ocrFailedCount": "{count} مورد ناموفق",
+      "scannedPdfDetected": "فایل {file} یک PDF اسکن‌شده ({pages} صفحه) بدون لایه متنی است.",
+      "modelLacksVision": "مدل انتخاب‌شده شما از {provider} یعنی \"{model}\" ورودی تصویر را نمی‌پذیرد، بنابراین نمی‌تواند صفحات اسکن‌شده را OCR کند.",
+      "switchToVision": "تغییر به:",
+      "runOcr": "اجرای OCR",
+      "providerHasNoVision": "{provider} مدل دارای قابلیت بینایی در این انتخابگر ارائه نمی‌دهد. برای تغییر ارائه‌دهنده، تنظیمات را باز کنید (Gemini، OpenAI یا Claude همگی از OCR پشتیبانی می‌کنند).",
+      "recentBooks": "کتاب‌های اخیر",
+      "progressParagraphs": "{done} / {total} پاراگراف",
+      "progressPages": "{done} / {total} صفحه",
+      "deleteBook": "حذف از تاریخچه",
+      "deleteConfirm": "\"{name}\" از تاریخچه حذف شود؟ فایل و ترجمه‌های آن پاک خواهند شد.",
+      "untitled": "بدون عنوان",
+      "relativeJustNow": "همین الان",
+      "relativeMinutesAgo": "{n} دقیقه پیش",
+      "relativeHoursAgo": "{n} ساعت پیش",
+      "relativeDaysAgo": "{n} روز پیش"
+    },
+    "preview": {
+      "pages": "{count} صفحه",
+      "scannedTag": "اسکن‌شده (نیاز به OCR دارد)",
+      "textLayerTag": "لایه متنی شناسایی شد",
+      "prev": "قبلی",
+      "next": "بعدی",
+      "pageOf": "صفحه {current} از {total}",
+      "pageList": "صفحات ({count})",
+      "pageLabel": "صفحه {n}",
+      "willOcrWith": "تمام صفحات با {model} به صورت OCR پردازش خواهند شد.",
+      "willTranslate": "متن استخراج شد. برای انتخاب فصل‌ها جهت ترجمه، ادامه دهید.",
+      "startOcr": "شروع OCR ({count} صفحه)",
+      "continue": "ادامه →",
+      "singlePage": {
+        "button": "ترجمه این صفحه",
+        "tooltip": "OCR و ترجمه فقط همین صفحه تا بتوانید قبل از شروع کل کتاب، کیفیت را پیش‌نمایش کنید.",
+        "running": "در حال OCR و ترجمه این صفحه…",
+        "translating": "در حال ترجمه این صفحه…",
+        "empty": "متن قابل ترجمه‌ای در این صفحه یافت نشد.",
+        "resultHeader": "صفحه {page} — پیش‌نمایش دوزبانه",
+        "needsVision": "مدل فعلی نمی‌تواند تصاویر را OCR کند. ابتدا به مدلی با قابلیت بینایی تغییر وضعیت دهید."
+      }
+    },
+    "browse": {
+      "chapters": "فصل‌ها",
+      "toneTitle": "لحن ترجمه — بر سبک نوشتار تأثیر می‌گذارد",
+      "paragraphCount": "{nodes} پاراگراف · {translated} ترجمه شده",
+      "errorOne": "{count} پاراگراف ناموفق بود. می‌توانید برای تلاش مجدد دوباره ترجمه کنید — پاراگراف‌هایی که قبلاً انجام شده‌اند نادیده گرفته می‌شوند.",
+      "errorMany": "{count} پاراگراف ناموفق بودند. می‌توانید برای تلاش مجدد دوباره ترجمه کنید — پاراگراف‌هایی که قبلاً انجام شده‌اند نادیده گرفته می‌شوند.",
+      "noTranslatableText": "این فصل متن قابل ترجمه‌ای ندارد (جلد، مقدمه و غیره).",
+      "translatingAria": "در حال ترجمه",
+      "translatingLabel": "در حال ترجمه…",
+      "buildFailed": "ساخت EPUB با خطا مواجه شد:"
+    },
+    "glossary": {
+      "label": "واژه‌نامه",
+      "title": "ترجمه‌های خاصی را برای اصطلاحات این کتاب اعمال کنید — مفید برای آثار فنی، حرفه‌ای یا تخصصی.",
+      "none": "هیچ‌کدام",
+      "empty": "هنوز واژه‌نامه‌ای بارگذاری نشده است.",
+      "entryCount": "{n} اصطلاح",
+      "upload": "بارگذاری CSV…",
+      "uploading": "در حال بارگذاری…",
+      "hint": "فایل CSV با دو ستون: اصطلاح مبدأ، ترجمه. ستون سوم اختیاری: یادداشت. ردیف اول می‌تواند سرتیتر باشد. با فرمت UTF-8.",
+      "delete": "حذف واژه‌نامه",
+      "deleteConfirm": "واژه‌نامه \"{name}\" حذف شود؟ هر کتابی که از آن استفاده می‌کند به حالت بدون واژه‌نامه بازمی‌گردد."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "اصطلاحی",
+        "hint": "طبیعی و روان — اکثر کتاب‌ها"
+      },
+      "literary": {
+        "label": "ادبی",
+        "hint": "رمان‌ها و آثار ادبی"
+      },
+      "technical": {
+        "label": "فنی",
+        "hint": "کتاب‌های تخصصی و مرجع"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "ارزان‌ترین، سریع",
+      "higherQuality": "کیفیت بالاتر",
+      "bestQuality": "بهترین کیفیت",
+      "newestFast": "جدیدترین، سریع",
+      "cheapest": "ارزان‌ترین",
+      "bestQualityStable": "بهترین کیفیت، پایدار",
+      "balanced": "متعادل",
+      "freeTierFast": "سطح رایگان، سریع",
+      "flagshipCoding": "پرچم‌دار کدنویسی/عاملی",
+      "longContext": "بافتار طولانی، پایدار",
+      "cheaper": "ارزان‌تر",
+      "latestLongContext": "آخرین نسخه، بافتار ۲۵۶K"
+    }
+  }
+}

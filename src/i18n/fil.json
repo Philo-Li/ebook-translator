@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Libreng Ebook Translator — EPUB / PDF / AI / 40 Wika",
+    "description": "Libreng AI ebook translator na ganap na gumagana sa iyong browser. Isalin ang mga EPUB at PDF file sa 40+ wika na may magkasabay na dalawang-wikang output. Gamitin ang iyong sariling API key."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Proyekto",
+    "title": "Libreng Ebook Translator",
+    "subtitle": "Mag-upload ng EPUB, gamitin ang sarili mong LLM API key, at kumuha ng bilingguwal na edisyon kung saan magkasunod ang orihinal at isinaling teksto bawat talata. Ang file ay sinusuri nang buo sa iyong browser — hindi kailanman mapupunta ang iyong libro sa anumang server.",
+    "steps": {
+      "settings": "mga setting",
+      "upload": "i-upload",
+      "preview": "silip",
+      "browse": "mag-browse"
+    },
+    "actions": {
+      "cancelRunning": "Kanselahin ang pagtakbo",
+      "translateAllRemaining": "Isalin ang lahat ng natitira",
+      "downloadEpub": "⬇ I-download ang EPUB",
+      "building": "Binubuo…",
+      "back": "← Bumalik",
+      "settingsModel": "← Mga Setting / modelo",
+      "show": "Ipakita",
+      "hide": "Itago",
+      "cancel": "Kanselahin",
+      "retranslate": "Isalin muli",
+      "resume": "Ipagpatuloy",
+      "translateChapter": "Isalin ang kabanatang ito",
+      "continue": "Magpatuloy →"
+    },
+    "settings": {
+      "provider": "Tagapagbigay",
+      "model": "Modelo",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "Idikit ang iyong {provider} key",
+      "apiKeyHint": "Kumuha sa {link}. Ang iyong key ay ipinapadala lamang sa {provider}, hinding-hindi sa {host}.",
+      "rememberKey": "Tandaan ang key sa browser na ito lamang (localStorage). Alisin ang tsek para sa mga kagamitang pinagsasaluhan.",
+      "showApiKey": "Ipakita ang API key",
+      "hideApiKey": "Itago ang API key",
+      "translateFrom": "Isalin mula sa",
+      "translateTo": "Isalin sa",
+      "tone": "Tono",
+      "customProvider": "Pasadyang (tugma sa OpenAI)",
+      "customModel": "ID ng Modelo",
+      "customModelPlaceholder": "hal. gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API Endpoint",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "Buong URL para sa isang endpoint na tugma sa OpenAI /chat/completions.",
+      "openrouterModelPlaceholder": "hal. google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "hal. kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Maglagay ng API key para magpatuloy."
+    },
+    "upload": {
+      "parsing": "Sinusuri ang EPUB…",
+      "parsingPdf": "Pinoproseso ang PDF — kinukuha ang teksto at muling binubuo ang mga talata…",
+      "dropTitle": "Ilagay ang EPUB dito",
+      "dropSubtitle": "o pindutin para pumili ng file",
+      "noChapters": "Walang nahanap na mababasang kabanata sa EPUB na ito.",
+      "ocrRunning": "Isinasagawa ang OCR sa mga pahina gamit ang {model}…",
+      "ocrPageOf": "Pahina {current} / {total}",
+      "ocrFailedCount": "{count} ang nabigo",
+      "scannedPdfDetected": "Ang {file} ay isang na-scan na PDF ({pages} na pahina) na walang layer ng teksto.",
+      "modelLacksVision": "Ang napili mong {provider} model na \"{model}\" ay hindi tumatanggap ng input na imahe, kaya hindi nito kayang mag-OCR ng mga na-scan na pahina.",
+      "switchToVision": "Lumipat sa:",
+      "runOcr": "Patakbuhin ang OCR",
+      "providerHasNoVision": "Ang {provider} ay walang model na may kakayahang vision sa picker na ito. Buksan ang Settings para lumipat ng provider (ang Gemini, OpenAI, o Claude ay sumusuporta lahat sa OCR).",
+      "recentBooks": "Mga kamakailang libro",
+      "progressParagraphs": "{done} / {total} na talata",
+      "progressPages": "{done} / {total} na pahina",
+      "deleteBook": "Alisin sa kasaysayan",
+      "deleteConfirm": "Alisin ang \"{name}\" sa kasaysayan? Mabubura ang file at ang mga salin nito.",
+      "untitled": "Walang pamagat",
+      "relativeJustNow": "kailan lang",
+      "relativeMinutesAgo": "{n} min ang nakalipas",
+      "relativeHoursAgo": "{n} oras ang nakalipas",
+      "relativeDaysAgo": "{n} araw ang nakalipas"
+    },
+    "preview": {
+      "pages": "{count} na pahina",
+      "scannedTag": "na-scan (kailangan ng OCR)",
+      "textLayerTag": "may nakitang layer ng teksto",
+      "prev": "Nakaraan",
+      "next": "Susunod",
+      "pageOf": "Pahina {current} / {total}",
+      "pageList": "Mga pahina ({count})",
+      "pageLabel": "Pahina {n}",
+      "willOcrWith": "I-o-OCR ang lahat ng pahina gamit ang {model}.",
+      "willTranslate": "Nakuha na ang teksto. Magpatuloy sa pagpili ng mga kabanata na isasalin.",
+      "startOcr": "Simulan ang OCR ({count} na pahina)",
+      "continue": "Magpatuloy →",
+      "singlePage": {
+        "button": "Isalin ang pahinang ito",
+        "tooltip": "I-OCR at isalin lang ang pahinang ito para masilip ang kalidad bago ituloy ang buong libro.",
+        "running": "Ino-OCR at isinasalin ang pahinang ito…",
+        "translating": "Isinasalin ang pahinang ito…",
+        "empty": "Walang tekstong maisasalin na nakita sa pahinang ito.",
+        "resultHeader": "Pahina {page} — bilingual na silip",
+        "needsVision": "Hindi kayang mag-OCR ng mga imahe ng kasalukuyang model. Lumipat muna sa model na may kakayahang vision."
+      }
+    },
+    "browse": {
+      "chapters": "Mga Kabanata",
+      "toneTitle": "Tono ng pagsasalin — nakakaapekto sa estilo ng pagsulat",
+      "paragraphCount": "{nodes} na talata · {translated} na naisalin",
+      "errorOne": "{count} na talata ang nabigo. Maaari mong isalin muli para sumubok ulit — lalaktawan ang mga talatang tapos na.",
+      "errorMany": "{count} na talata ang nabigo. Maaari mong isalin muli para sumubok ulit — lalaktawan ang mga talatang tapos na.",
+      "noTranslatableText": "Ang kabanatang ito ay walang tekstong maisasalin (pabalat, panimulang bahagi, atbp).",
+      "translatingAria": "Isinasalin",
+      "translatingLabel": "isinasalin…",
+      "buildFailed": "Nabigong buuin ang EPUB:"
+    },
+    "glossary": {
+      "label": "Glossary",
+      "title": "Magtakda ng mga partikular na salin para sa mga termino sa aklat na ito — kapaki-pakinabang para sa mga teknikal, propesyonal, o espesyalisadong gawa.",
+      "none": "Wala",
+      "empty": "Wala pang na-upload na glossary.",
+      "entryCount": "{n} termino",
+      "upload": "Mag-upload ng CSV…",
+      "uploading": "Nag-a-upload…",
+      "hint": "CSV na may dalawang column: source term, salin. Opsyonal na ikatlong column: tala. Ang unang row ay maaaring header. UTF-8.",
+      "delete": "Alisin ang glossary",
+      "deleteConfirm": "Alisin ang glossary na \"{name}\"? Ang anumang aklat na gumagamit nito ay babalik sa walang glossary."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Idyomatiko",
+        "hint": "natural at matatas — karamihan ng mga aklat"
+      },
+      "literary": {
+        "label": "Pampanitikan",
+        "hint": "mga nobela at akdang pampanitikan"
+      },
+      "technical": {
+        "label": "Teknikal",
+        "hint": "mga aklat na propesyonal at sanggunian"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "pinakamura, mabilis",
+      "higherQuality": "mas mataas na kalidad",
+      "bestQuality": "pinakamahusay na kalidad",
+      "newestFast": "pinakabago, mabilis",
+      "cheapest": "pinakamura",
+      "bestQualityStable": "pinakamahusay na kalidad, matatag",
+      "balanced": "balanse",
+      "freeTierFast": "libreng antas, mabilis",
+      "flagshipCoding": "pangunahing coding/agentic",
+      "longContext": "mahabang konteksto, matatag",
+      "cheaper": "mas mura",
+      "latestLongContext": "pinakabago, 256K na konteksto"
+    }
+  }
+}

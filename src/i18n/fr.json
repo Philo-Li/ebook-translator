@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Traducteur d'ebooks gratuit — EPUB / PDF / IA / 40 langues",
+    "description": "Traducteur d'ebooks gratuit basé sur l'IA, fonctionnant entièrement dans votre navigateur. Traduisez vos fichiers EPUB et PDF en plus de 40 langues avec un affichage bilingue côte à côte. Utilisez votre propre clé API."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Projet",
+    "title": "Traducteur d'ebooks gratuit",
+    "subtitle": "Importez un EPUB, utilisez votre propre API key LLM, et obtenez une édition bilingue avec le texte original et traduit entrelacé paragraphe par paragraphe. Le fichier est analysé entièrement dans votre navigateur — votre livre ne touche jamais aucun serveur.",
+    "steps": {
+      "settings": "paramètres",
+      "upload": "importer",
+      "preview": "aperçu",
+      "browse": "parcourir"
+    },
+    "actions": {
+      "cancelRunning": "Annuler l'exécution",
+      "translateAllRemaining": "Traduire tout le reste",
+      "downloadEpub": "⬇ Télécharger l'EPUB",
+      "building": "Génération…",
+      "back": "← Retour",
+      "settingsModel": "← Paramètres / modèle",
+      "show": "Afficher",
+      "hide": "Masquer",
+      "cancel": "Annuler",
+      "retranslate": "Retraduire",
+      "resume": "Reprendre",
+      "translateChapter": "Traduire ce chapitre",
+      "continue": "Continuer →"
+    },
+    "settings": {
+      "provider": "Fournisseur",
+      "model": "Modèle",
+      "apiKey": "API Key",
+      "apiKeyPlaceholder": "Collez votre clé {provider}",
+      "apiKeyHint": "Obtenez-en une sur {link}. Votre clé est envoyée uniquement à {provider}, jamais à {host}.",
+      "rememberKey": "Mémoriser la clé dans ce navigateur uniquement (localStorage). Décochez pour les appareils partagés.",
+      "showApiKey": "Afficher la API key",
+      "hideApiKey": "Masquer la API key",
+      "translateFrom": "Traduire de",
+      "translateTo": "Traduire vers",
+      "tone": "Ton",
+      "customProvider": "Personnalisé (compatible OpenAI)",
+      "customModel": "ID du modèle",
+      "customModelPlaceholder": "par ex. gpt-4o, deepseek-chat, …",
+      "customEndpoint": "Endpoint API",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "URL complète vers un endpoint /chat/completions compatible OpenAI.",
+      "openrouterModelPlaceholder": "par ex. google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "par ex. kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Saisissez une API key pour continuer."
+    },
+    "upload": {
+      "parsing": "Analyse de l'EPUB…",
+      "parsingPdf": "Analyse du PDF — extraction du texte et reconstruction des paragraphes…",
+      "dropTitle": "Déposez un EPUB ici",
+      "dropSubtitle": "ou cliquez pour choisir un fichier",
+      "noChapters": "Aucun chapitre lisible trouvé dans cet EPUB.",
+      "ocrRunning": "OCR des pages avec {model}…",
+      "ocrPageOf": "Page {current} / {total}",
+      "ocrFailedCount": "{count} échec",
+      "scannedPdfDetected": "{file} est un PDF numérisé ({pages} pages) sans couche de texte.",
+      "modelLacksVision": "Le modèle {provider} sélectionné « {model} » n'accepte pas les images en entrée, il ne peut donc pas effectuer l'OCR des pages numérisées.",
+      "switchToVision": "Passer à :",
+      "runOcr": "Exécuter l'OCR",
+      "providerHasNoVision": "{provider} ne propose pas de modèle doté de vision dans ce sélecteur. Ouvrez les paramètres pour changer de fournisseur (Gemini, OpenAI ou Claude prennent tous en charge l'OCR).",
+      "recentBooks": "Livres récents",
+      "progressParagraphs": "{done} / {total} paragraphes",
+      "progressPages": "{done} / {total} pages",
+      "deleteBook": "Supprimer de l'historique",
+      "deleteConfirm": "Supprimer « {name} » de l'historique ? Le fichier et ses traductions seront supprimés.",
+      "untitled": "Sans titre",
+      "relativeJustNow": "à l'instant",
+      "relativeMinutesAgo": "il y a {n} min",
+      "relativeHoursAgo": "il y a {n} h",
+      "relativeDaysAgo": "il y a {n} j"
+    },
+    "preview": {
+      "pages": "{count} pages",
+      "scannedTag": "numérisé (nécessite l'OCR)",
+      "textLayerTag": "couche de texte détectée",
+      "prev": "Précédent",
+      "next": "Suivant",
+      "pageOf": "Page {current} / {total}",
+      "pageList": "Pages ({count})",
+      "pageLabel": "Page {n}",
+      "willOcrWith": "Effectuera l'OCR de toutes les pages avec {model}.",
+      "willTranslate": "Texte extrait. Continuez pour choisir les chapitres à traduire.",
+      "startOcr": "Lancer l'OCR ({count} pages)",
+      "continue": "Continuer →",
+      "singlePage": {
+        "button": "Traduire cette page",
+        "tooltip": "OCR + traduction de cette page uniquement pour prévisualiser la qualité avant de vous engager sur l'ensemble du livre.",
+        "running": "OCR et traduction de cette page en cours…",
+        "translating": "Traduction de cette page en cours…",
+        "empty": "Aucun texte traduisible trouvé sur cette page.",
+        "resultHeader": "Page {page} — aperçu bilingue",
+        "needsVision": "Le modèle actuel ne peut pas effectuer l'OCR d'images. Passez d'abord à un modèle doté de vision."
+      }
+    },
+    "browse": {
+      "chapters": "Chapitres",
+      "toneTitle": "Ton de la traduction — affecte le style d'écriture",
+      "paragraphCount": "{nodes} paragraphes · {translated} traduits",
+      "errorOne": "{count} paragraphe a échoué. Vous pouvez retraduire pour réessayer — les paragraphes déjà faits sont ignorés.",
+      "errorMany": "{count} paragraphes ont échoué. Vous pouvez retraduire pour réessayer — les paragraphes déjà faits sont ignorés.",
+      "noTranslatableText": "Ce chapitre ne contient aucun texte traduisible (couverture, pages de garde, etc.).",
+      "translatingAria": "Traduction en cours",
+      "translatingLabel": "traduction en cours…",
+      "buildFailed": "Échec de la création de l'EPUB :"
+    },
+    "glossary": {
+      "label": "Glossaire",
+      "title": "Forcez des traductions spécifiques pour les termes de ce livre — utile pour les ouvrages techniques, professionnels ou spécialisés.",
+      "none": "Aucun",
+      "empty": "Aucun glossaire n'a encore été téléchargé.",
+      "entryCount": "{n} termes",
+      "upload": "Téléverser un CSV…",
+      "uploading": "Téléversement en cours…",
+      "hint": "CSV avec deux colonnes : terme source, traduction. Troisième colonne optionnelle : note. La première ligne peut être un en-tête. UTF-8.",
+      "delete": "Supprimer le glossaire",
+      "deleteConfirm": "Supprimer le glossaire \"{name}\" ? Tous les livres l'utilisant reviendront à l'absence de glossaire."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Idiomatique",
+        "hint": "naturel et fluide — la plupart des livres"
+      },
+      "literary": {
+        "label": "Littéraire",
+        "hint": "romans et œuvres littéraires"
+      },
+      "technical": {
+        "label": "Technique",
+        "hint": "livres professionnels et de référence"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "le moins cher, rapide",
+      "higherQuality": "qualité supérieure",
+      "bestQuality": "meilleure qualité",
+      "newestFast": "le plus récent, rapide",
+      "cheapest": "le moins cher",
+      "bestQualityStable": "meilleure qualité, stable",
+      "balanced": "équilibré",
+      "freeTierFast": "offre gratuite, rapide",
+      "flagshipCoding": "fleuron du code/agentique",
+      "longContext": "contexte long, stable",
+      "cheaper": "moins cher",
+      "latestLongContext": "dernier cri, contexte 256K"
+    }
+  }
+}

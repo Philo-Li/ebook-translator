@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Besplatni prevoditelj e-knjiga — EPUB / PDF / AI / 40 jezika",
+    "description": "Besplatni AI prevoditelj e-knjiga koji u potpunosti radi u vašem pregledniku. Prevedite EPUB i PDF datoteke na 40+ jezika s dvojezičnim izlazom jedan pored drugog. Koristite vlastiti API ključ."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Projekt",
+    "title": "Besplatni prevoditelj e-knjiga",
+    "subtitle": "Učitajte EPUB, upotrijebite vlastiti LLM API key i dobit ćete dvojezično izdanje s izvornim i prevedenim tekstom isprepletenim odlomak po odlomak. Datoteka se obrađuje u potpunosti u vašem pregledniku — vaša knjiga nikada ne dotiče nijedan poslužitelj.",
+    "steps": {
+      "settings": "postavke",
+      "upload": "učitaj",
+      "preview": "pretpregled",
+      "browse": "pregledaj"
+    },
+    "actions": {
+      "cancelRunning": "Prekini izvođenje",
+      "translateAllRemaining": "Prevedi sve preostalo",
+      "downloadEpub": "⬇ Preuzmi EPUB",
+      "building": "Izrada…",
+      "back": "← Natrag",
+      "settingsModel": "← Postavke / model",
+      "show": "Prikaži",
+      "hide": "Sakrij",
+      "cancel": "Odustani",
+      "retranslate": "Ponovno prevedi",
+      "resume": "Nastavi",
+      "translateChapter": "Prevedi ovo poglavlje",
+      "continue": "Nastavi →"
+    },
+    "settings": {
+      "provider": "Pružatelj",
+      "model": "Model",
+      "apiKey": "API ključ",
+      "apiKeyPlaceholder": "Zalijepite svoj {provider} ključ",
+      "apiKeyHint": "Nabavite ga na {link}. Vaš ključ se šalje samo {provider} usluzi, nikada na {host}.",
+      "rememberKey": "Zapamti ključ samo u ovom pregledniku (localStorage). Odznačite za zajedničke uređaje.",
+      "showApiKey": "Prikaži API ključ",
+      "hideApiKey": "Sakrij API ključ",
+      "translateFrom": "Prevedi s",
+      "translateTo": "Prevedi na",
+      "tone": "Ton",
+      "customProvider": "Prilagođeno (OpenAI-kompatibilno)",
+      "customModel": "ID modela",
+      "customModelPlaceholder": "npr. gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API adresa",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "Puni URL za OpenAI-kompatibilnu /chat/completions krajnju točku.",
+      "openrouterModelPlaceholder": "npr. google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "npr. kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Unesite API ključ za nastavak."
+    },
+    "upload": {
+      "parsing": "Parsiranje EPUB-a…",
+      "parsingPdf": "Parsiranje PDF-a — izdvajanje teksta i rekonstrukcija odlomaka…",
+      "dropTitle": "Dovucite EPUB ovdje",
+      "dropSubtitle": "ili kliknite za odabir datoteke",
+      "noChapters": "Nisu pronađena čitljiva poglavlja u ovom EPUB-u.",
+      "ocrRunning": "OCR obrada stranica pomoću {model}…",
+      "ocrPageOf": "Stranica {current} / {total}",
+      "ocrFailedCount": "{count} neuspjelo",
+      "scannedPdfDetected": "{file} je skenirani PDF ({pages} stranica) bez tekstualnog sloja.",
+      "modelLacksVision": "Odabrani {provider} model \"{model}\" ne prihvaća unos slika, stoga ne može obaviti OCR skeniranih stranica.",
+      "switchToVision": "Prebaci na:",
+      "runOcr": "Pokreni OCR",
+      "providerHasNoVision": "{provider} ne nudi model s mogućnošću prepoznavanja slike u ovom izborniku. Otvorite Postavke za promjenu pružatelja usluge (Gemini, OpenAI ili Claude podržavaju OCR).",
+      "recentBooks": "Nedavne knjige",
+      "progressParagraphs": "{done} / {total} odlomaka",
+      "progressPages": "{done} / {total} stranica",
+      "deleteBook": "Ukloni iz povijesti",
+      "deleteConfirm": "Ukloniti \"{name}\" iz povijesti? Datoteka i njezini prijevodi bit će izbrisani.",
+      "untitled": "Bez naslova",
+      "relativeJustNow": "upravo sada",
+      "relativeMinutesAgo": "prije {n} min",
+      "relativeHoursAgo": "prije {n} h",
+      "relativeDaysAgo": "prije {n} d"
+    },
+    "preview": {
+      "pages": "{count} stranica",
+      "scannedTag": "skenirano (potreban OCR)",
+      "textLayerTag": "otkriven tekstualni sloj",
+      "prev": "Prethodna",
+      "next": "Sljedeća",
+      "pageOf": "Stranica {current} / {total}",
+      "pageList": "Stranice ({count})",
+      "pageLabel": "Stranica {n}",
+      "willOcrWith": "Obavit će OCR svih stranica pomoću {model}.",
+      "willTranslate": "Tekst izdvojen. Nastavite s odabirom poglavlja za prevođenje.",
+      "startOcr": "Pokreni OCR ({count} stranica)",
+      "continue": "Nastavi →",
+      "singlePage": {
+        "button": "Prevedi ovu stranicu",
+        "tooltip": "OCR i prijevod samo ove stranice kako biste mogli provjeriti kvalitetu prije obrade cijele knjige.",
+        "running": "OCR obrada i prevođenje ove stranice…",
+        "translating": "Prevođenje ove stranice…",
+        "empty": "Na ovoj stranici nije pronađen tekst za prevođenje.",
+        "resultHeader": "Stranica {page} — dvojezični pretpregled",
+        "needsVision": "Trenutni model ne može obavljati OCR slika. Prvo se prebacite na model s mogućnošću prepoznavanja slike."
+      }
+    },
+    "browse": {
+      "chapters": "Poglavlja",
+      "toneTitle": "Ton prijevoda — utječe na stil pisanja",
+      "paragraphCount": "{nodes} odlomaka · {translated} prevedeno",
+      "errorOne": "{count} odlomak nije uspio. Možete ponovno prevesti za novi pokušaj — već prevedeni odlomci bit će preskočeni.",
+      "errorMany": "{count} odlomaka nije uspjelo. Možete ponovno prevesti za novi pokušaj — već prevedeni odlomci bit će preskočeni.",
+      "noTranslatableText": "Ovo poglavlje nema teksta za prijevod (naslovnica, uvodni dio, itd.).",
+      "translatingAria": "Prevođenje",
+      "translatingLabel": "prevođenje…",
+      "buildFailed": "Pogreška pri izradi EPUB-a:"
+    },
+    "glossary": {
+      "label": "Pojmovnik",
+      "title": "Nametni specifične prijevode za pojmove u ovoj knjizi — korisno za tehnička, profesionalna ili domenski specifična djela.",
+      "none": "Nijedan",
+      "empty": "Još nije učitan nijedan pojmovnik.",
+      "entryCount": "{n} pojmova",
+      "upload": "Učitaj CSV…",
+      "uploading": "Učitavanje…",
+      "hint": "CSV s dva stupca: izvorni pojam, prijevod. Opcionalni treći stupac: napomena. Prvi redak može biti zaglavlje. UTF-8.",
+      "delete": "Ukloni pojmovnik",
+      "deleteConfirm": "Ukloniti pojmovnik \"{name}\"? Sve knjige koje ga koriste vratit će se na postavku bez pojmovnika."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Idiomatski",
+        "hint": "prirodno i tečno — većina knjiga"
+      },
+      "literary": {
+        "label": "Književni",
+        "hint": "romani i književna djela"
+      },
+      "technical": {
+        "label": "Tehnički",
+        "hint": "stručne knjige i priručnici"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "najjeftinije, brzo",
+      "higherQuality": "viša kvaliteta",
+      "bestQuality": "najbolja kvaliteta",
+      "newestFast": "najnovije, brzo",
+      "cheapest": "najjeftinije",
+      "bestQualityStable": "najbolja kvaliteta, stabilno",
+      "balanced": "uravnoteženo",
+      "freeTierFast": "besplatna razina, brzo",
+      "flagshipCoding": "vodeći za kodiranje/agente",
+      "longContext": "dugi kontekst, stabilno",
+      "cheaper": "jeftinije",
+      "latestLongContext": "najnovije, 256K kontekst"
+    }
+  }
+}

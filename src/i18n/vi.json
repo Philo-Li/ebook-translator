@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Trình dịch ebook miễn phí — EPUB / PDF / AI / 40 ngôn ngữ",
+    "description": "Trình dịch ebook AI miễn phí chạy hoàn toàn trên trình duyệt. Dịch tệp EPUB và PDF sang hơn 40 ngôn ngữ với đầu ra song ngữ đối chiếu. Sử dụng API key của bạn."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Dự án",
+    "title": "Trình dịch ebook miễn phí",
+    "subtitle": "Tải lên tệp EPUB, sử dụng API key LLM của bạn và nhận lại bản song ngữ với văn bản gốc và bản dịch xen kẽ từng đoạn. Tệp được xử lý hoàn toàn trong trình duyệt của bạn — sách của bạn không bao giờ được gửi lên bất kỳ máy chủ nào.",
+    "steps": {
+      "settings": "cài đặt",
+      "upload": "tải lên",
+      "preview": "xem trước",
+      "browse": "duyệt tệp"
+    },
+    "actions": {
+      "cancelRunning": "Hủy quá trình",
+      "translateAllRemaining": "Dịch tất cả phần còn lại",
+      "downloadEpub": "⬇ Tải xuống EPUB",
+      "building": "Đang tạo…",
+      "back": "← Quay lại",
+      "settingsModel": "← Cài đặt / mô hình",
+      "show": "Hiện",
+      "hide": "Ẩn",
+      "cancel": "Hủy",
+      "retranslate": "Dịch lại",
+      "resume": "Tiếp tục",
+      "translateChapter": "Dịch chương này",
+      "continue": "Tiếp tục →"
+    },
+    "settings": {
+      "provider": "Nhà cung cấp",
+      "model": "Mô hình",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "Dán API key {provider} của bạn",
+      "apiKeyHint": "Nhận mã tại {link}. Mã của bạn chỉ được gửi đến {provider}, không bao giờ gửi đến {host}.",
+      "rememberKey": "Ghi nhớ mã chỉ trên trình duyệt này (localStorage). Bỏ chọn nếu dùng thiết bị chung.",
+      "showApiKey": "Hiện API key",
+      "hideApiKey": "Ẩn API key",
+      "translateFrom": "Dịch từ",
+      "translateTo": "Dịch sang",
+      "tone": "Văn phong",
+      "customProvider": "Tùy chỉnh (tương thích OpenAI)",
+      "customModel": "ID mô hình",
+      "customModelPlaceholder": "VD: gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API Endpoint",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "URL đầy đủ đến endpoint /chat/completions tương thích OpenAI.",
+      "openrouterModelPlaceholder": "VD: google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "VD: kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Nhập API key để tiếp tục."
+    },
+    "upload": {
+      "parsing": "Đang phân tích EPUB…",
+      "parsingPdf": "Đang phân tích PDF — trích xuất văn bản và tái tạo đoạn văn…",
+      "dropTitle": "Thả tệp EPUB vào đây",
+      "dropSubtitle": "hoặc nhấp để chọn tệp",
+      "noChapters": "Không tìm thấy chương nào có thể đọc được trong tệp EPUB này.",
+      "ocrRunning": "Đang OCR các trang bằng {model}…",
+      "ocrPageOf": "Trang {current} / {total}",
+      "ocrFailedCount": "{count} thất bại",
+      "scannedPdfDetected": "{file} là tệp PDF dạng quét ({pages} trang) không có lớp văn bản.",
+      "modelLacksVision": "Mô hình {provider} \"{model}\" bạn chọn không hỗ trợ đầu vào là hình ảnh, vì vậy nó không thể OCR các trang dạng quét.",
+      "switchToVision": "Chuyển sang:",
+      "runOcr": "Chạy OCR",
+      "providerHasNoVision": "{provider} không cung cấp mô hình có khả năng xử lý hình ảnh trong bộ chọn này. Mở Cài đặt để chuyển đổi nhà cung cấp (Gemini, OpenAI, hoặc Claude đều hỗ trợ OCR).",
+      "recentBooks": "Sách gần đây",
+      "progressParagraphs": "{done} / {total} đoạn văn",
+      "progressPages": "{done} / {total} trang",
+      "deleteBook": "Xóa khỏi lịch sử",
+      "deleteConfirm": "Xóa \"{name}\" khỏi lịch sử? Tệp tin và các bản dịch của nó sẽ bị xóa.",
+      "untitled": "Không tiêu đề",
+      "relativeJustNow": "vừa xong",
+      "relativeMinutesAgo": "{n} phút trước",
+      "relativeHoursAgo": "{n} giờ trước",
+      "relativeDaysAgo": "{n} ngày trước"
+    },
+    "preview": {
+      "pages": "{count} trang",
+      "scannedTag": "dạng quét (cần OCR)",
+      "textLayerTag": "đã phát hiện lớp văn bản",
+      "prev": "Trước",
+      "next": "Tiếp",
+      "pageOf": "Trang {current} / {total}",
+      "pageList": "Các trang ({count})",
+      "pageLabel": "Trang {n}",
+      "willOcrWith": "Sẽ OCR tất cả các trang bằng {model}.",
+      "willTranslate": "Đã trích xuất văn bản. Tiếp tục chọn chương để dịch.",
+      "startOcr": "Bắt đầu OCR ({count} trang)",
+      "continue": "Tiếp tục →",
+      "singlePage": {
+        "button": "Dịch trang này",
+        "tooltip": "OCR + dịch riêng trang này để bạn có thể xem trước chất lượng trước khi thực hiện cho toàn bộ cuốn sách.",
+        "running": "Đang OCR & dịch trang này…",
+        "translating": "Đang dịch trang này…",
+        "empty": "Không tìm thấy văn bản có thể dịch trên trang này.",
+        "resultHeader": "Trang {page} — xem trước song ngữ",
+        "needsVision": "Mô hình hiện tại không thể OCR hình ảnh. Hãy chuyển sang mô hình có khả năng xử lý hình ảnh trước."
+      }
+    },
+    "browse": {
+      "chapters": "Chương",
+      "toneTitle": "Văn phong dịch — ảnh hưởng đến phong cách viết",
+      "paragraphCount": "{nodes} đoạn văn · {translated} đã dịch",
+      "errorOne": "{count} đoạn văn bị lỗi. Bạn có thể dịch lại để thử lại — các đoạn đã hoàn thành sẽ được bỏ qua.",
+      "errorMany": "{count} đoạn văn bị lỗi. Bạn có thể dịch lại để thử lại — các đoạn đã hoàn thành sẽ được bỏ qua.",
+      "noTranslatableText": "Chương này không có văn bản để dịch (bìa, lời tựa, v.v.).",
+      "translatingAria": "Đang dịch",
+      "translatingLabel": "đang dịch…",
+      "buildFailed": "Lỗi khi tạo EPUB:"
+    },
+    "glossary": {
+      "label": "Bảng thuật ngữ",
+      "title": "Ép buộc các bản dịch cụ thể cho các thuật ngữ trong cuốn sách này — hữu ích cho các tác phẩm kỹ thuật, chuyên môn hoặc chuyên ngành.",
+      "none": "Không có",
+      "empty": "Chưa có bảng thuật ngữ nào được tải lên.",
+      "entryCount": "{n} thuật ngữ",
+      "upload": "Tải lên CSV…",
+      "uploading": "Đang tải lên…",
+      "hint": "CSV với hai cột: thuật ngữ gốc, bản dịch. Cột thứ ba tùy chọn: ghi chú. Hàng đầu tiên có thể là tiêu đề. UTF-8.",
+      "delete": "Xóa bảng thuật ngữ",
+      "deleteConfirm": "Xóa bảng thuật ngữ \"{name}\"? Bất kỳ cuốn sách nào đang sử dụng nó sẽ quay về trạng thái không có bảng thuật ngữ."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Tự nhiên",
+        "hint": "tự nhiên & trôi chảy — hầu hết các loại sách"
+      },
+      "literary": {
+        "label": "Văn chương",
+        "hint": "tiểu thuyết & tác phẩm văn học"
+      },
+      "technical": {
+        "label": "Kỹ thuật",
+        "hint": "sách chuyên môn & tham khảo"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "rẻ nhất, nhanh",
+      "higherQuality": "chất lượng cao hơn",
+      "bestQuality": "chất lượng tốt nhất",
+      "newestFast": "mới nhất, nhanh",
+      "cheapest": "rẻ nhất",
+      "bestQualityStable": "chất lượng tốt nhất, ổn định",
+      "balanced": "cân bằng",
+      "freeTierFast": "gói miễn phí, nhanh",
+      "flagshipCoding": "đầu bảng cho lập trình/tác vụ tự hành",
+      "longContext": "ngữ cảnh dài, ổn định",
+      "cheaper": "rẻ hơn",
+      "latestLongContext": "mới nhất, ngữ cảnh 256K"
+    }
+  }
+}

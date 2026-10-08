@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "免費電子書翻譯器 — EPUB / PDF / AI / 40 種語言",
+    "description": "免費線上電子書翻譯器，在瀏覽器中執行，使用自己的 API Key 即可。AI 智慧翻譯 EPUB 與 PDF，輸出雙語對照版本，支援 40+ 種語言。"
+  },
+  "ebookTranslator": {
+    "eyebrow": "專案",
+    "title": "免費電子書翻譯器",
+    "subtitle": "上傳 EPUB，使用您自己的 LLM API key，即可獲得原文與譯文逐段對照的雙語版本。檔案完全在您的瀏覽器中解析 — 您的書籍絕不會上傳到任何伺服器。",
+    "steps": {
+      "settings": "設定",
+      "upload": "上傳",
+      "preview": "預覽",
+      "browse": "瀏覽"
+    },
+    "actions": {
+      "cancelRunning": "取消執行",
+      "translateAllRemaining": "翻譯所有剩餘內容",
+      "downloadEpub": "⬇ 下載 EPUB",
+      "building": "建立中…",
+      "back": "← 返回",
+      "settingsModel": "← 設定 / 模型",
+      "show": "顯示",
+      "hide": "隱藏",
+      "cancel": "取消",
+      "retranslate": "重新翻譯",
+      "resume": "繼續",
+      "translateChapter": "翻譯本章",
+      "continue": "繼續 →"
+    },
+    "settings": {
+      "provider": "供應商",
+      "model": "模型",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "貼上您的 {provider} 金鑰",
+      "apiKeyHint": "前往 {link} 獲取。您的金鑰僅會發送至 {provider}，絕不會傳送至 {host}。",
+      "rememberKey": "僅在此瀏覽器中記住金鑰 (localStorage)。若使用公用裝置請取消勾選。",
+      "showApiKey": "顯示 API key",
+      "hideApiKey": "隱藏 API key",
+      "translateFrom": "翻譯自",
+      "translateTo": "翻譯為",
+      "tone": "語氣",
+      "customProvider": "自定義 (相容 OpenAI)",
+      "customModel": "模型 ID",
+      "customModelPlaceholder": "例如 gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API 端點",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "指向相容 OpenAI 的 /chat/completions 端點的完整 URL。必須是 https:// 且能從公網存取。",
+      "openrouterModelPlaceholder": "例如 google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "例如 kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "請輸入 API key 以繼續。"
+    },
+    "upload": {
+      "parsing": "正在解析 EPUB…",
+      "parsingPdf": "正在解析 PDF — 正在提取文字並重組段落…",
+      "dropTitle": "將 EPUB 拖放到此處",
+      "dropSubtitle": "或點擊選擇檔案",
+      "noChapters": "此 EPUB 中未發現可讀取章節。",
+      "ocrRunning": "正在使用 {model} 進行 OCR…",
+      "ocrPageOf": "第 {current} / {total} 頁",
+      "ocrFailedCount": "{count} 個失敗",
+      "scannedPdfDetected": "{file} 是沒有文字層的掃描版 PDF（共 {pages} 頁）。",
+      "modelLacksVision": "您選擇的 {provider} 模型「{model}」不支援圖片輸入，因此無法對掃描頁面進行 OCR。",
+      "switchToVision": "切換至：",
+      "runOcr": "執行 OCR",
+      "providerHasNoVision": "{provider} 在此選單中未提供具備視覺辨識能力的模型。請開啟設定以切換服務供應商（Gemini、OpenAI 或 Claude 皆支援 OCR）。",
+      "recentBooks": "近期書籍",
+      "progressParagraphs": "{done} / {total} 段落",
+      "progressPages": "{done} / {total} 頁",
+      "deleteBook": "從歷史記錄中移除",
+      "deleteConfirm": "確定要從歷史記錄中移除「{name}」嗎？該檔案及其翻譯內容將會被刪除。",
+      "untitled": "未命名",
+      "relativeJustNow": "剛剛",
+      "relativeMinutesAgo": "{n} 分鐘前",
+      "relativeHoursAgo": "{n} 小時前",
+      "relativeDaysAgo": "{n} 天前"
+    },
+    "preview": {
+      "pages": "{count} 頁",
+      "scannedTag": "已掃描（需要 OCR）",
+      "textLayerTag": "已偵測到文字層",
+      "prev": "上一頁",
+      "next": "下一頁",
+      "pageOf": "第 {current} / {total} 頁",
+      "pageList": "頁面（{count}）",
+      "pageLabel": "第 {n} 頁",
+      "willOcrWith": "將使用 {model} 對所有頁面進行 OCR。",
+      "willTranslate": "文字已提取。請繼續選擇要翻譯的章節。",
+      "startOcr": "開始 OCR（{count} 頁）",
+      "continue": "繼續 →",
+      "singlePage": {
+        "button": "翻譯此頁面",
+        "tooltip": "僅對此頁面進行 OCR 與翻譯，以便在處理整本書之前預覽品質。",
+        "running": "正在 OCR 與翻譯此頁面…",
+        "translating": "正在翻譯此頁面…",
+        "empty": "此頁面未發現可翻譯的文字。",
+        "resultHeader": "第 {page} 頁 — 雙語預覽",
+        "needsVision": "目前的模型無法進行 OCR。請先切換至具備視覺辨識能力的模型。"
+      }
+    },
+    "browse": {
+      "chapters": "章節",
+      "toneTitle": "翻譯語氣 — 影響寫作風格",
+      "paragraphCount": "{nodes} 個段落 · {translated} 已翻譯",
+      "errorOne": "{count} 個段落失敗。您可以重新翻譯以重試 — 已完成的段落將被跳過。",
+      "errorMany": "{count} 個段落失敗。您可以重新翻譯以重試 — 已完成的段落將被跳過。",
+      "noTranslatableText": "此章節沒有可翻譯的文本（封面、前言等）。",
+      "translatingAria": "正在翻譯",
+      "translatingLabel": "翻譯中…",
+      "buildFailed": "建立 EPUB 失敗："
+    },
+    "glossary": {
+      "label": "術語表",
+      "title": "為本書中的術語強制指定翻譯——適用於技術、專業或特定領域的作品。",
+      "none": "無",
+      "empty": "尚未上傳術語表。",
+      "entryCount": "{n} 個術語",
+      "upload": "上傳 CSV…",
+      "uploading": "上傳中…",
+      "hint": "包含兩欄的 CSV：原文術語、譯文。可選第三欄：備註。第一列可作為標題。編碼為 UTF-8。",
+      "delete": "移除術語表",
+      "deleteConfirm": "確定要移除術語表「{name}」嗎？任何使用此術語表的書籍將恢復為無術語表狀態。"
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "道地",
+        "hint": "自然流暢 — 多數書籍"
+      },
+      "literary": {
+        "label": "文學",
+        "hint": "小說與文學作品"
+      },
+      "technical": {
+        "label": "技術",
+        "hint": "專業與參考書籍"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "最便宜，快速",
+      "higherQuality": "較高品質",
+      "bestQuality": "最佳品質",
+      "newestFast": "最新，快速",
+      "cheapest": "最便宜",
+      "bestQualityStable": "最佳品質，穩定",
+      "balanced": "均衡",
+      "freeTierFast": "免費額度，快速",
+      "flagshipCoding": "旗艦級程式編寫/代理",
+      "longContext": "長上下文，穩定",
+      "cheaper": "較便宜",
+      "latestLongContext": "最新，256K 上下文"
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "מתרגם ספרים אלקטרוניים חינמי — EPUB / PDF / AI / 40 שפות",
+    "description": "מתרגם ספרים אלקטרוניים חינמי מבוסס AI שפועל לחלוטין בדפדפן שלך. תרגם קבצי EPUB ו-PDF ל-40+ שפות עם פלט דו-לשוני זה לצד זה. השתמש במפתח ה-API שלך."
+  },
+  "ebookTranslator": {
+    "eyebrow": "פרויקט",
+    "title": "מתרגם ספרים אלקטרוניים חינמי",
+    "subtitle": "העלו קובץ EPUB, השתמשו ב-LLM API key משלכם, וקבלו מהדורה דו-לשונית שבה הטקסט המקורי והמתורגם משולבים פסקה אחר פסקה. הקובץ מעובד כולו בדפדפן שלכם — הספר שלכם לעולם לא מגיע לשרת כלשהו.",
+    "steps": {
+      "settings": "הגדרות",
+      "upload": "העלאה",
+      "preview": "תצוגה מקדימה",
+      "browse": "עיון"
+    },
+    "actions": {
+      "cancelRunning": "ביטול הפעולה",
+      "translateAllRemaining": "תרגום כל השאר",
+      "downloadEpub": "⬇ הורדת EPUB",
+      "building": "בבנייה…",
+      "back": "← חזרה",
+      "settingsModel": "← הגדרות / מודל",
+      "show": "הצגה",
+      "hide": "הסתרה",
+      "cancel": "ביטול",
+      "retranslate": "תרגום מחדש",
+      "resume": "המשך",
+      "translateChapter": "תרגום פרק זה",
+      "continue": "המשך →"
+    },
+    "settings": {
+      "provider": "ספק",
+      "model": "מודל",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "הדבק את מפתח ה-{provider} שלך",
+      "apiKeyHint": "קבל אחד ב-{link}. המפתח שלך נשלח רק ל-{provider}, לעולם לא ל-{host}.",
+      "rememberKey": "זכור מפתח בדפדפן זה בלבד (localStorage). בטל את הסימון עבור מכשירים משותפים.",
+      "showApiKey": "הצג API key",
+      "hideApiKey": "הסתר API key",
+      "translateFrom": "תרגם מ-",
+      "translateTo": "תרגם ל-",
+      "tone": "סגנון",
+      "customProvider": "מותאם אישית (תואם OpenAI)",
+      "customModel": "מזהה מודל",
+      "customModelPlaceholder": "למשל gpt-4o, deepseek-chat, …",
+      "customEndpoint": "נקודת קצה של API",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "כתובת URL מלאה לנקודת קצה של /chat/completions התואמת ל-OpenAI.",
+      "openrouterModelPlaceholder": "למשל google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "למשל kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "הזן API key כדי להמשיך."
+    },
+    "upload": {
+      "parsing": "מנתח EPUB…",
+      "parsingPdf": "מנתח PDF — מחלץ טקסט ומשחזר פסקאות…",
+      "dropTitle": "גרור EPUB לכאן",
+      "dropSubtitle": "או לחץ כדי לבחור קובץ",
+      "noChapters": "לא נמצאו פרקים קריאים ב-EPUB זה.",
+      "ocrRunning": "מבצע OCR לדפים עם {model}…",
+      "ocrPageOf": "עמוד {current} / {total}",
+      "ocrFailedCount": "{count} נכשלו",
+      "scannedPdfDetected": "{file} הוא קובץ PDF סרוק ({pages} עמודים) ללא שכבת טקסט.",
+      "modelLacksVision": "מודל ה-{provider} שבחרת \"{model}\" אינו מקבל קלט תמונה, לכן לא ניתן לבצע OCR לדפים סרוקים.",
+      "switchToVision": "החלף ל-:",
+      "runOcr": "הרץ OCR",
+      "providerHasNoVision": "{provider} לא מציע מודל בעל יכולת ראייה בבורר זה. פתח את ההגדרות כדי להחליף ספק (Gemini, OpenAI, או Claude כולם תומכים ב-OCR).",
+      "recentBooks": "ספרים אחרונים",
+      "progressParagraphs": "{done} / {total} פסקאות",
+      "progressPages": "{done} / {total} עמודים",
+      "deleteBook": "הסרה מההיסטוריה",
+      "deleteConfirm": "להסיר את \"{name}\" מההיסטוריה? הקובץ והתרגומים שלו יימחקו.",
+      "untitled": "ללא כותרת",
+      "relativeJustNow": "ממש עכשיו",
+      "relativeMinutesAgo": "לפני {n} דק׳",
+      "relativeHoursAgo": "לפני {n} ש׳",
+      "relativeDaysAgo": "לפני {n} ימים"
+    },
+    "preview": {
+      "pages": "{count} עמודים",
+      "scannedTag": "סרוק (דורש OCR)",
+      "textLayerTag": "זוהתה שכבת טקסט",
+      "prev": "הקודם",
+      "next": "הבא",
+      "pageOf": "עמוד {current} / {total}",
+      "pageList": "עמודים ({count})",
+      "pageLabel": "עמוד {n}",
+      "willOcrWith": "יבצע OCR לכל העמודים עם {model}.",
+      "willTranslate": "הטקסט חולץ. המשך לבחירת פרקים לתרגום.",
+      "startOcr": "התחל OCR ({count} עמודים)",
+      "continue": "המשך →",
+      "singlePage": {
+        "button": "תרגם עמוד זה",
+        "tooltip": "בצע OCR ותרגם רק את העמוד הזה כדי שתוכל לראות תצוגה מקדימה של האיכות לפני שתתחייב לכל הספר.",
+        "running": "מבצע OCR ותרגום לעמוד זה…",
+        "translating": "מתרגם עמוד זה…",
+        "empty": "לא נמצא טקסט לתרגום בעמוד זה.",
+        "resultHeader": "עמוד {page} — תצוגה מקדימה דו-לשונית",
+        "needsVision": "המודל הנוכחי אינו יכול לבצע OCR לתמונות. החלף תחילה למודל בעל יכולת ראייה."
+      }
+    },
+    "browse": {
+      "chapters": "פרקים",
+      "toneTitle": "סגנון תרגום — משפיע על סגנון הכתיבה",
+      "paragraphCount": "{nodes} פסקאות · {translated} תורגמו",
+      "errorOne": "פסקה {count} נכשלה. ניתן לתרגם שוב כדי לנסות שנית — פסקאות שכבר תורגמו ידלגו.",
+      "errorMany": "{count} פסקאות נכשלו. ניתן לתרגם שוב כדי לנסות שנית — פסקאות שכבר תורגמו ידלגו.",
+      "noTranslatableText": "בפרק זה אין טקסט הניתן לתרגום (כריכה, חלקים מקדימים וכו').",
+      "translatingAria": "מתרגם",
+      "translatingLabel": "מתרגם…",
+      "buildFailed": "בניית EPUB נכשלה:"
+    },
+    "glossary": {
+      "label": "מילון מונחים",
+      "title": "כפה תרגומים ספציפיים למונחים בספר זה — שימושי לעבודות טכניות, מקצועיות או ממוקדות תחום.",
+      "none": "ללא",
+      "empty": "טרם הועלו מילוני מונחים.",
+      "entryCount": "{n} מונחים",
+      "upload": "העלה CSV…",
+      "uploading": "מעלה…",
+      "hint": "קובץ CSV עם שתי עמודות: מונח מקור, תרגום. עמודה שלישית אופציונלית: הערה. השורה הראשונה יכולה להיות כותרת. UTF-8.",
+      "delete": "הסר מילון מונחים",
+      "deleteConfirm": "להסיר את מילון המונחים \"{name}\"? כל ספר שישתמש בו יחזור למצב ללא מילון מונחים."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "אידיומטי",
+        "hint": "טבעי וזורם — רוב הספרים"
+      },
+      "literary": {
+        "label": "ספרותי",
+        "hint": "רומנים ויצירות ספרותיות"
+      },
+      "technical": {
+        "label": "טכני",
+        "hint": "ספרי מקצוע ועיון"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "הכי זול, מהיר",
+      "higherQuality": "איכות גבוהה יותר",
+      "bestQuality": "האיכות הטובה ביותר",
+      "newestFast": "הכי חדש, מהיר",
+      "cheapest": "הכי זול",
+      "bestQualityStable": "האיכות הטובה ביותר, יציב",
+      "balanced": "מאוזן",
+      "freeTierFast": "מסלול חינמי, מהיר",
+      "flagshipCoding": "דגם דגל לתכנות/סוכנים",
+      "longContext": "הקשר ארוך, יציב",
+      "cheaper": "זול יותר",
+      "latestLongContext": "הכי עדכני, הקשר 256K"
+    }
+  }
+}

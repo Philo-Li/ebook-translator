@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Free Ebook Translator — EPUB / PDF / AI / 40 Languages",
+    "description": "Free AI ebook translator that runs entirely in your browser. Translate EPUB and PDF files into 40+ languages with side-by-side bilingual output. Use your own API key."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Project",
+    "title": "Free Ebook Translator",
+    "subtitle": "Upload an EPUB or PDF, bring your own LLM API key, and get back a bilingual edition with the original and translated text interleaved paragraph by paragraph. The file is parsed entirely in your browser — your book never touches any server.",
+    "steps": {
+      "settings": "settings",
+      "upload": "upload",
+      "preview": "preview",
+      "browse": "browse"
+    },
+    "actions": {
+      "cancelRunning": "Cancel running",
+      "translateAllRemaining": "Translate all remaining",
+      "downloadEpub": "⬇ Download EPUB",
+      "building": "Building…",
+      "back": "← Back",
+      "settingsModel": "← Settings / model",
+      "show": "Show",
+      "hide": "Hide",
+      "cancel": "Cancel",
+      "retranslate": "Re-translate",
+      "resume": "Resume",
+      "translateChapter": "Translate this chapter",
+      "continue": "Continue →"
+    },
+    "settings": {
+      "provider": "Provider",
+      "model": "Model",
+      "apiKey": "API Key",
+      "apiKeyPlaceholder": "Paste your {provider} key",
+      "apiKeyHint": "Get one at {link}. Your key is sent only to {provider}, never to {host}.",
+      "rememberKey": "Remember key in this browser only (localStorage). Uncheck for shared devices.",
+      "showApiKey": "Show API key",
+      "hideApiKey": "Hide API key",
+      "translateFrom": "Translate from",
+      "translateTo": "Translate to",
+      "tone": "Tone",
+      "customProvider": "Custom (OpenAI-compatible)",
+      "customModel": "Model ID",
+      "customModelPlaceholder": "e.g. gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API Endpoint",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "Full URL to an OpenAI-compatible /chat/completions endpoint. Must be https:// and reachable on the public internet.",
+      "openrouterModelPlaceholder": "e.g. google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "e.g. kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Enter an API key to continue."
+    },
+    "upload": {
+      "parsing": "Parsing EPUB…",
+      "parsingPdf": "Parsing PDF — extracting text and reconstructing paragraphs…",
+      "dropTitle": "Drop an EPUB or PDF here",
+      "dropSubtitle": "or click to choose a file",
+      "noChapters": "No readable chapters found in this file.",
+      "ocrRunning": "OCR'ing pages with {model}…",
+      "ocrPageOf": "Page {current} / {total}",
+      "ocrFailedCount": "{count} failed",
+      "scannedPdfDetected": "{file} is a scanned PDF ({pages} pages) with no text layer.",
+      "modelLacksVision": "Your selected {provider} model \"{model}\" doesn't accept image input, so it can't OCR scanned pages.",
+      "switchToVision": "Switch to:",
+      "runOcr": "Run OCR",
+      "providerHasNoVision": "{provider} doesn't offer a vision-capable model in this picker. Open Settings to switch provider (Gemini, OpenAI, or Claude all support OCR).",
+      "recentBooks": "Recent books",
+      "progressParagraphs": "{done} / {total} paragraphs",
+      "progressPages": "{done} / {total} pages",
+      "deleteBook": "Remove from history",
+      "deleteConfirm": "Remove \"{name}\" from history? The file and its translations will be deleted.",
+      "untitled": "Untitled",
+      "relativeJustNow": "just now",
+      "relativeMinutesAgo": "{n} min ago",
+      "relativeHoursAgo": "{n} h ago",
+      "relativeDaysAgo": "{n} d ago"
+    },
+    "preview": {
+      "pages": "{count} pages",
+      "scannedTag": "scanned (needs OCR)",
+      "textLayerTag": "text layer detected",
+      "prev": "Prev",
+      "next": "Next",
+      "pageOf": "Page {current} / {total}",
+      "pageList": "Pages ({count})",
+      "pageLabel": "Page {n}",
+      "willOcrWith": "Will OCR all pages with {model}.",
+      "willTranslate": "Text extracted. Continue to pick chapters to translate.",
+      "startOcr": "Start OCR ({count} pages)",
+      "continue": "Continue →",
+      "singlePage": {
+        "button": "Translate this page",
+        "tooltip": "OCR + translate just this page so you can preview the quality before committing to the whole book.",
+        "running": "OCR'ing & translating this page…",
+        "translating": "Translating this page…",
+        "empty": "No translatable text found on this page.",
+        "resultHeader": "Page {page} — bilingual preview",
+        "needsVision": "The current model can't OCR images. Switch to a vision-capable model first."
+      }
+    },
+    "browse": {
+      "chapters": "Chapters",
+      "toneTitle": "Translation tone — affects writing style",
+      "paragraphCount": "{nodes} paragraphs · {translated} translated",
+      "errorOne": "{count} paragraph failed. You can re-translate to retry — already-done paragraphs are skipped.",
+      "errorMany": "{count} paragraphs failed. You can re-translate to retry — already-done paragraphs are skipped.",
+      "noTranslatableText": "This chapter has no translatable text (cover, front matter, etc).",
+      "translatingAria": "Translating",
+      "translatingLabel": "translating…",
+      "buildFailed": "Failed to build EPUB:"
+    },
+    "glossary": {
+      "label": "Glossary",
+      "title": "Force specific translations for terms in this book — useful for technical, professional, or domain-specific works.",
+      "none": "None",
+      "empty": "No glossaries uploaded yet.",
+      "entryCount": "{n} terms",
+      "upload": "Upload CSV…",
+      "uploading": "Uploading…",
+      "hint": "CSV with two columns: source term, translation. Optional third column: note. First row may be a header. UTF-8.",
+      "delete": "Remove glossary",
+      "deleteConfirm": "Remove the glossary \"{name}\"? Any books using it will fall back to no glossary."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Idiomatic",
+        "hint": "natural & fluent — most books"
+      },
+      "literary": {
+        "label": "Literary",
+        "hint": "novels & literary works"
+      },
+      "technical": {
+        "label": "Technical",
+        "hint": "professional & reference books"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "cheapest, fast",
+      "higherQuality": "higher quality",
+      "bestQuality": "best quality",
+      "newestFast": "newest, fast",
+      "cheapest": "cheapest",
+      "bestQualityStable": "best quality, stable",
+      "balanced": "balanced",
+      "freeTierFast": "free tier, fast",
+      "flagshipCoding": "flagship coding/agentic",
+      "longContext": "long context, stable",
+      "cheaper": "cheaper",
+      "latestLongContext": "latest, 256K context"
+    }
+  }
+}

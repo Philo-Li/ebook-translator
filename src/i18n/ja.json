@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "無料の電子書籍翻訳ツール — EPUB / PDF / AI / 40言語対応",
+    "description": "ブラウザ内で動作する無料のAI電子書籍翻訳ツール。EPUBとPDFを40以上の言語に翻訳し、対訳版として出力。自分のAPIキーを使用。"
+  },
+  "ebookTranslator": {
+    "eyebrow": "プロジェクト",
+    "title": "無料の電子書籍翻訳ツール",
+    "subtitle": "EPUB をアップロードし、ご自身の LLM API key を使用することで、原文と翻訳文が段落ごとに交互に配置された2ヶ国語版を作成します。ファイル解析はすべてブラウザ内で行われるため、本がサーバーに送信されることはありません。",
+    "steps": {
+      "settings": "設定",
+      "upload": "アップロード",
+      "preview": "プレビュー",
+      "browse": "ファイルを選択"
+    },
+    "actions": {
+      "cancelRunning": "実行をキャンセル",
+      "translateAllRemaining": "残りをすべて翻訳",
+      "downloadEpub": "⬇ EPUB をダウンロード",
+      "building": "作成中…",
+      "back": "← 戻る",
+      "settingsModel": "← 設定 / モデル",
+      "show": "表示",
+      "hide": "非表示",
+      "cancel": "キャンセル",
+      "retranslate": "再翻訳",
+      "resume": "再開",
+      "translateChapter": "この章を翻訳",
+      "continue": "続ける →"
+    },
+    "settings": {
+      "provider": "プロバイダー",
+      "model": "モデル",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "{provider}のキーを貼り付けてください",
+      "apiKeyHint": "{link}で取得できます。キーは{provider}にのみ送信され、{host}に送信されることはありません。",
+      "rememberKey": "このブラウザにのみキーを保存する（ローカルストレージ）。共有デバイスの場合はチェックを外してください。",
+      "showApiKey": "API keyを表示",
+      "hideApiKey": "API keyを隠す",
+      "translateFrom": "翻訳元",
+      "translateTo": "翻訳先",
+      "tone": "トーン",
+      "customProvider": "カスタム（OpenAI互換）",
+      "customModel": "モデルID",
+      "customModelPlaceholder": "例：gpt-4o、deepseek-chat、…",
+      "customEndpoint": "APIエンドポイント",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "OpenAI互換の /chat/completions エンドポイントのフルURL。",
+      "openrouterModelPlaceholder": "例：google/gemini-2.5-flash、anthropic/claude-sonnet-4、…",
+      "opencodeModelPlaceholder": "例：kimi-k2.6、deepseek-v4-flash、glm-5.1、…",
+      "needApiKey": "続行するには API key を入力してください。"
+    },
+    "upload": {
+      "parsing": "EPUBを解析中…",
+      "parsingPdf": "PDFを解析中 — テキストを抽出して段落を再構築しています…",
+      "dropTitle": "ここに EPUB をドロップ",
+      "dropSubtitle": "またはクリックしてファイルを選択",
+      "noChapters": "この EPUB 内に読み取り可能な章が見つかりませんでした。",
+      "ocrRunning": "{model}でページをOCR処理中…",
+      "ocrPageOf": "{current} / {total} ページ",
+      "ocrFailedCount": "{count} 件の失敗",
+      "scannedPdfDetected": "{file} はテキストレイヤーのないスキャン済みPDF（{pages} ページ）です。",
+      "modelLacksVision": "選択した {provider} のモデル「{model}」は画像入力を受け付けないため、スキャンされたページをOCR処理できません。",
+      "switchToVision": "切り替え先：",
+      "runOcr": "OCRを実行",
+      "providerHasNoVision": "{provider} は、この選択肢の中に画像認識対応モデルを提供していません。設定を開いてプロバイダーを切り替えてください（Gemini、OpenAI、ClaudeはすべてOCRに対応しています）。",
+      "recentBooks": "最近読んだ本",
+      "progressParagraphs": "{done} / {total} 段落",
+      "progressPages": "{done} / {total} ページ",
+      "deleteBook": "履歴から削除",
+      "deleteConfirm": "\"{name}\" を履歴から削除しますか？ファイルとその翻訳は削除されます。",
+      "untitled": "無題",
+      "relativeJustNow": "たった今",
+      "relativeMinutesAgo": "{n} 分前",
+      "relativeHoursAgo": "{n} 時間前",
+      "relativeDaysAgo": "{n} 日前"
+    },
+    "preview": {
+      "pages": "{count} ページ",
+      "scannedTag": "スキャン済み（OCRが必要）",
+      "textLayerTag": "テキストレイヤーを検出済み",
+      "prev": "前へ",
+      "next": "次へ",
+      "pageOf": "{current} / {total} ページ",
+      "pageList": "ページ数（{count}）",
+      "pageLabel": "{n} ページ",
+      "willOcrWith": "{model} を使用して全ページをOCR処理します。",
+      "willTranslate": "テキストを抽出しました。続けて翻訳する章を選択してください。",
+      "startOcr": "OCRを開始（{count} ページ）",
+      "continue": "続ける →",
+      "singlePage": {
+        "button": "このページを翻訳",
+        "tooltip": "本全体を翻訳する前に、OCRと翻訳の品質を確認できるよう、このページのみを処理します。",
+        "running": "このページをOCR・翻訳中…",
+        "translating": "このページを翻訳中…",
+        "empty": "このページには翻訳可能なテキストが見つかりませんでした。",
+        "resultHeader": "{page} ページ — バイリンガルプレビュー",
+        "needsVision": "現在のモデルは画像をOCR処理できません。先に画像認識対応モデルへ切り替えてください。"
+      }
+    },
+    "browse": {
+      "chapters": "章",
+      "toneTitle": "翻訳トーン — 文章のスタイルに影響します",
+      "paragraphCount": "{nodes} 段落 · {translated} 翻訳済み",
+      "errorOne": "{count} 個の段落で失敗しました。再翻訳してリトライできます。翻訳済みの段落はスキップされます。",
+      "errorMany": "{count} 個の段落で失敗しました。再翻訳してリトライできます。翻訳済みの段落はスキップされます。",
+      "noTranslatableText": "この章には翻訳可能なテキストがありません（表紙、前付など）。",
+      "translatingAria": "翻訳中",
+      "translatingLabel": "翻訳中…",
+      "buildFailed": "EPUBの作成に失敗しました："
+    },
+    "glossary": {
+      "label": "用語集",
+      "title": "本書内の用語を特定の訳語に固定します。技術文書や専門書、特定の分野の翻訳に便利です。",
+      "none": "なし",
+      "empty": "用語集がまだアップロードされていません。",
+      "entryCount": "{n} 個の用語",
+      "upload": "CSVをアップロード…",
+      "uploading": "アップロード中…",
+      "hint": "2列のCSV形式：原文、訳語。3列目にメモを追加可能（任意）。1行目はヘッダーでも可。UTF-8形式。",
+      "delete": "用語集を削除",
+      "deleteConfirm": "用語集「{name}」を削除しますか？これを使用しているすべての書籍で用語集が適用されなくなります。"
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "慣用的",
+        "hint": "自然で流暢 — ほとんどの本"
+      },
+      "literary": {
+        "label": "文学的",
+        "hint": "小説・文学作品"
+      },
+      "technical": {
+        "label": "技術的",
+        "hint": "専門書・参考書"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "最安、高速",
+      "higherQuality": "高品質",
+      "bestQuality": "最高品質",
+      "newestFast": "最新、高速",
+      "cheapest": "最安",
+      "bestQualityStable": "最高品質、安定",
+      "balanced": "バランス重視",
+      "freeTierFast": "無料枠、高速",
+      "flagshipCoding": "フラッグシップ・コーディング/エージェント",
+      "longContext": "長文コンテキスト、安定",
+      "cheaper": "より安価",
+      "latestLongContext": "最新、256Kコンテキスト"
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Penerjemah Ebook Gratis — EPUB / PDF / AI / 40 Bahasa",
+    "description": "Penerjemah ebook AI gratis yang berjalan sepenuhnya di browser Anda. Terjemahkan file EPUB dan PDF ke 40+ bahasa dengan output dwibahasa berdampingan. Gunakan API key Anda sendiri."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Proyek",
+    "title": "Penerjemah Ebook Gratis",
+    "subtitle": "Unggah EPUB, gunakan API key LLM Anda sendiri, dan dapatkan edisi dwibahasa dengan teks asli dan terjemahan yang disisipkan paragraf demi paragraf. Berkas diproses sepenuhnya di peramban Anda — buku Anda tidak pernah menyentuh server mana pun.",
+    "steps": {
+      "settings": "pengaturan",
+      "upload": "unggah",
+      "preview": "pratinjau",
+      "browse": "telusuri"
+    },
+    "actions": {
+      "cancelRunning": "Batalkan proses",
+      "translateAllRemaining": "Terjemahkan semua sisanya",
+      "downloadEpub": "⬇ Unduh EPUB",
+      "building": "Membangun…",
+      "back": "← Kembali",
+      "settingsModel": "← Pengaturan / model",
+      "show": "Tampilkan",
+      "hide": "Sembunyikan",
+      "cancel": "Batal",
+      "retranslate": "Terjemahkan ulang",
+      "resume": "Lanjutkan",
+      "translateChapter": "Terjemahkan bab ini",
+      "continue": "Lanjutkan →"
+    },
+    "settings": {
+      "provider": "Penyedia",
+      "model": "Model",
+      "apiKey": "API Key",
+      "apiKeyPlaceholder": "Tempel kunci {provider} Anda",
+      "apiKeyHint": "Dapatkan di {link}. Kunci Anda hanya dikirim ke {provider}, tidak pernah ke {host}.",
+      "rememberKey": "Ingat kunci di peramban ini saja (localStorage). Hapus centang untuk perangkat bersama.",
+      "showApiKey": "Tampilkan API key",
+      "hideApiKey": "Sembunyikan API key",
+      "translateFrom": "Terjemahkan dari",
+      "translateTo": "Terjemahkan ke",
+      "tone": "Nada",
+      "customProvider": "Kustom (kompatibel dengan OpenAI)",
+      "customModel": "ID Model",
+      "customModelPlaceholder": "misal: gpt-4o, deepseek-chat, …",
+      "customEndpoint": "Endpoint API",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "URL lengkap ke endpoint /chat/completions yang kompatibel dengan OpenAI.",
+      "openrouterModelPlaceholder": "misal: google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "misal: kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Masukkan API key untuk melanjutkan."
+    },
+    "upload": {
+      "parsing": "Mengurai EPUB…",
+      "parsingPdf": "Memproses PDF — mengekstrak teks dan menyusun ulang paragraf…",
+      "dropTitle": "Letakkan EPUB di sini",
+      "dropSubtitle": "atau klik untuk memilih berkas",
+      "noChapters": "Tidak ada bab yang terbaca ditemukan di EPUB ini.",
+      "ocrRunning": "Melakukan OCR pada halaman dengan {model}…",
+      "ocrPageOf": "Halaman {current} / {total}",
+      "ocrFailedCount": "{count} gagal",
+      "scannedPdfDetected": "{file} adalah PDF hasil pindai ({pages} halaman) tanpa lapisan teks.",
+      "modelLacksVision": "Model {provider} \"{model}\" yang Anda pilih tidak menerima input gambar, sehingga tidak dapat melakukan OCR pada halaman hasil pindai.",
+      "switchToVision": "Beralih ke:",
+      "runOcr": "Jalankan OCR",
+      "providerHasNoVision": "{provider} tidak menawarkan model dengan kemampuan visi di pemilih ini. Buka Pengaturan untuk beralih penyedia (Gemini, OpenAI, atau Claude semuanya mendukung OCR).",
+      "recentBooks": "Buku terbaru",
+      "progressParagraphs": "{done} / {total} paragraf",
+      "progressPages": "{done} / {total} halaman",
+      "deleteBook": "Hapus dari riwayat",
+      "deleteConfirm": "Hapus \"{name}\" dari riwayat? File dan terjemahannya akan dihapus.",
+      "untitled": "Tanpa judul",
+      "relativeJustNow": "baru saja",
+      "relativeMinutesAgo": "{n} menit yang lalu",
+      "relativeHoursAgo": "{n} jam yang lalu",
+      "relativeDaysAgo": "{n} hari yang lalu"
+    },
+    "preview": {
+      "pages": "{count} halaman",
+      "scannedTag": "hasil pindai (perlu OCR)",
+      "textLayerTag": "lapisan teks terdeteksi",
+      "prev": "Sebelumnya",
+      "next": "Berikutnya",
+      "pageOf": "Halaman {current} / {total}",
+      "pageList": "Halaman ({count})",
+      "pageLabel": "Halaman {n}",
+      "willOcrWith": "Akan melakukan OCR pada semua halaman dengan {model}.",
+      "willTranslate": "Teks berhasil diekstrak. Lanjutkan untuk memilih bab yang akan diterjemahkan.",
+      "startOcr": "Mulai OCR ({count} halaman)",
+      "continue": "Lanjutkan →",
+      "singlePage": {
+        "button": "Terjemahkan halaman ini",
+        "tooltip": "OCR + terjemahkan hanya halaman ini agar Anda dapat melihat pratinjau kualitasnya sebelum memproses seluruh buku.",
+        "running": "Melakukan OCR & menerjemahkan halaman ini…",
+        "translating": "Menerjemahkan halaman ini…",
+        "empty": "Tidak ada teks yang dapat diterjemahkan di halaman ini.",
+        "resultHeader": "Halaman {page} — pratinjau dwibahasa",
+        "needsVision": "Model saat ini tidak dapat melakukan OCR pada gambar. Beralihlah ke model dengan kemampuan visi terlebih dahulu."
+      }
+    },
+    "browse": {
+      "chapters": "Bab",
+      "toneTitle": "Nada terjemahan — memengaruhi gaya penulisan",
+      "paragraphCount": "{nodes} paragraf · {translated} diterjemahkan",
+      "errorOne": "{count} paragraf gagal. Anda dapat menerjemahkan ulang untuk mencoba lagi — paragraf yang sudah selesai akan dilewati.",
+      "errorMany": "{count} paragraf gagal. Anda dapat menerjemahkan ulang untuk mencoba lagi — paragraf yang sudah selesai akan dilewati.",
+      "noTranslatableText": "Bab ini tidak memiliki teks yang dapat diterjemahkan (sampul, bagian depan, dll).",
+      "translatingAria": "Menerjemahkan",
+      "translatingLabel": "menerjemahkan…",
+      "buildFailed": "Gagal membuat EPUB:"
+    },
+    "glossary": {
+      "label": "Glosarium",
+      "title": "Paksa terjemahan spesifik untuk istilah dalam buku ini — berguna untuk karya teknis, profesional, atau spesifik domain.",
+      "none": "Tidak ada",
+      "empty": "Belum ada glosarium yang diunggah.",
+      "entryCount": "{n} istilah",
+      "upload": "Unggah CSV…",
+      "uploading": "Sedang mengunggah…",
+      "hint": "CSV dengan dua kolom: istilah sumber, terjemahan. Kolom ketiga opsional: catatan. Baris pertama boleh berupa header. UTF-8.",
+      "delete": "Hapus glosarium",
+      "deleteConfirm": "Hapus glosarium \"{name}\"? Buku apa pun yang menggunakannya akan kembali ke tanpa glosarium."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Idiomatik",
+        "hint": "alami & lancar — sebagian besar buku"
+      },
+      "literary": {
+        "label": "Sastra",
+        "hint": "novel & karya sastra"
+      },
+      "technical": {
+        "label": "Teknis",
+        "hint": "buku profesional & referensi"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "termurah, cepat",
+      "higherQuality": "kualitas lebih tinggi",
+      "bestQuality": "kualitas terbaik",
+      "newestFast": "terbaru, cepat",
+      "cheapest": "termurah",
+      "bestQualityStable": "kualitas terbaik, stabil",
+      "balanced": "seimbang",
+      "freeTierFast": "tingkat gratis, cepat",
+      "flagshipCoding": "unggulan pengodean/agentic",
+      "longContext": "konteks panjang, stabil",
+      "cheaper": "lebih murah",
+      "latestLongContext": "terbaru, konteks 256K"
+    }
+  }
+}

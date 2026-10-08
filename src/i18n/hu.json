@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Ingyenes e-könyv fordító — EPUB / PDF / AI / 40 nyelv",
+    "description": "Ingyenes AI e-könyv fordító, amely teljes egészében a böngészőben fut. Fordíts EPUB és PDF fájlokat 40+ nyelvre kétnyelvű egymás melletti kimenettel. Használd a saját API kulcsodat."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Projekt",
+    "title": "Ingyenes e-könyv fordító",
+    "subtitle": "Töltsön fel egy EPUB fájlt, használja saját LLM API key-ét, és kapjon egy kétnyelvű kiadást, ahol az eredeti és a lefordított szöveg bekezdésenként váltakozik. A fájl feldolgozása teljes egészében a böngészőjében történik — a könyve soha nem kerül szerverre.",
+    "steps": {
+      "settings": "beállítások",
+      "upload": "feltöltés",
+      "preview": "előnézet",
+      "browse": "böngészés"
+    },
+    "actions": {
+      "cancelRunning": "Futás megszakítása",
+      "translateAllRemaining": "Összes hátralévő fordítása",
+      "downloadEpub": "⬇ EPUB letöltése",
+      "building": "Összeállítás…",
+      "back": "← Vissza",
+      "settingsModel": "← Beállítások / modell",
+      "show": "Megjelenítés",
+      "hide": "Elrejtés",
+      "cancel": "Mégse",
+      "retranslate": "Újrafordítás",
+      "resume": "Folytatás",
+      "translateChapter": "Fejezet fordítása",
+      "continue": "Folytatás →"
+    },
+    "settings": {
+      "provider": "Szolgáltató",
+      "model": "Modell",
+      "apiKey": "API Key",
+      "apiKeyPlaceholder": "Illeszd be a {provider} kulcsodat",
+      "apiKeyHint": "Szerezz egyet itt: {link}. A kulcsodat csak a {provider} felé továbbítjuk, a {host}-ra soha.",
+      "rememberKey": "Kulcs megjegyzése csak ebben a böngészőben (localStorage). Vedd ki a pipát közös használatú eszközökön.",
+      "showApiKey": "API Key megjelenítése",
+      "hideApiKey": "API Key elrejtése",
+      "translateFrom": "Fordítás erről:",
+      "translateTo": "Fordítás erre:",
+      "tone": "Stílus",
+      "customProvider": "Egyéni (OpenAI-kompatibilis)",
+      "customModel": "Modell azonosító",
+      "customModelPlaceholder": "pl. gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API végpont",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "Egy OpenAI-kompatibilis /chat/completions végpont teljes URL-je.",
+      "openrouterModelPlaceholder": "pl. google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "pl. kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "A folytatáshoz adj meg egy API Key-t."
+    },
+    "upload": {
+      "parsing": "EPUB feldolgozása…",
+      "parsingPdf": "PDF elemzése — szöveg kinyerése és bekezdések rekonstruálása…",
+      "dropTitle": "Húzz ide egy EPUB fájlt",
+      "dropSubtitle": "vagy kattints a fájl kiválasztásához",
+      "noChapters": "Nem találhatók olvasható fejezetek ebben az EPUB fájlban.",
+      "ocrRunning": "Oldalak OCR-ezése a következővel: {model}…",
+      "ocrPageOf": "{current} / {total} oldal",
+      "ocrFailedCount": "{count} sikertelen",
+      "scannedPdfDetected": "A(z) {file} egy szkennelt PDF ({pages} oldal), szövegréteg nélkül.",
+      "modelLacksVision": "A kiválasztott {provider} modell („{model}”) nem fogad el képbemenetet, így nem tudja elvégezni a szkennelt oldalak OCR-ezését.",
+      "switchToVision": "Váltás erre:",
+      "runOcr": "OCR futtatása",
+      "providerHasNoVision": "A(z) {provider} nem kínál látásalapú modellt ebben a választóban. Nyissa meg a Beállításokat a szolgáltató váltásához (a Gemini, az OpenAI és a Claude mind támogatja az OCR-t).",
+      "recentBooks": "Legutóbbi könyvek",
+      "progressParagraphs": "{done} / {total} bekezdés",
+      "progressPages": "{done} / {total} oldal",
+      "deleteBook": "Eltávolítás az előzményekből",
+      "deleteConfirm": "Eltávolítja a(z) „{name}” elemet az előzményekből? A fájl és a hozzá tartozó fordítások törlődnek.",
+      "untitled": "Cím nélküli",
+      "relativeJustNow": "éppen most",
+      "relativeMinutesAgo": "{n} perce",
+      "relativeHoursAgo": "{n} órája",
+      "relativeDaysAgo": "{n} napja"
+    },
+    "preview": {
+      "pages": "{count} oldal",
+      "scannedTag": "szkennelt (OCR szükséges)",
+      "textLayerTag": "szövegréteg észlelve",
+      "prev": "Előző",
+      "next": "Következő",
+      "pageOf": "{current} / {total} oldal",
+      "pageList": "Oldalak ({count})",
+      "pageLabel": "{n}. oldal",
+      "willOcrWith": "Az összes oldal OCR-ezése a következővel: {model}.",
+      "willTranslate": "Szöveg kinyerve. Folytassa a fejezetek kiválasztásával a fordításhoz.",
+      "startOcr": "OCR indítása ({count} oldal)",
+      "continue": "Folytatás →",
+      "singlePage": {
+        "button": "Oldal fordítása",
+        "tooltip": "Csak ennek az oldalnak az OCR-ezése és fordítása, hogy ellenőrizhesse a minőséget, mielőtt az egész könyvre alkalmazná.",
+        "running": "Oldal OCR-ezése és fordítása…",
+        "translating": "Oldal fordítása…",
+        "empty": "Nem található fordítható szöveg ezen az oldalon.",
+        "resultHeader": "{page}. oldal — kétnyelvű előnézet",
+        "needsVision": "A jelenlegi modell nem tudja OCR-ezni a képeket. Előbb váltson egy látásalapú modellre."
+      }
+    },
+    "browse": {
+      "chapters": "Fejezetek",
+      "toneTitle": "Fordítás stílusa — befolyásolja az írásmódot",
+      "paragraphCount": "{nodes} bekezdés · {translated} lefordítva",
+      "errorOne": "{count} bekezdés sikertelen. Az újrafordítással próbálkozhatsz újra — a már kész bekezdéseket kihagyjuk.",
+      "errorMany": "{count} bekezdés sikertelen. Az újrafordítással próbálkozhatsz újra — a már kész bekezdéseket kihagyjuk.",
+      "noTranslatableText": "Ez a fejezet nem tartalmaz fordítható szöveget (borító, bevezető rész stb.).",
+      "translatingAria": "Fordítás",
+      "translatingLabel": "fordítás…",
+      "buildFailed": "Sikertelen EPUB létrehozás:"
+    },
+    "glossary": {
+      "label": "Szójegyzék",
+      "title": "Kényszeríts konkrét fordításokat a könyv kifejezéseire – hasznos technikai, szakmai vagy szakterületi munkákhoz.",
+      "none": "Nincs",
+      "empty": "Még nincs feltöltött szójegyzék.",
+      "entryCount": "{n} kifejezés",
+      "upload": "CSV feltöltése…",
+      "uploading": "Feltöltés…",
+      "hint": "CSV két oszloppal: forráskifejezés, fordítás. Opcionális harmadik oszlop: megjegyzés. Az első sor lehet fejléc. UTF-8.",
+      "delete": "Szójegyzék eltávolítása",
+      "deleteConfirm": "Eltávolítod a(z) \"{name}\" szójegyzéket? Az ezt használó könyvek szójegyzék nélkül fognak tovább működni."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Idiomatikus",
+        "hint": "természetes és gördülékeny — a legtöbb könyvhöz"
+      },
+      "literary": {
+        "label": "Irodalmi",
+        "hint": "regények és irodalmi művek"
+      },
+      "technical": {
+        "label": "Szakmai",
+        "hint": "szakmai és referenciakönyvek"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "legolcsóbb, gyors",
+      "higherQuality": "jobb minőség",
+      "bestQuality": "legjobb minőség",
+      "newestFast": "legújabb, gyors",
+      "cheapest": "legolcsóbb",
+      "bestQualityStable": "legjobb minőség, stabil",
+      "balanced": "kiegyensúlyozott",
+      "freeTierFast": "ingyenes csomag, gyors",
+      "flagshipCoding": "zászlóshajó kódoláshoz/ágens alapú",
+      "longContext": "hosszú kontextus, stabil",
+      "cheaper": "olcsóbb",
+      "latestLongContext": "legfrissebb, 256K kontextus"
+    }
+  }
+}

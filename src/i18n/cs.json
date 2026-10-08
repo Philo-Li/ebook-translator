@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Bezplatný překladač e-knih — EPUB / PDF / AI / 40 jazyků",
+    "description": "Bezplatný překladač e-knih s AI, který běží kompletně ve vašem prohlížeči. Překládejte soubory EPUB a PDF do více než 40 jazyků s dvojjazyčným výstupem vedle sebe. Použijte vlastní API klíč."
+  },
+  "ebookTranslator": {
+    "eyebrow": "Projekt",
+    "title": "Bezplatný překladač e-knih",
+    "subtitle": "Nahrajte EPUB, použijte svůj vlastní LLM API key a získejte dvojjazyčné vydání s původním a přeloženým textem prokládaným odstavec po odstavci. Soubor je zpracován kompletně ve vašem prohlížeči — vaše kniha se nikdy nedotkne žádného serveru.",
+    "steps": {
+      "settings": "nastavení",
+      "upload": "nahrát",
+      "preview": "náhled",
+      "browse": "procházet"
+    },
+    "actions": {
+      "cancelRunning": "Zrušit probíhající",
+      "translateAllRemaining": "Přeložit vše zbývající",
+      "downloadEpub": "⬇ Stáhnout EPUB",
+      "building": "Sestavování…",
+      "back": "← Zpět",
+      "settingsModel": "← Nastavení / model",
+      "show": "Zobrazit",
+      "hide": "Skrýt",
+      "cancel": "Zrušit",
+      "retranslate": "Přeložit znovu",
+      "resume": "Pokračovat",
+      "translateChapter": "Přeložit tuto kapitolu",
+      "continue": "Pokračovat →"
+    },
+    "settings": {
+      "provider": "Poskytovatel",
+      "model": "Model",
+      "apiKey": "API key",
+      "apiKeyPlaceholder": "Vložte svůj klíč {provider}",
+      "apiKeyHint": "Získejte jej na {link}. Váš klíč je odesílán pouze {provider}, nikdy na {host}.",
+      "rememberKey": "Zapamatovat klíč pouze v tomto prohlížeči (localStorage). Pro sdílená zařízení odškrtněte.",
+      "showApiKey": "Zobrazit API key",
+      "hideApiKey": "Skrýt API key",
+      "translateFrom": "Přeložit z",
+      "translateTo": "Přeložit do",
+      "tone": "Tón",
+      "customProvider": "Vlastní (kompatibilní s OpenAI)",
+      "customModel": "ID modelu",
+      "customModelPlaceholder": "např. gpt-4o, deepseek-chat, …",
+      "customEndpoint": "API Endpoint",
+      "customEndpointPlaceholder": "https://your-api.example.com/v1/chat/completions",
+      "customEndpointHint": "Úplná URL adresa pro endpoint /chat/completions kompatibilní s OpenAI.",
+      "openrouterModelPlaceholder": "např. google/gemini-2.5-flash, anthropic/claude-sonnet-4, …",
+      "opencodeModelPlaceholder": "např. kimi-k2.6, deepseek-v4-flash, glm-5.1, …",
+      "needApiKey": "Pro pokračování zadejte API key."
+    },
+    "upload": {
+      "parsing": "Zpracování EPUB…",
+      "parsingPdf": "Zpracovávám PDF — extrahuji text a rekonstruuji odstavce…",
+      "dropTitle": "Přetáhněte EPUB sem",
+      "dropSubtitle": "nebo klikněte pro výběr souboru",
+      "noChapters": "V tomto EPUB nebyly nalezeny žádné čitelné kapitoly.",
+      "ocrRunning": "Provádím OCR stránek pomocí {model}…",
+      "ocrPageOf": "Stránka {current} / {total}",
+      "ocrFailedCount": "{count} selhalo",
+      "scannedPdfDetected": "{file} je skenované PDF ({pages} stran) bez textové vrstvy.",
+      "modelLacksVision": "Vámi vybraný model {provider} „{model}“ nepřijímá obrázkové vstupy, takže nemůže provést OCR skenovaných stránek.",
+      "switchToVision": "Přepnout na:",
+      "runOcr": "Spustit OCR",
+      "providerHasNoVision": "{provider} v tomto výběru nenabízí model schopný analýzy obrazu. Otevřete Nastavení a přepněte poskytovatele (Gemini, OpenAI nebo Claude podporují OCR).",
+      "recentBooks": "Nedávné knihy",
+      "progressParagraphs": "{done} / {total} odstavců",
+      "progressPages": "{done} / {total} stran",
+      "deleteBook": "Odstranit z historie",
+      "deleteConfirm": "Odstranit „{name}“ z historie? Soubor a jeho překlady budou smazány.",
+      "untitled": "Bez názvu",
+      "relativeJustNow": "právě teď",
+      "relativeMinutesAgo": "před {n} min.",
+      "relativeHoursAgo": "před {n} h.",
+      "relativeDaysAgo": "před {n} d."
+    },
+    "preview": {
+      "pages": "{count} stran",
+      "scannedTag": "skenováno (vyžaduje OCR)",
+      "textLayerTag": "zjištěna textová vrstva",
+      "prev": "Předchozí",
+      "next": "Další",
+      "pageOf": "Stránka {current} / {total}",
+      "pageList": "Stránky ({count})",
+      "pageLabel": "Stránka {n}",
+      "willOcrWith": "Provede OCR všech stránek pomocí {model}.",
+      "willTranslate": "Text extrahován. Pokračujte výběrem kapitol k překladu.",
+      "startOcr": "Spustit OCR ({count} stran)",
+      "continue": "Pokračovat →",
+      "singlePage": {
+        "button": "Přeložit tuto stránku",
+        "tooltip": "Provést OCR a překlad pouze této stránky, abyste si mohli prohlédnout kvalitu předtím, než se pustíte do celé knihy.",
+        "running": "Provádím OCR a překlad této stránky…",
+        "translating": "Překládám tuto stránku…",
+        "empty": "Na této stránce nebyl nalezen žádný text k překladu.",
+        "resultHeader": "Stránka {page} — dvojjazyčný náhled",
+        "needsVision": "Aktuální model neumí provádět OCR obrázků. Nejprve přepněte na model schopný analýzy obrazu."
+      }
+    },
+    "browse": {
+      "chapters": "Kapitoly",
+      "toneTitle": "Tón překladu — ovlivňuje styl psaní",
+      "paragraphCount": "{nodes} odstavců · {translated} přeloženo",
+      "errorOne": "{count} odstavec selhal. Pro opakování můžete zkusit znovu přeložit — již hotové odstavce budou přeskočeny.",
+      "errorMany": "{count} odstavců selhalo. Pro opakování můžete zkusit znovu přeložit — již hotové odstavce budou přeskočeny.",
+      "noTranslatableText": "Tato kapitola neobsahuje žádný text k překladu (obálka, úvodní informace atd.).",
+      "translatingAria": "Překládání",
+      "translatingLabel": "překládání…",
+      "buildFailed": "Nepodařilo se vytvořit EPUB:"
+    },
+    "glossary": {
+      "label": "Glosář",
+      "title": "Vynutit konkrétní překlady pro termíny v této knize — užitečné pro technická, odborná nebo oborově specifická díla.",
+      "none": "Žádný",
+      "empty": "Zatím nebyly nahrány žádné glosáře.",
+      "entryCount": "{n} termínů",
+      "upload": "Nahrát CSV…",
+      "uploading": "Nahrávání…",
+      "hint": "CSV se dvěma sloupci: zdrojový termín, překlad. Volitelný třetí sloupec: poznámka. První řádek může obsahovat záhlaví. UTF-8.",
+      "delete": "Odstranit glosář",
+      "deleteConfirm": "Odstranit glosář „{name}“? Všechny knihy, které jej používají, se vrátí k nastavení bez glosáře."
+    },
+    "tones": {
+      "idiomatic": {
+        "label": "Idiomatický",
+        "hint": "přirozený a plynulý — většina knih"
+      },
+      "literary": {
+        "label": "Literární",
+        "hint": "romány a literární díla"
+      },
+      "technical": {
+        "label": "Technický",
+        "hint": "odborné a referenční knihy"
+      }
+    },
+    "modelHints": {
+      "cheapestFast": "nejlevnější, rychlý",
+      "higherQuality": "vyšší kvalita",
+      "bestQuality": "nejlepší kvalita",
+      "newestFast": "nejnovější, rychlý",
+      "cheapest": "nejlevnější",
+      "bestQualityStable": "nejlepší kvalita, stabilní",
+      "balanced": "vyvážený",
+      "freeTierFast": "bezplatná úroveň, rychlý",
+      "flagshipCoding": "vlajková loď pro kódování/agenty",
+      "longContext": "dlouhý kontext, stabilní",
+      "cheaper": "levnější",
+      "latestLongContext": "nejnovější, 256K kontext"
+    }
+  }
+}
