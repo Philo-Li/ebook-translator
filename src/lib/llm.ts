@@ -54,9 +54,9 @@ export const PROVIDERS: ProviderConfig[] = [
     keyHelp: 'https://aistudio.google.com/apikey',
     defaultModel: 'gemini-3.5-flash-lite',
     models: [
-      { id: 'gemini-3.6-flash', label: 'Gemini 3.6 Flash', hint: 'newest, fast', vision: true },
+      { id: 'gemini-3.8-flash', label: 'Gemini 3.8 Flash', hint: 'newest, fast', vision: true },
       { id: 'gemini-3.5-flash-lite', label: 'Gemini 3.5 Flash Lite', hint: 'cheapest', vision: true },
-      { id: 'gemini-3.5-flash', label: 'Gemini 3.5 Flash', hint: 'balanced', vision: true },
+      { id: 'gemini-3.7-flash', label: 'Gemini 3.7 Flash', hint: 'balanced', vision: true },
       { id: 'gemini-3.1-pro-preview', label: 'Gemini 3.1 Pro (preview)', hint: 'best quality', vision: true },
       { id: 'gemini-2.5-flash', label: 'Gemini 2.5 Flash', hint: 'legacy, balanced', vision: true },
       { id: 'gemini-2.5-flash-lite', label: 'Gemini 2.5 Flash Lite', hint: 'legacy, cheapest', vision: true },
@@ -69,10 +69,10 @@ export const PROVIDERS: ProviderConfig[] = [
     endpoint: 'https://api.openai.com/v1/chat/completions',
     keyHelp: 'https://platform.openai.com/api-keys',
     models: [
-      { id: 'gpt-5.6-luna', label: 'GPT-5.6 Luna', hint: 'cheapest, fast', vision: true },
-      { id: 'gpt-5.6-terra', label: 'GPT-5.6 Terra', hint: 'balanced', vision: true },
-      { id: 'gpt-5.6-sol', label: 'GPT-5.6 Sol', hint: 'best quality', vision: true },
-      { id: 'gpt-5.5', label: 'GPT-5.5', hint: 'legacy flagship', vision: true },
+      { id: 'gpt-6-luna', label: 'GPT-6 Luna', hint: 'cheapest, fast', vision: true },
+      { id: 'gpt-6.1-sol', label: 'GPT-6.1 Sol', hint: 'balanced', vision: true },
+      { id: 'gpt-6-astra', label: 'GPT-6 Astra', hint: 'best quality', vision: true },
+      { id: 'gpt-5.6-sol', label: 'GPT-5.6 Sol', hint: 'previous flagship', vision: true },
     ],
   },
   {
@@ -81,9 +81,9 @@ export const PROVIDERS: ProviderConfig[] = [
     api: 'anthropic',
     keyHelp: 'https://console.anthropic.com/settings/keys',
     models: [
-      { id: 'claude-haiku-4-5', label: 'Claude Haiku 4.5', hint: 'cheapest, fast', vision: true },
-      { id: 'claude-sonnet-5', label: 'Claude Sonnet 5', hint: 'higher quality', vision: true },
-      { id: 'claude-opus-5', label: 'Claude Opus 5', hint: 'best quality', vision: true },
+      { id: 'claude-haiku-5-5', label: 'Claude Haiku 5.5', hint: 'cheapest, fast', vision: true },
+      { id: 'claude-sonnet-5-5', label: 'Claude Sonnet 5.5', hint: 'higher quality', vision: true },
+      { id: 'claude-opus-5-5', label: 'Claude Opus 5.5', hint: 'best quality', vision: true },
     ],
   },
   {
@@ -93,8 +93,8 @@ export const PROVIDERS: ProviderConfig[] = [
     endpoint: 'https://api.deepseek.com/v1/chat/completions',
     keyHelp: 'https://platform.deepseek.com/api_keys',
     models: [
-      // V4 chat IDs are text-only; vision lives on a separate VL track.
-      { id: 'deepseek-v4-flash', label: 'DeepSeek V4 Flash', hint: 'cheapest, fast' },
+      // `deepseek-flash` serves V4.1-Flash and accepts image input; Pro is text-only.
+      { id: 'deepseek-flash', label: 'DeepSeek Flash (V4.1)', hint: 'cheapest, fast', vision: true },
       { id: 'deepseek-v4-pro', label: 'DeepSeek V4 Pro', hint: 'best quality' },
     ],
   },
@@ -105,13 +105,12 @@ export const PROVIDERS: ProviderConfig[] = [
     // China region (DashScope). Mainland keys / mainland users.
     endpoint: 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions',
     keyHelp: 'https://bailian.console.aliyun.com/?apiKey=1',
-    // Qwen text chat line is text-only on DashScope; image input requires the qwen3-vl-* IDs below.
+    // Qwen 3.7+ chat models accept image input natively on DashScope, so the
+    // separate qwen3-vl-* line is no longer needed for OCR.
     models: [
-      { id: 'qwen3.6-flash', label: 'Qwen 3.6 Flash', hint: 'cheapest, fast' },
-      { id: 'qwen3.7-plus', label: 'Qwen 3.7 Plus', hint: 'balanced' },
-      { id: 'qwen3.7-max', label: 'Qwen 3.7 Max', hint: 'best quality' },
-      { id: 'qwen3-vl-flash', label: 'Qwen3-VL Flash', hint: 'vision, fast', vision: true },
-      { id: 'qwen3-vl-plus', label: 'Qwen3-VL Plus', hint: 'vision, balanced', vision: true },
+      { id: 'qwen3.8-flash', label: 'Qwen 3.8 Flash', hint: 'cheapest, fast', vision: true },
+      { id: 'qwen3.7-plus', label: 'Qwen 3.7 Plus', hint: 'balanced', vision: true },
+      { id: 'qwen3.8-max', label: 'Qwen 3.8 Max', hint: 'best quality', vision: true },
     ],
   },
   {
@@ -120,13 +119,12 @@ export const PROVIDERS: ProviderConfig[] = [
     api: 'openai-compat',
     endpoint: 'https://open.bigmodel.cn/api/paas/v4/chat/completions',
     keyHelp: 'https://bigmodel.cn/usercenter/proj-mgmt/apikeys',
-    // GLM chat line is text-only; vision lives on the *V suffix variants.
+    // GLM-5.3 itself is text-only; GLM-5.3-Flash is the native multimodal line.
     models: [
       { id: 'glm-4.7-flash', label: 'GLM-4.7 Flash', hint: 'free tier, fast' },
-      { id: 'glm-5.2', label: 'GLM-5.2', hint: 'best quality' },
-      { id: 'glm-5.1', label: 'GLM-5.1', hint: 'previous flagship' },
-      { id: 'glm-4.6v', label: 'GLM-4.6V', hint: 'vision, balanced', vision: true },
-      { id: 'glm-5v-turbo', label: 'GLM-5V Turbo', hint: 'vision, best quality', vision: true },
+      { id: 'glm-5.3-flash', label: 'GLM-5.3 Flash', hint: 'balanced', vision: true },
+      { id: 'glm-5.3', label: 'GLM-5.3', hint: 'best quality' },
+      { id: 'glm-5.2', label: 'GLM-5.2', hint: 'previous flagship' },
     ],
   },
   {
@@ -134,12 +132,10 @@ export const PROVIDERS: ProviderConfig[] = [
     label: 'Moonshot Kimi',
     api: 'openai-compat',
     endpoint: 'https://api.moonshot.ai/v1/chat/completions',
-    keyHelp: 'https://platform.moonshot.ai/console/api-keys',
+    keyHelp: 'https://platform.kimi.ai/console/api-keys',
     models: [
-      { id: 'kimi-k3', label: 'Kimi K3', hint: 'best quality', vision: true },
       { id: 'kimi-k2.6', label: 'Kimi K2.6', hint: 'balanced', vision: true },
-      { id: 'moonshot-v1-128k', label: 'Moonshot v1 128K', hint: 'long context, stable' },
-      { id: 'moonshot-v1-128k-vision-preview', label: 'Moonshot v1 128K Vision (preview)', hint: 'vision, long context', vision: true },
+      { id: 'kimi-k3', label: 'Kimi K3', hint: 'best quality', vision: true },
     ],
   },
   {
@@ -430,10 +426,10 @@ async function callOpenAICompat(
   return parseBatchResponse(text, passages.length);
 }
 
-// Claude Sonnet 5 / Opus 5 (and Opus 4.7+) removed `temperature` — sending a
+// Claude 5.x (Haiku 5.5 included) and Opus 4.7+ removed `temperature` — sending a
 // non-default value returns a 400. Only these older families still accept it.
 function anthropicAcceptsTemperature(model: string): boolean {
-  return /^claude-(haiku|3|sonnet-4|opus-4-[0-6])/.test(model);
+  return /^claude-(haiku-[34]|3|sonnet-4|opus-4-[0-6])/.test(model);
 }
 
 async function callAnthropic(
