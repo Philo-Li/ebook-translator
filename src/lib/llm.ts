@@ -57,9 +57,9 @@ export const PROVIDERS: ProviderConfig[] = [
       { id: 'gemini-3.8-flash', label: 'Gemini 3.8 Flash', hint: 'newest, fast', vision: true },
       { id: 'gemini-3.5-flash-lite', label: 'Gemini 3.5 Flash Lite', hint: 'cheapest', vision: true },
       { id: 'gemini-3.7-flash', label: 'Gemini 3.7 Flash', hint: 'balanced', vision: true },
+      { id: 'gemini-3.6-flash', label: 'Gemini 3.6 Flash', hint: 'legacy, fast', vision: true },
+      { id: 'gemini-3.5-flash', label: 'Gemini 3.5 Flash', hint: 'legacy, balanced', vision: true },
       { id: 'gemini-3.1-pro-preview', label: 'Gemini 3.1 Pro (preview)', hint: 'best quality', vision: true },
-      { id: 'gemini-2.5-flash', label: 'Gemini 2.5 Flash', hint: 'legacy, balanced', vision: true },
-      { id: 'gemini-2.5-flash-lite', label: 'Gemini 2.5 Flash Lite', hint: 'legacy, cheapest', vision: true },
     ],
   },
   {
@@ -72,7 +72,10 @@ export const PROVIDERS: ProviderConfig[] = [
       { id: 'gpt-6-luna', label: 'GPT-6 Luna', hint: 'cheapest, fast', vision: true },
       { id: 'gpt-6.1-sol', label: 'GPT-6.1 Sol', hint: 'balanced', vision: true },
       { id: 'gpt-6-astra', label: 'GPT-6 Astra', hint: 'best quality', vision: true },
+      { id: 'gpt-5.6-luna', label: 'GPT-5.6 Luna', hint: 'legacy, cheapest', vision: true },
+      { id: 'gpt-5.6-terra', label: 'GPT-5.6 Terra', hint: 'legacy, balanced', vision: true },
       { id: 'gpt-5.6-sol', label: 'GPT-5.6 Sol', hint: 'previous flagship', vision: true },
+      { id: 'gpt-5.5', label: 'GPT-5.5', hint: 'legacy flagship', vision: true },
     ],
   },
   {
@@ -84,6 +87,9 @@ export const PROVIDERS: ProviderConfig[] = [
       { id: 'claude-haiku-5-5', label: 'Claude Haiku 5.5', hint: 'cheapest, fast', vision: true },
       { id: 'claude-sonnet-5-5', label: 'Claude Sonnet 5.5', hint: 'higher quality', vision: true },
       { id: 'claude-opus-5-5', label: 'Claude Opus 5.5', hint: 'best quality', vision: true },
+      { id: 'claude-haiku-4-5', label: 'Claude Haiku 4.5', hint: 'legacy, cheapest', vision: true },
+      { id: 'claude-sonnet-5', label: 'Claude Sonnet 5', hint: 'legacy, balanced', vision: true },
+      { id: 'claude-opus-5', label: 'Claude Opus 5', hint: 'previous flagship', vision: true },
     ],
   },
   {
@@ -106,11 +112,13 @@ export const PROVIDERS: ProviderConfig[] = [
     endpoint: 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions',
     keyHelp: 'https://bailian.console.aliyun.com/?apiKey=1',
     // Qwen 3.7+ chat models accept image input natively on DashScope, so the
-    // separate qwen3-vl-* line is no longer needed for OCR.
+    // separate qwen3-vl-* line (Sept 2025) is no longer needed for OCR.
     models: [
       { id: 'qwen3.8-flash', label: 'Qwen 3.8 Flash', hint: 'cheapest, fast', vision: true },
       { id: 'qwen3.7-plus', label: 'Qwen 3.7 Plus', hint: 'balanced', vision: true },
       { id: 'qwen3.8-max', label: 'Qwen 3.8 Max', hint: 'best quality', vision: true },
+      { id: 'qwen3.6-flash', label: 'Qwen 3.6 Flash', hint: 'legacy, cheapest' },
+      { id: 'qwen3.7-max', label: 'Qwen 3.7 Max', hint: 'previous flagship' },
     ],
   },
   {
@@ -125,6 +133,9 @@ export const PROVIDERS: ProviderConfig[] = [
       { id: 'glm-5.3-flash', label: 'GLM-5.3 Flash', hint: 'balanced', vision: true },
       { id: 'glm-5.3', label: 'GLM-5.3', hint: 'best quality' },
       { id: 'glm-5.2', label: 'GLM-5.2', hint: 'previous flagship' },
+      { id: 'glm-5.1', label: 'GLM-5.1', hint: 'legacy flagship' },
+      { id: 'glm-4.6v', label: 'GLM-4.6V', hint: 'vision, balanced', vision: true },
+      { id: 'glm-5v-turbo', label: 'GLM-5V Turbo', hint: 'vision, best quality', vision: true },
     ],
   },
   {
